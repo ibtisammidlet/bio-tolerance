@@ -1,0 +1,19 @@
+{
+  "name": "retrieve-data",
+  "type": "module",
+  "version": "1.0",
+  "description": "user data retrieve",
+  "author": "ibtisam midlet",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.27.2",
+    "express": "4.18.1",
+    "url": "0.11.0",
+    "path": "0.12.7",
+    "body-parser": "1.20.0",
+    "node-fetch": "3.2.10",
+    "sqlite3": "5.0.11"
+
+  }
+
+}

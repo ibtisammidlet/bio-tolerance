@@ -1,0 +1,15 @@
+{
+  "name": "verify",
+  "version": "1.0",
+  "main": "index.js",
+  "description": "user verify",
+  "author": "ibtisam midlet",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "7.0.1"
+  },
+  "scripts": {
+   "compile:sass": "sass ./style.scss ./style.css -w"
+ }  
+
+}

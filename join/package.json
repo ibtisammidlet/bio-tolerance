@@ -1,0 +1,13 @@
+{
+  "name": "retrieve-data",
+  "version": "1.0",
+  "main": "index.js",
+  "type": "module",
+  "description": "user data retrieve",
+  "author": "ibtisam midlet",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "3.2.10"
+  }
+
+}
