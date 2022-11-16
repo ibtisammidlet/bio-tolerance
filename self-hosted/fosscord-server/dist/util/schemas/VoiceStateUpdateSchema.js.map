@@ -1,0 +1,1 @@
+{"version":3,"file":"VoiceStateUpdateSchema.js","sourceRoot":"","sources":["../../../src/util/schemas/VoiceStateUpdateSchema.ts"],"names":[],"mappings":";;;AAAa,QAAA,sBAAsB,GAAG;IACrC,SAAS,EAAE,MAAM;IACjB,WAAW,EAAE,MAAM;IACnB,SAAS,EAAE,OAAO;IAClB,SAAS,EAAE,OAAO;IAClB,UAAU,EAAE,OAAO;CACnB,CAAC"}
