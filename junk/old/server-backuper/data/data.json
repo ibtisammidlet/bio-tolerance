@@ -1,0 +1,161 @@
+[
+  {
+    "input": {
+      "actionScore": 0.7,
+      "victimReputation": -10,
+      "reputation": 30
+    },
+    "output": {
+      "confidence": 0.6
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.7,
+      "victimReputation": 10,
+      "reputation": 3
+    },
+    "output": {
+      "confidence": 0.95
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.7,
+      "victimReputation": -1,
+      "reputation": 1
+    },
+    "output": {
+      "confidence": 0.6
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.7,
+      "victimReputation": 5,
+      "reputation": -5
+    },
+    "output": {
+      "confidence": 0.9
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.3,
+      "victimReputation": 5,
+      "reputation": 5
+    },
+    "output": {
+      "confidence": 0.4
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.8,
+      "victimReputation": -10,
+      "reputation": 20
+    },
+    "output": {
+      "confidence": 0.7
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.1,
+      "victimReputation": 30,
+      "reputation": -30
+    },
+    "output": {
+      "confidence": 0.3
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.7,
+      "victimReputation": 1,
+      "reputation": 10
+    },
+    "output": {
+      "confidence": 0.7
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.5,
+      "victimReputation": -8,
+      "reputation": 10
+    },
+    "output": {
+      "confidence": 0.4
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.9,
+      "victimReputation": -30,
+      "reputation": 40
+    },
+    "output": {
+      "confidence": 0.8
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.75,
+      "victimReputation": 0,
+      "reputation": 0
+    },
+    "output": {
+      "confidence": 0.85
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.5,
+      "victimReputation": 10,
+      "reputation": -5
+    },
+    "output": {
+      "confidence": 0.65
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.2,
+      "victimReputation": 10,
+      "reputation": -5
+    },
+    "output": {
+      "confidence": 0.4
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.1,
+      "victimReputation": 100,
+      "reputation": -50
+    },
+    "output": {
+      "confidence": 0.35
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.4,
+      "reputation": 5
+    },
+    "output": {
+      "confidence": 0.4
+    }
+  },
+  {
+    "input": {
+      "actionScore": 0.6,
+      "victimReputation": 2,
+      "reputation": 2
+    },
+    "output": {
+      "confidence": 0.65
+    }
+  }
+]

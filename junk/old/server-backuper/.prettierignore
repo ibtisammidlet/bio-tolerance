@@ -1,0 +1,9 @@
+# Never format node_modules
+node_modules
+
+# Never format network files
+data/net.json
+
+# Let's not care about DB
+
+db/

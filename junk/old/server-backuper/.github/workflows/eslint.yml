@@ -1,0 +1,23 @@
+name: Run ESLint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }} and run ESLint
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm i -D eslint@7 eslint-config-airbnb-base@14 eslint-config-prettier@8 eslint-plugin-import@2
+    - run: npx eslint --rule "import/no-unresolved: 0" --fix .

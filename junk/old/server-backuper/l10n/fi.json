@@ -1,0 +1,22 @@
+{
+  "cmd.help.title": "",
+  "cmd.bighelp.description": "",
+  "cmd.bighelp.title": "",
+  "cmd.bighelp.commands.help": "",
+  "cmd.bighelp.commands.bighelp": "",
+  "cmd.bighelp.commands.exploits": "",
+  "requestedBy": "",
+  "cmd.help.commands.help": "",
+  "cmd.help.commands.bighelp": "",
+  "cmd.help.commands.exploits": "",
+  "cmd.help.description": "",
+  "cmd.whitelist.title": "",
+  "cmd.unwhitelist.description": "",
+  "cmd.whitelist.description": "",
+  "cmd.whitelist.bigDescription": "",
+  "errors.missingPermissions": "",
+  "errors.botMissingPermissions": "",
+  "errors.missingPermissions.title": "",
+  "errors.botMissingPermissions.title": "",
+  "cmd.invite.description": ""
+}

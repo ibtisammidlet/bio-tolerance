@@ -1,0 +1,20 @@
+{
+  "cmd.help.title": "My commands",
+  "cmd.bighelp.description": "For now my commands are:",
+  "cmd.bighelp.title": "My commands",
+  "cmd.bighelp.commands.help": "Displays help message. Nothing else.",
+  "cmd.bighelp.commands.bighelp": "Displays big detailed help. Avoid using this command in chat as it can be spammy!",
+  "cmd.bighelp.commands.exploits": "Checks your server for bots with unpatched bugs, which can let people raid your server! For instance, sometimes such bugs can let raiders to ping a lot of people even if they are not allowed to do it!",
+  "requestedBy": "Requested by {tag} | amogus",
+  "cmd.help.commands.help": "Displays this message",
+  "cmd.help.commands.bighelp": "Displays big help. Avoid using this command in chat!",
+  "cmd.help.commands.exploits": "Checks your server for bots with unpatched bugs, which can allow people to raid your server! (but why would I care)",
+  "cmd.help.description": "For now my commands are (I'm quite cool btw):",
+  "cmd.whitelist.title": "Whitelist",
+  "cmd.whitelist.description": "Whitelists a member. The bot will just ignore them.",
+  "cmd.whitelist.bigDescription": "Whitelists a member. The bot will just ignore them. Make sure to only whitelist members you trust! Don't whitelist bots which can be used to ban/kick/do other moderator actions. (actually you can whitelist any user lol)",
+  "errors.missingPermissions": "You must have these permissions to use this command and you don't have them loser: {permissions}",
+  "errors.botMissingPermissions": "Server Backuper must have these permissions to use this command: {permissions}.",
+  "errors.missingPermissions.title": "Access denied and you are sus",
+  "errors.botMissingPermissions.title": "Server Backuper has insufficient permissions bruh why do I have to tell you it"
+}

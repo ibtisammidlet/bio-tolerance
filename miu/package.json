@@ -1,0 +1,12 @@
+{
+  "name": "backups-bot",
+  "version": "1.0",
+  "main": "index.js",
+  "description": "my own dis backuper, based on backups-bot & discord.js",
+  "author": "ibtisam midlet",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14",
+    "jsonfile" : "^6.1.0"
+  }
+}

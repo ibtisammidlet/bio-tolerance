@@ -1,0 +1,20 @@
+{
+  "cmd.help.title": "Mes commandes",
+  "cmd.bighelp.description": "Pour l'instant, les commandes auxquelles j'ai accès sont:",
+  "cmd.bighelp.title": "Mes commandes",
+  "cmd.bighelp.commands.help": "Affiche le message d'aide. Rien d'autre.",
+  "cmd.bighelp.commands.bighelp": "Affiche un message d'aide très précis. Évitez d'utiliser cette commande dans un salon de chat étant donné qu'il est très long.",
+  "cmd.bighelp.commands.exploits": "Regarde dans votre serveur pour trouver des bots ayant bugs pouvant permettre à des personnes, par exemple, de \"ping\" beaucoup de personnes même si elles n'en ont pas l'autorisation !",
+  "requestedBy": "Demandé par {tag}",
+  "cmd.help.commands.help": "Affiche le message que vous êtes en train de lire.",
+  "cmd.help.commands.bighelp": "Affiche un grand message d'aide. Évitez d'utiliser cette commande dans un salon de chat.",
+  "cmd.help.commands.exploits": "Regarde dans votre serveur pour trouver des bots ayant bugs permettant à des personnes d'envahir votre serveur !",
+  "cmd.help.description": "Pour l'instant, les commandes auxquelles j'ai accès sont:",
+  "cmd.whitelist.title": "Whitelist",
+  "cmd.whitelist.description": "Whitelists a member. The bot will just ignore them.",
+  "cmd.whitelist.bigDescription": "Whitelists a member. The bot will just ignore them. Make sure to only whitelist members you trust! Don't whitelist bots which can be used to ban/kick/do other moderator actions.",
+  "errors.missingPermissions": "You must have these permissions to use this command: {permissions}",
+  "errors.botMissingPermissions": "Server Backuper must have these permissions to use this command: {permissions}.",
+  "errors.missingPermissions.title": "Access denied",
+  "errors.botMissingPermissions.title": "Server Backuper has insufficient permissions"
+}
