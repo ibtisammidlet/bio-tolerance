@@ -16,3 +16,4 @@
 | DB_VERBOSE         | any                              | Log database queries, enabled if defined                                  |
 | DB_MIGRATE         | any                              | Exit fosscord after connecting to and migrating database, used internally |
 | LOG_INVALID_BODY   | any                              | Log request method, path and body if invalid                              |
+

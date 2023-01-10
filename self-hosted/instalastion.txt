@@ -9,3 +9,6 @@ npm run setup
 npm run start:bundle
 
 cmd: npm i @yukikaze-bot/erlpack
+
+
+https://server.biotune.org/invite/vjR0tN
