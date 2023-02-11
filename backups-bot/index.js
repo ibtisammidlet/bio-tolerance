@@ -7,7 +7,7 @@ const config = require('./config.json');
 client.config = config;
 
 /* Load all events */
-fs.readdir("C:/Users/ibtisam/AppData/Roaming/npm/node_modules/bio-tolerance/backups-bot/events/", (_err, files) => {
+fs.readdir("E:/data/development/nodejs/node_modules/bio-tolerance/backups-bot/events/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
         const event = require(`./events/${file}`);
@@ -21,7 +21,7 @@ fs.readdir("C:/Users/ibtisam/AppData/Roaming/npm/node_modules/bio-tolerance/back
 client.commands = new Discord.Collection();
 
 /* Load all commands */
-fs.readdir("C:/Users/ibtisam/AppData/Roaming/npm/node_modules/bio-tolerance/backups-bot/commands/", (_err, files) => {
+fs.readdir("E:/data/development/nodejs/node_modules/bio-tolerance/backups-bot/commands/", (_err, files) => {
     files.forEach((file) => {
         if (!file.endsWith(".js")) return;
         let props = require(`./commands/${file}`);
