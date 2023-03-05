@@ -1,0 +1,20 @@
+diff -crB from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-06-24 21:10:17.102821455 +0100
+--- to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-06-24 21:11:01.054328256 +0100
+***************
+*** 230,236 ****
+  .method public static final g(Lcom/lytefast/flexinput/fragment/FlexInputFragment;Lcom/lytefast/flexinput/viewmodel/FlexInputState;)V
+      .locals 11
+  
+!     const/4 v0, 0x0
+  
+      if-eqz p0, :cond_26
+  
+--- 230,236 ----
+  .method public static final g(Lcom/lytefast/flexinput/fragment/FlexInputFragment;Lcom/lytefast/flexinput/viewmodel/FlexInputState;)V
+      .locals 11
+  
+!     const/16 v0, 0x8
+  
+      if-eqz p0, :cond_26
+  

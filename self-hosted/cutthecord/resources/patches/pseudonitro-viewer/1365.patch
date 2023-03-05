@@ -1,0 +1,21 @@
+diff -crB from/smali/com/discord/utilities/textprocessing/Rules.smali to/smali/com/discord/utilities/textprocessing/Rules.smali
+*** from/smali/com/discord/utilities/textprocessing/Rules.smali	2020-11-10 19:16:20.741135070 +0000
+--- to/smali/com/discord/utilities/textprocessing/Rules.smali	2020-11-10 19:16:35.743200853 +0000
+***************
+*** 130,136 ****
+  
+      sput-object v0, Lcom/discord/utilities/textprocessing/Rules;->PATTERN_UNICODE_EMOJI$delegate:Lkotlin/Lazy;
+  
+!     const-string v0, "^<(a)?:([a-zA-Z_0-9]+):(\\d+)>"
+  
+      .line 7
+      invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+--- 130,137 ----
+  
+      sput-object v0, Lcom/discord/utilities/textprocessing/Rules;->PATTERN_UNICODE_EMOJI$delegate:Lkotlin/Lazy;
+  
+!     # There's a ZWSP there
+!     const-string v0, "^<&?​?(a)?:([a-zA-Z_0-9]+):(\\d+)>"
+  
+      .line 7
+      invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;

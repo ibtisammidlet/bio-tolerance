@@ -1,0 +1,37 @@
+Only in com.discord: build
+Only in com.discord: dist
+diff --color -crB com.discord-base/smali/com/discord/models/domain/ModelUser.smali com.discord/smali/com/discord/models/domain/ModelUser.smali
+*** com.discord-base/smali/com/discord/models/domain/ModelUser.smali	2020-07-29 21:27:27.843445644 +0300
+--- com.discord/smali/com/discord/models/domain/ModelUser.smali	2020-07-30 01:46:42.627403991 +0300
+***************
+*** 1709,1714 ****
+--- 1709,1736 ----
+      :goto_2
+      if-eqz p1, :cond_5
+  
++     new-instance v0, Ljava/lang/StringBuilder;
++ 
++     invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
++ 
++     const-string v1, " ("
++ 
++     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++ 
++     invoke-virtual {p0}, Lcom/discord/models/domain/ModelUser;->getUserNameWithDiscriminator()Ljava/lang/String;
++ 
++     move-result-object v1
++ 
++     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++ 
++     const-string v1, ")"
++ 
++     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++ 
++     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++ 
++     move-result-object p1
++ 
+      goto :goto_3
+  
+      .line 8
+

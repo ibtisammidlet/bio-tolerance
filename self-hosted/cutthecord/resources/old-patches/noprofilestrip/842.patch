@@ -1,0 +1,29 @@
+diff -crB -x dist -x build com.discord-842-base/res/layout/widget_user_profile_strip.xml com.discord-842/res/layout/widget_user_profile_strip.xml
+*** com.discord-842-base/res/layout/widget_user_profile_strip.xml	2019-02-05 03:12:32.399764040 +0300
+--- com.discord-842/res/layout/widget_user_profile_strip.xml	2019-02-06 00:48:43.768078629 +0300
+***************
+*** 8,15 ****
+          <FrameLayout android:background="?primary_630_circle" android:padding="@dimen/uikit_image_border_size_small" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/image_bottom_guideline" app:layout_constraintEnd_toEndOf="@id/image_bottom_guideline" app:layout_constraintRight_toRightOf="@id/image_bottom_guideline">
+              <com.facebook.drawee.view.SimpleDraweeView android:id="@id/profile_strip_status" android:layout_width="10.0dip" android:layout_height="10.0dip" app:placeholderImage="@color/status_grey_500" app:roundAsCircle="true" />
+          </FrameLayout>
+-         <TextView android:textSize="@dimen/uikit_textsize_large" android:textColor="@color/primary_100" android:ellipsize="end" android:id="@id/profile_strip_name" android:layout_width="0.0dip" android:singleLine="true" app:layout_constraintBottom_toTopOf="@id/profile_strip_discriminator" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="@style/UiKit.TextView.Semibold" />
+-         <TextView android:id="@id/profile_strip_discriminator" android:layout_width="0.0dip" android:singleLine="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toBottomOf="@id/profile_strip_name" style="@style/UiKit.TextView.Subtext.Semibold" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+      <ImageView android:id="@id/profile_strip_search" android:src="@drawable/ic_search_items_white_a60_24dp" android:contentDescription="@string/search_recent" style="@style/UiKit.Profile.Strip.Icon" />
+      <ImageView android:id="@id/profile_strip_mentions" android:src="@drawable/ic_mentions_white_a60_24dp" android:contentDescription="@string/mentions" style="@style/UiKit.Profile.Strip.Icon" />
+--- 8,13 ----
+diff -crB -x dist -x build com.discord-842-base/res/layout-v17/widget_user_profile_strip.xml com.discord-842/res/layout-v17/widget_user_profile_strip.xml
+*** com.discord-842-base/res/layout-v17/widget_user_profile_strip.xml	2019-02-05 03:12:33.223101284 +0300
+--- com.discord-842/res/layout-v17/widget_user_profile_strip.xml	2019-02-06 00:46:33.070827359 +0300
+***************
+*** 8,15 ****
+          <FrameLayout android:background="?primary_630_circle" android:padding="@dimen/uikit_image_border_size_small" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@id/image_bottom_guideline" app:layout_constraintEnd_toEndOf="@id/image_bottom_guideline" app:layout_constraintRight_toRightOf="@id/image_bottom_guideline">
+              <com.facebook.drawee.view.SimpleDraweeView android:id="@id/profile_strip_status" android:layout_width="10.0dip" android:layout_height="10.0dip" app:placeholderImage="@color/status_grey_500" app:roundAsCircle="true" />
+          </FrameLayout>
+-         <TextView android:textSize="@dimen/uikit_textsize_large" android:textColor="@color/primary_100" android:ellipsize="end" android:id="@id/profile_strip_name" android:layout_width="0.0dip" android:singleLine="true" app:layout_constraintBottom_toTopOf="@id/profile_strip_discriminator" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="@style/UiKit.TextView.Semibold" />
+-         <TextView android:id="@id/profile_strip_discriminator" android:layout_width="0.0dip" android:singleLine="true" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/guideline" app:layout_constraintTop_toBottomOf="@id/profile_strip_name" style="@style/UiKit.TextView.Subtext.Semibold" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+      <ImageView android:id="@id/profile_strip_search" android:src="@drawable/ic_search_items_white_a60_24dp" android:contentDescription="@string/search_recent" style="@style/UiKit.Profile.Strip.Icon" />
+      <ImageView android:id="@id/profile_strip_mentions" android:src="@drawable/ic_mentions_white_a60_24dp" android:contentDescription="@string/mentions" style="@style/UiKit.Profile.Strip.Icon" />
+--- 8,13 ----
+

@@ -1,0 +1,41 @@
+diff -crB from/res/values/dimens.xml to/res/values/dimens.xml
+*** from/res/values/dimens.xml	2020-12-13 04:52:10.270783571 +0000
+--- to/res/values/dimens.xml	2020-12-13 04:52:20.088877381 +0000
+***************
+*** 222,228 ****
+      <dimen name="folder_guild_outer_margin">6.0dip</dimen>
+      <dimen name="folder_guild_size">16.0dip</dimen>
+      <dimen name="grid_item_padding">4.0dip</dimen>
+!     <dimen name="guild_icon_radius">12.0dip</dimen>
+      <dimen name="guild_item_size">54.0dip</dimen>
+      <dimen name="guild_item_spacing">6.0dip</dimen>
+      <dimen name="guild_list_size">72.0dip</dimen>
+--- 222,228 ----
+      <dimen name="folder_guild_outer_margin">6.0dip</dimen>
+      <dimen name="folder_guild_size">16.0dip</dimen>
+      <dimen name="grid_item_padding">4.0dip</dimen>
+!     <dimen name="guild_icon_radius">0.0dip</dimen>
+      <dimen name="guild_item_size">54.0dip</dimen>
+      <dimen name="guild_item_spacing">6.0dip</dimen>
+      <dimen name="guild_list_size">72.0dip</dimen>
+diff -crB from/res/values/styles.xml to/res/values/styles.xml
+*** from/res/values/styles.xml	2020-12-13 04:52:10.414746413 +0000
+--- to/res/values/styles.xml	2020-12-13 04:52:20.090877110 +0000
+***************
+*** 990,996 ****
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">true</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>
+--- 990,997 ----
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">false</item>
+!         <item name="roundedCornerRadius">3dp</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>

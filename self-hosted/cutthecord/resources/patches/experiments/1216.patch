@@ -1,0 +1,142 @@
+diff -crB from/smali/com/discord/stores/StoreExperiments$getExperimentalAlpha$1.smali to/smali/com/discord/stores/StoreExperiments$getExperimentalAlpha$1.smali
+*** from/smali/com/discord/stores/StoreExperiments$getExperimentalAlpha$1.smali	2020-07-31 21:32:18.727326394 +0300
+--- to/smali/com/discord/stores/StoreExperiments$getExperimentalAlpha$1.smali	2020-07-31 21:34:25.207964699 +0300
+***************
+*** 81,110 ****
+  .method public final call(Lcom/discord/models/domain/ModelUser;Lcom/discord/models/domain/ModelGuild;)Z
+      .locals 1
+  
+!     const-string v0, "meUser"
+  
+!     .line 2
+!     invoke-static {p1, v0}, Lj0/n/c/h;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result p1
+! 
+!     if-nez p1, :cond_1
+! 
+!     if-eqz p2, :cond_0
+! 
+!     goto :goto_0
+! 
+!     :cond_0
+!     const/4 p1, 0x0
+! 
+!     goto :goto_1
+! 
+!     :cond_1
+!     :goto_0
+!     const/4 p1, 0x1
+! 
+!     :goto_1
+!     return p1
+  .end method
+--- 81,87 ----
+  .method public final call(Lcom/discord/models/domain/ModelUser;Lcom/discord/models/domain/ModelGuild;)Z
+      .locals 1
+  
+!     const/4 v0, 0x1
+  
+!     return v0
+  .end method
+diff -crB from/smali/com/discord/stores/StoreExperiments.smali to/smali/com/discord/stores/StoreExperiments.smali
+*** from/smali/com/discord/stores/StoreExperiments.smali	2020-07-31 21:32:18.720659693 +0300
+--- to/smali/com/discord/stores/StoreExperiments.smali	2020-07-31 21:34:25.211298049 +0300
+***************
+*** 1320,1377 ****
+  .end method
+  
+  .method public final isExperimentalAlpha$app_productionDiscordExternalRelease()Z
+!     .locals 4
+  
+!     .line 1
+!     iget-boolean v0, p0, Lcom/discord/stores/StoreExperiments;->initialized:Z
+  
+!     const/4 v1, 0x1
+! 
+!     if-eqz v0, :cond_0
+! 
+!     .line 2
+!     iget-object v0, p0, Lcom/discord/stores/StoreExperiments;->storeUser:Lcom/discord/stores/StoreUser;
+! 
+!     invoke-virtual {v0}, Lcom/discord/stores/StoreUser;->getMeInternal$app_productionDiscordExternalRelease()Lcom/discord/models/domain/ModelUser$Me;
+! 
+!     move-result-object v0
+! 
+!     if-eqz v0, :cond_0
+! 
+!     invoke-virtual {v0}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result v0
+! 
+!     if-eq v0, v1, :cond_2
+! 
+!     .line 3
+!     :cond_0
+!     iget-object v0, p0, Lcom/discord/stores/StoreExperiments;->storeGuilds:Lcom/discord/stores/StoreGuilds;
+! 
+!     invoke-virtual {v0}, Lcom/discord/stores/StoreGuilds;->getGuildsInternal$app_productionDiscordExternalRelease()Ljava/util/Map;
+! 
+!     move-result-object v0
+! 
+!     const-wide v2, 0x2bc056ab0800006L
+! 
+!     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+! 
+!     move-result-object v2
+! 
+!     invoke-interface {v0, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+! 
+!     move-result v0
+! 
+!     if-eqz v0, :cond_1
+! 
+!     goto :goto_0
+! 
+!     :cond_1
+!     const/4 v1, 0x0
+! 
+!     :cond_2
+!     :goto_0
+!     return v1
+  .end method
+  
+  .method public final isInitialized()Lrx/Observable;
+--- 1320,1330 ----
+  .end method
+  
+  .method public final isExperimentalAlpha$app_productionDiscordExternalRelease()Z
+!     .locals 1
+  
+!     const/4 v0, 0x1
+  
+!     return v0
+  .end method
+  
+  .method public final isInitialized()Lrx/Observable;
+diff -crB from/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali to/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali
+*** from/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2020-07-31 21:32:19.427329926 +0300
+--- to/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2020-07-31 21:34:25.211298049 +0300
+***************
+*** 87,97 ****
+  
+      if-nez p4, :cond_1
+  
+!     invoke-static {p1, v1}, Lj0/n/c/h;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result p4
+  
+      if-eqz p4, :cond_0
+  
+--- 87,93 ----
+  
+      if-nez p4, :cond_1
+  
+!     const/4 p4, 0x1
+  
+      if-eqz p4, :cond_0
+  

@@ -1,0 +1,22 @@
+diff -crB -x dist -x build com.discord-839-testing/res/values/styles.xml com.discord-839/res/values/styles.xml
+*** com.discord-839-testing/res/values/styles.xml	2019-02-03 09:37:05.669928847 +0300
+--- com.discord-839/res/values/styles.xml	2019-02-03 09:54:45.214140645 +0300
+***************
+*** 811,817 ****
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">true</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>
+--- 811,818 ----
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">false</item>
+!         <item name="roundedCornerRadius">3dp</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>
+

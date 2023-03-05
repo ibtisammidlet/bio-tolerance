@@ -1,0 +1,66 @@
+diff -crB -x dist -x build com.discord-839-testing/smali/com/discord/models/domain/ModelMessageEmbed.smali com.discord-839/smali/com/discord/models/domain/ModelMessageEmbed.smali
+*** com.discord-839-testing/smali/com/discord/models/domain/ModelMessageEmbed.smali	2019-02-03 09:37:05.753262781 +0300
+--- com.discord-839/smali/com/discord/models/domain/ModelMessageEmbed.smali	2019-02-04 16:19:51.198580934 +0300
+***************
+*** 1908,1937 ****
+  .end method
+  
+  .method public isSpoilerAttachment()Z
+!     .locals 2
+  
+-     .line 135
+-     invoke-virtual {p0}, Lcom/discord/models/domain/ModelMessageEmbed;->isAttachment()Z
+- 
+-     move-result v0
+- 
+-     if-eqz v0, :cond_0
+- 
+-     iget-object v0, p0, Lcom/discord/models/domain/ModelMessageEmbed;->title:Ljava/lang/String;
+- 
+-     const-string v1, "SPOILER_"
+- 
+-     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+- 
+-     move-result v0
+- 
+-     if-eqz v0, :cond_0
+- 
+-     const/4 v0, 0x1
+- 
+-     return v0
+- 
+-     :cond_0
+      const/4 v0, 0x0
+  
+      return v0
+--- 1908,1915 ----
+  .end method
+  
+  .method public isSpoilerAttachment()Z
+!     .locals 1
+  
+      const/4 v0, 0x0
+  
+      return v0
+diff -crB -x dist -x build com.discord-839-testing/smali/com/discord/utilities/textprocessing/node/SpoilerNode.smali com.discord-839/smali/com/discord/utilities/textprocessing/node/SpoilerNode.smali
+*** com.discord-839-testing/smali/com/discord/utilities/textprocessing/node/SpoilerNode.smali	2019-02-03 09:37:05.789929711 +0300
+--- com.discord-839/smali/com/discord/utilities/textprocessing/node/SpoilerNode.smali	2019-02-04 16:23:13.019478110 +0300
+***************
+*** 220,227 ****
+  .method public final isRevealed()Z
+      .locals 1
+  
+!     .line 23
+!     iget-boolean v0, p0, Lcom/discord/utilities/textprocessing/node/SpoilerNode;->isRevealed:Z
+  
+      return v0
+  .end method
+--- 220,226 ----
+  .method public final isRevealed()Z
+      .locals 1
+  
+!     const/4 v0, 0x1
+  
+      return v0
+  .end method
+

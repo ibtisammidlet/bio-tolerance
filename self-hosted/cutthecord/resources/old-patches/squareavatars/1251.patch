@@ -1,0 +1,55 @@
+diff -crB from/res/values/dimens.xml to/res/values/dimens.xml
+*** from/res/values/dimens.xml	2020-09-07 10:44:46.615522714 +0100
+--- to/res/values/dimens.xml	2020-09-07 10:45:09.299333261 +0100
+***************
+*** 209,215 ****
+      <dimen name="folder_guild_outer_margin">6.0dip</dimen>
+      <dimen name="folder_guild_size">16.0dip</dimen>
+      <dimen name="grid_item_padding">4.0dip</dimen>
+!     <dimen name="guild_icon_radius">12.0dip</dimen>
+      <dimen name="guild_item_size">54.0dip</dimen>
+      <dimen name="guild_item_spacing">6.0dip</dimen>
+      <dimen name="guild_list_size">72.0dip</dimen>
+--- 209,215 ----
+      <dimen name="folder_guild_outer_margin">6.0dip</dimen>
+      <dimen name="folder_guild_size">16.0dip</dimen>
+      <dimen name="grid_item_padding">4.0dip</dimen>
+!     <dimen name="guild_icon_radius">0.0dip</dimen>
+      <dimen name="guild_item_size">54.0dip</dimen>
+      <dimen name="guild_item_spacing">6.0dip</dimen>
+      <dimen name="guild_list_size">72.0dip</dimen>
+diff -crB from/res/values/styles.xml to/res/values/styles.xml
+*** from/res/values/styles.xml	2020-09-07 10:44:46.793521227 +0100
+--- to/res/values/styles.xml	2020-09-07 10:45:09.299333261 +0100
+***************
+*** 951,957 ****
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">true</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>
+--- 951,958 ----
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">false</item>
+!         <item name="roundedCornerRadius">3dp</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>
+diff -crB from/smali/com/discord/widgets/guilds/list/GuildListViewHolder$GuildViewHolder.smali to/smali/com/discord/widgets/guilds/list/GuildListViewHolder$GuildViewHolder.smali
+*** from/smali/com/discord/widgets/guilds/list/GuildListViewHolder$GuildViewHolder.smali	2020-09-07 10:44:49.609497703 +0100
+--- to/smali/com/discord/widgets/guilds/list/GuildListViewHolder$GuildViewHolder.smali	2020-09-07 10:45:09.299333261 +0100
+***************
+*** 1143,1148 ****
+--- 1143,1150 ----
+      move-result v10
+  
+      .line 14
++     const v8, 0x1
++ 
+      invoke-direct {p0, v8, v9, v10}, Lcom/discord/widgets/guilds/list/GuildListViewHolder$GuildViewHolder;->configureGuildIconBackground(ZZZ)V
+  
+      if-eqz v5, :cond_c

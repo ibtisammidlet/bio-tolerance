@@ -1,0 +1,37 @@
+diff -crB from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-04-17 13:03:28.433008202 +0100
+--- to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-04-17 13:15:33.658745061 +0100
+***************
+*** 363,369 ****
+  
+      if-eqz p1, :cond_1
+  
+!     const/4 v0, 0x0
+  
+      invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+--- 363,369 ----
+  
+      if-eqz p1, :cond_1
+  
+!     const/16 v0, 0x8
+  
+      invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+***************
+*** 1531,1537 ****
+      .line 60
+      instance-of v0, p1, Lf/b/a/f/a$a;
+  
+!     const/4 v1, 0x0
+  
+      if-eqz v0, :cond_0
+  
+--- 1531,1537 ----
+      .line 60
+      instance-of v0, p1, Lf/b/a/f/a$a;
+  
+!     const/16 v1, 0x8
+  
+      if-eqz v0, :cond_0
+  

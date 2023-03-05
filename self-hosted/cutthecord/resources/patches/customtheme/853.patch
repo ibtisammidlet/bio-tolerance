@@ -1,0 +1,233 @@
+diff -crB -x dist -x build com.discord-853-base/res/values/colors.xml com.discord-853/res/values/colors.xml
+*** com.discord-853-base/res/values/colors.xml	2019-03-01 12:49:08.553197191 +0300
+--- com.discord-853/res/values/colors.xml	2019-03-01 12:56:46.921575786 +0300
+***************
+*** 61,68 ****
+      <color name="common_google_signin_btn_text_light_disabled">#1f000000</color>
+      <color name="common_google_signin_btn_text_light_focused">#90000000</color>
+      <color name="common_google_signin_btn_text_light_pressed">#de000000</color>
+!     <color name="dark_grey_2">#ff36393e</color>
+!     <color name="dark_grey_2_alpha_10">#ff303337</color>
+      <color name="design_bottom_navigation_shadow_color">#14000000</color>
+      <color name="design_default_color_primary">#ff3f51b5</color>
+      <color name="design_default_color_primary_dark">#ff303f9f</color>
+--- 61,68 ----
+      <color name="common_google_signin_btn_text_light_disabled">#1f000000</color>
+      <color name="common_google_signin_btn_text_light_focused">#90000000</color>
+      <color name="common_google_signin_btn_text_light_pressed">#de000000</color>
+!     <color name="dark_grey_2">#ff000000</color>
+!     <color name="dark_grey_2_alpha_10">#ff000000</color>
+      <color name="design_bottom_navigation_shadow_color">#14000000</color>
+      <color name="design_default_color_primary">#ff3f51b5</color>
+      <color name="design_default_color_primary_dark">#ff303f9f</color>
+***************
+*** 98,106 ****
+      <color name="grey_6_alpha_05">#0d4f545c</color>
+      <color name="grey_6_alpha_30">#4d4f545c</color>
+      <color name="grey_6_alpha_60">#994f545c</color>
+!     <color name="grey_account">#ff282b30</color>
+!     <color name="grey_channels">#ff2e3136</color>
+!     <color name="grey_guilds">#ff1e2124</color>
+      <color name="grey_unread">#ff8a8e94</color>
+      <color name="highlighted_text_material_dark">#6680cbc4</color>
+      <color name="highlighted_text_material_light">#66009688</color>
+--- 98,106 ----
+      <color name="grey_6_alpha_05">#0d4f545c</color>
+      <color name="grey_6_alpha_30">#4d4f545c</color>
+      <color name="grey_6_alpha_60">#994f545c</color>
+!     <color name="grey_account">#ff000000</color>
+!     <color name="grey_channels">#ff000000</color>
+!     <color name="grey_guilds">#ff000000</color>
+      <color name="grey_unread">#ff8a8e94</color>
+      <color name="highlighted_text_material_dark">#6680cbc4</color>
+      <color name="highlighted_text_material_light">#66009688</color>
+***************
+*** 109,123 ****
+      <color name="hypesquad_house3">#ff45ddc0</color>
+      <color name="icon_color_light">#ff93a5af</color>
+      <color name="league_of_legends">#ff021f25</color>
+!     <color name="link_100">#fff2fbfe</color>
+!     <color name="link_200">#ffcceffd</color>
+!     <color name="link_300">#ff99dffb</color>
+!     <color name="link_400">#ff33c0f6</color>
+!     <color name="link_500">#ff00b0f4</color>
+!     <color name="link_600">#ff0078a6</color>
+!     <color name="link_700">#ff004662</color>
+!     <color name="link_800">#ff003549</color>
+!     <color name="link_900">#ff00090c</color>
+      <color name="material_blue_grey_800">#ff37474f</color>
+      <color name="material_blue_grey_900">#ff263238</color>
+      <color name="material_blue_grey_950">#ff21272b</color>
+--- 109,123 ----
+      <color name="hypesquad_house3">#ff45ddc0</color>
+      <color name="icon_color_light">#ff93a5af</color>
+      <color name="league_of_legends">#ff021f25</color>
+!     <color name="link_100">#ff8cf687</color>
+!     <color name="link_200">#ff7df577</color>
+!     <color name="link_300">#ff6ef368</color>
+!     <color name="link_400">#ff5ff258</color>
+!     <color name="link_500">#ff50f148</color>
+!     <color name="link_600">#ff41f038</color>
+!     <color name="link_700">#ff32ef28</color>
+!     <color name="link_800">#ff23ed19</color>
+!     <color name="link_900">#ff1be411</color>
+      <color name="material_blue_grey_800">#ff37474f</color>
+      <color name="material_blue_grey_900">#ff263238</color>
+      <color name="material_blue_grey_950">#ff21272b</color>
+***************
+*** 159,176 ****
+      <color name="primary_400_alpha_30">#4d7d8187</color>
+      <color name="primary_400_alpha_60">#997d8187</color>
+      <color name="primary_400_alpha_90">#e67d8187</color>
+!     <color name="primary_500">#ff4f545c</color>
+!     <color name="primary_500_alpha_30">#4d4f545c</color>
+!     <color name="primary_500_alpha_60">#994f545c</color>
+!     <color name="primary_500_alpha_90">#e64f545c</color>
+!     <color name="primary_600">#ff36393f</color>
+!     <color name="primary_600_alpha_30">#4d36393f</color>
+!     <color name="primary_600_alpha_60">#9936393f</color>
+!     <color name="primary_600_alpha_90">#e636393f</color>
+!     <color name="primary_630">#ff2f3136</color>
+!     <color name="primary_630_alpha_30">#4d2f3136</color>
+!     <color name="primary_630_alpha_60">#992f3136</color>
+!     <color name="primary_630_alpha_90">#e62f3136</color>
+      <color name="primary_660">#ff2f3136</color>
+      <color name="primary_660_alpha_30">#4d292b2f</color>
+      <color name="primary_660_alpha_60">#99292b2f</color>
+--- 159,176 ----
+      <color name="primary_400_alpha_30">#4d7d8187</color>
+      <color name="primary_400_alpha_60">#997d8187</color>
+      <color name="primary_400_alpha_90">#e67d8187</color>
+!     <color name="primary_500">#ff0f0f0f</color>
+!     <color name="primary_500_alpha_30">#4d0f0f0f</color>
+!     <color name="primary_500_alpha_60">#990f0f0f</color>
+!     <color name="primary_500_alpha_90">#e60f0f0f</color>
+!     <color name="primary_600">#ff000000</color>
+!     <color name="primary_600_alpha_30">#4d000000</color>
+!     <color name="primary_600_alpha_60">#99000000</color>
+!     <color name="primary_600_alpha_90">#e6000000</color>
+!     <color name="primary_630">#ff000000</color>
+!     <color name="primary_630_alpha_30">#4d000000</color>
+!     <color name="primary_630_alpha_60">#99000000</color>
+!     <color name="primary_630_alpha_90">#e6000000</color>
+      <color name="primary_660">#ff2f3136</color>
+      <color name="primary_660_alpha_30">#4d292b2f</color>
+      <color name="primary_660_alpha_60">#99292b2f</color>
+***************
+*** 195,202 ****
+      <color name="primary_text_default_material_light">#de000000</color>
+      <color name="primary_text_disabled_material_dark">#4dffffff</color>
+      <color name="primary_text_disabled_material_light">#39000000</color>
+!     <color name="purple_brand">#ff738bd7</color>
+!     <color name="purple_brand_alpha_10">#1a738bd7</color>
+      <color name="purple_brand_dark">#ff697ec4</color>
+      <color name="purple_brand_hint">#ffc9d2f0</color>
+      <color name="purple_brand_notification">#ff5161ff</color>
+--- 195,202 ----
+      <color name="primary_text_default_material_light">#de000000</color>
+      <color name="primary_text_disabled_material_dark">#4dffffff</color>
+      <color name="primary_text_disabled_material_light">#39000000</color>
+!     <color name="purple_brand">#ff9c4249</color>
+!     <color name="purple_brand_alpha_10">#1a9c4249</color>
+      <color name="purple_brand_dark">#ff697ec4</color>
+      <color name="purple_brand_hint">#ffc9d2f0</color>
+      <color name="purple_brand_notification">#ff5161ff</color>
+diff -crB -x dist -x build com.discord-853-base/res/values/styles.xml com.discord-853/res/values/styles.xml
+*** com.discord-853-base/res/values/styles.xml	2019-03-01 12:49:08.556530537 +0300
+--- com.discord-853/res/values/styles.xml	2019-03-01 12:50:46.706897095 +0300
+***************
+*** 116,122 ****
+          <item name="colorPrimary">@color/primary_600</item>
+          <item name="colorPrimaryBg">@drawable/drawable_uikit_primary_600_bg_dark</item>
+          <item name="colorPrimaryCircle">@drawable/drawable_uikit_primary_600_circle</item>
+!         <item name="colorPrimaryDark">#ff2b2e31</item>
+          <item name="colorPrimaryDivider">@color/primary_500_alpha_60</item>
+          <item name="colorPrimaryTabs">@color/black_alpha_05</item>
+          <item name="dialogTheme">@style/AppTheme.Dark.Notice</item>
+--- 116,122 ----
+          <item name="colorPrimary">@color/primary_600</item>
+          <item name="colorPrimaryBg">@drawable/drawable_uikit_primary_600_bg_dark</item>
+          <item name="colorPrimaryCircle">@drawable/drawable_uikit_primary_600_circle</item>
+!         <item name="colorPrimaryDark">@color/primary_630</item>
+          <item name="colorPrimaryDivider">@color/primary_500_alpha_60</item>
+          <item name="colorPrimaryTabs">@color/black_alpha_05</item>
+          <item name="dialogTheme">@style/AppTheme.Dark.Notice</item>
+***************
+*** 330,336 ****
+          <item name="tabSelectedTextColor">@color/white</item>
+          <item name="tabTextColor">@color/white_alpha_40</item>
+          <item name="theme_backspace_icon">@drawable/ic_backspace_white_24dp</item>
+!         <item name="theme_chat_blocked_bg">#ff34373c</item>
+          <item name="theme_chat_blocked_text">@color/grey_unread</item>
+          <item name="theme_chat_code">@color/grey_channels</item>
+          <item name="theme_chat_codeblock_border">@color/grey_account</item>
+--- 330,336 ----
+          <item name="tabSelectedTextColor">@color/white</item>
+          <item name="tabTextColor">@color/white_alpha_40</item>
+          <item name="theme_backspace_icon">@drawable/ic_backspace_white_24dp</item>
+!         <item name="theme_chat_blocked_bg">@color/primary_500</item>
+          <item name="theme_chat_blocked_text">@color/grey_unread</item>
+          <item name="theme_chat_code">@color/grey_channels</item>
+          <item name="theme_chat_codeblock_border">@color/grey_account</item>
+***************
+*** 344,355 ****
+          <item name="theme_chat_input_button_tint_colors">@color/chat_input_button_tint_colors_dark</item>
+          <item name="theme_chat_input_content_tab_bg">@drawable/drawable_rect_rounded_dark</item>
+          <item name="theme_chat_input_divider">@color/dark_grey_2_alpha_10</item>
+!         <item name="theme_chat_input_edit">#ff3e4145</item>
+          <item name="theme_chat_input_photo_selection_icon">@drawable/ic_img_selected_dark_theme</item>
+          <item name="theme_chat_input_text">@color/white_alpha_70</item>
+          <item name="theme_chat_input_text_placeholder">@color/white_alpha_20</item>
+          <item name="theme_chat_loading_spinner_color">@color/white</item>
+!         <item name="theme_chat_mentioned_me">#1afaa61a</item>
+          <item name="theme_chat_name">@color/white</item>
+          <item name="theme_chat_reaction_background">@drawable/drawable_bg_reaction_dark</item>
+          <item name="theme_chat_reaction_text_color">@drawable/drawable_reaction_text_color_dark</item>
+--- 344,355 ----
+          <item name="theme_chat_input_button_tint_colors">@color/chat_input_button_tint_colors_dark</item>
+          <item name="theme_chat_input_content_tab_bg">@drawable/drawable_rect_rounded_dark</item>
+          <item name="theme_chat_input_divider">@color/dark_grey_2_alpha_10</item>
+!         <item name="theme_chat_input_edit">@color/primary_600</item>
+          <item name="theme_chat_input_photo_selection_icon">@drawable/ic_img_selected_dark_theme</item>
+          <item name="theme_chat_input_text">@color/white_alpha_70</item>
+          <item name="theme_chat_input_text_placeholder">@color/white_alpha_20</item>
+          <item name="theme_chat_loading_spinner_color">@color/white</item>
+!         <item name="theme_chat_mentioned_me">@color/purple_brand_alpha_10</item>
+          <item name="theme_chat_name">@color/white</item>
+          <item name="theme_chat_reaction_background">@drawable/drawable_bg_reaction_dark</item>
+          <item name="theme_chat_reaction_text_color">@drawable/drawable_reaction_text_color_dark</item>
+***************
+*** 415,421 ****
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">#ff2b2e31</item>
+      </style>
+      <style name="AppTheme.Dark.Evil" parent="@style/AppTheme.Dark">
+          <item name="colorAccent">@color/brand_600</item>
+--- 415,421 ----
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">@color/primary_630</item>
+      </style>
+      <style name="AppTheme.Dark.Evil" parent="@style/AppTheme.Dark">
+          <item name="colorAccent">@color/brand_600</item>
+***************
+*** 447,453 ****
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">#ff2b2e31</item>
+      </style>
+      <style name="AppTheme.Dark.Notice.PositiveRed" parent="@style/AppTheme.Dark.Notice">
+          <item name="buttonBarPositiveButtonStyle">@style/UiKit.Button.Red.Fit</item>
+--- 447,453 ----
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">@color/primary_630</item>
+      </style>
+      <style name="AppTheme.Dark.Notice.PositiveRed" parent="@style/AppTheme.Dark.Notice">
+          <item name="buttonBarPositiveButtonStyle">@style/UiKit.Button.Red.Fit</item>
+

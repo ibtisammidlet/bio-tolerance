@@ -1,0 +1,18 @@
+diff -crB -x dist -x build com.discord-836-base/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali com.discord-836/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali
+*** com.discord-836-base/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali   2019-01-31 10:35:43.748266335 +0300
+--- com.discord-836/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali    2019-01-31 17:55:38.125415675 +0300
+***************
+*** 125,136 ****
+  
+      move-result-object p1
+  
+-     iget-object v0, p0, Lcom/discord/widgets/chat/input/WidgetChatInputEditText$1;->this$0:Lcom/discord/widgets/chat/input/WidgetChatInputEditText;
+- 
+-     iget-wide v0, v0, Lcom/discord/widgets/chat/input/WidgetChatInputEditText;->channelId:J
+- 
+-     invoke-virtual {p1, v0, v1}, Lcom/discord/stores/StoreUserTyping;->setUserTyping(J)V
+- 
+      :cond_1
+      return-void
+  .end method
+--- 125,130 ----

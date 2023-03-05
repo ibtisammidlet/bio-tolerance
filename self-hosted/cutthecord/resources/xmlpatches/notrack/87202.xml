@@ -1,0 +1,5 @@
+<diffs>
+    <diff file="res/values/strings.xml">
+        <replace sel="resources/string[@name='com.crashlytics.android.build_id']/text()">00000000-0000-0000-0000-000000000000</replace>
+    </diff>
+</diffs>

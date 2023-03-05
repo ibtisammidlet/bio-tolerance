@@ -1,0 +1,20 @@
+diff -crB from/smali_classes2/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali to/smali_classes2/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali
+*** from/smali_classes2/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali    2021-08-04 19:46:19.422375900 +0100
+--- to/smali_classes2/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali      2021-08-04 22:41:58.849465700 +0100
+***************
+*** 350,356 ****
+
+      invoke-static {v0, v1}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+!     invoke-virtual {v0, v6}, Landroid/widget/ImageButton;->setVisibility(I)V
+
+      :goto_0
+      return-void
+--- 350,356 ----
+
+      invoke-static {v0, v1}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+!     # invoke-virtual {v0, v6}, Landroid/widget/ImageButton;->setVisibility(I)V
+
+      :goto_0
+      return-void

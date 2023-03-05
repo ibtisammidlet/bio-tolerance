@@ -1,0 +1,63 @@
+## DisTok CutTheCord: "Pure Evil" Theme Patch
+
+This patch enables the secret AMOLED theme (which is shit).
+
+#### Conflicts with
+- experiments
+
+#### Bugs / Side effects
+- Discord banned people for using experiments before, which is why this patch exists. It doesn't enable everything developer related, just AMOLED theme. Still, don't show stuff this publicly.
+
+#### Available and tested on:
+- 8.3.2
+- 8.3.3
+- 8.3.4g
+- 8.3.5g
+- 8.3.6g
+- 8.3.9g
+- 8.4.1g
+- 8.4.2g
+- 8.4.3g
+- 8.4.4g
+- 8.4.5g
+- 8.4.8
+- 8.5.0
+- 8.5.1
+- 8.5.3
+- 8.5.4
+- 8.5.5
+- 8.5.6
+- 8.7.6
+- 8.8.4
+- 8.8.8
+- 8.9.6
+- 8.9.7
+- 8.9.8
+- 8.9.9
+- 9.0.0
+- 9.0.1
+- 9.0.2
+- 9.0.3
+- 9.0.4
+- 9.0.6
+- 9.0.9
+- 9.1.0
+- 9.3.8-SAO-Heathcliff
+- 9.3.9
+- 9.4.0
+- 9.4.2-SA
+- 9.4.3-SA
+- 9.4.5
+- 9.4.6
+- 9.4.7
+- 9.4.8
+- 9.6.3
+- 9.6.4
+- 9.6.5
+- 9.6.6
+- 9.6.7
+- 9.6.8
+- 9.7.0
+- 9.8.0
+- 9.8.4
+

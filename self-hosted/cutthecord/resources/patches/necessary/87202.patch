@@ -1,0 +1,14 @@
+diff -crB fromAndroidManifest.xml to/AndroidManifest.xml
+*** fromAndroidManifest.xml	2021-05-31 14:05:32.000000000 +0300
+--- to/AndroidManifest.xml	2021-05-31 15:40:24.000000000 +0300
+***************
+*** 1,4 ****
+! <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" android:installLocation="auto" package="com.discord" platformBuildVersionCode="30" platformBuildVersionName="11">
+      <uses-feature android:name="android.hardware.camera" android:required="false"/>
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+      <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+--- 1,4 ----
+! <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" android:installLocation="auto" package="com.discord" platformBuildVersionCode="87202" platformBuildVersionName="87.2 - Alpha">
+      <uses-feature android:name="android.hardware.camera" android:required="false"/>
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+      <uses-feature android:name="android.hardware.faketouch" android:required="false"/>

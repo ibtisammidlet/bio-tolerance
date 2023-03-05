@@ -1,0 +1,13 @@
+diff -crB com.discord-base/smali/com/discord/stores/BuiltInCommands.smali com.discord/smali/com/discord/stores/BuiltInCommands.smali
+*** com.discord-base/smali/com/discord/stores/BuiltInCommands.smali       2021-08-15 15:01:18.951758400 +0100
+--- com.discord/smali/com/discord/stores/BuiltInCommands.smali 2021-08-15 15:02:36.852775500 +0100
+***************
+*** 305,310 ****
+--- 305,312 ----
+
+      iput-object v12, p0, Lcom/discord/stores/BuiltInCommands;->builtInApplication:Lcom/discord/models/commands/Application;
+
++     invoke-static {p0}, Lcom/cutthecord/commands/CTCCommands;->CreateCTCCommands(Lcom/discord/stores/BuiltInCommands;)V
++
+      return-void
+  .end method

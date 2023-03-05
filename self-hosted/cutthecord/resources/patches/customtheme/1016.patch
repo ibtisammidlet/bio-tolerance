@@ -1,0 +1,275 @@
+diff -crB from/res/drawable/drawable_overlay_channels_active.xml to/res/drawable/drawable_overlay_channels_active.xml
+*** from/res/drawable/drawable_overlay_channels_active.xml	2020-01-03 17:10:07.762251542 +0200
+--- to/res/drawable/drawable_overlay_channels_active.xml	2020-01-03 17:10:40.629938093 +0200
+***************
+*** 3,9 ****
+    xmlns:android="http://schemas.android.com/apk/res/android">
+      <item android:left="8.0dip" android:right="8.0dip">
+          <shape android:shape="rectangle">
+!             <solid android:color="@color/primary_500_alpha_60" />
+              <corners android:radius="4.0dip" />
+          </shape>
+      </item>
+--- 3,9 ----
+    xmlns:android="http://schemas.android.com/apk/res/android">
+      <item android:left="8.0dip" android:right="8.0dip">
+          <shape android:shape="rectangle">
+!             <solid android:color="@color/primary_700_alpha_60" />
+              <corners android:radius="4.0dip" />
+          </shape>
+      </item>
+diff -crB from/res/values/colors.xml to/res/values/colors.xml
+*** from/res/values/colors.xml	2020-01-03 17:10:08.958833152 +0200
+--- to/res/values/colors.xml	2020-01-03 17:10:40.633272083 +0200
+***************
+*** 52,58 ****
+      <color name="cardview_shadow_start_color">#37000000</color>
+      <color name="code">#ff657b83</color>
+      <color name="colorPrimary">#ff333333</color>
+!     <color name="colorPrimaryDark">#ff1d1d1d</color>
+      <color name="color_clicked_darker">#40000000</color>
+      <color name="color_clicked_lighter">#40ffffff</color>
+      <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
+--- 52,58 ----
+      <color name="cardview_shadow_start_color">#37000000</color>
+      <color name="code">#ff657b83</color>
+      <color name="colorPrimary">#ff333333</color>
+!     <color name="colorPrimaryDark">#ff000000</color>
+      <color name="color_clicked_darker">#40000000</color>
+      <color name="color_clicked_lighter">#40ffffff</color>
+      <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
+***************
+*** 63,70 ****
+      <color name="common_google_signin_btn_text_light_disabled">#1f000000</color>
+      <color name="common_google_signin_btn_text_light_focused">#90000000</color>
+      <color name="common_google_signin_btn_text_light_pressed">#de000000</color>
+!     <color name="dark_grey_2">#ff36393e</color>
+!     <color name="dark_grey_2_alpha_10">#ff303337</color>
+      <color name="design_bottom_navigation_shadow_color">#14000000</color>
+      <color name="design_default_color_primary">#ff3f51b5</color>
+      <color name="design_default_color_primary_dark">#ff303f9f</color>
+--- 63,70 ----
+      <color name="common_google_signin_btn_text_light_disabled">#1f000000</color>
+      <color name="common_google_signin_btn_text_light_focused">#90000000</color>
+      <color name="common_google_signin_btn_text_light_pressed">#de000000</color>
+!     <color name="dark_grey_2">#ff000000</color>
+!     <color name="dark_grey_2_alpha_10">#ff000000</color>
+      <color name="design_bottom_navigation_shadow_color">#14000000</color>
+      <color name="design_default_color_primary">#ff3f51b5</color>
+      <color name="design_default_color_primary_dark">#ff303f9f</color>
+***************
+*** 98,106 ****
+      <color name="grey_6">#ff4f545c</color>
+      <color name="grey_6_alpha_05">#0d4f545c</color>
+      <color name="grey_6_alpha_30">#4d4f545c</color>
+!     <color name="grey_account">#ff282b30</color>
+!     <color name="grey_channels">#ff2e3136</color>
+!     <color name="grey_guilds">#ff1e2124</color>
+      <color name="grey_unread">#ff8a8e94</color>
+      <color name="highlighted_text_material_dark">#6680cbc4</color>
+      <color name="highlighted_text_material_light">#66009688</color>
+--- 98,106 ----
+      <color name="grey_6">#ff4f545c</color>
+      <color name="grey_6_alpha_05">#0d4f545c</color>
+      <color name="grey_6_alpha_30">#4d4f545c</color>
+!     <color name="grey_account">#ff000000</color>
+!     <color name="grey_channels">#ff000000</color>
+!     <color name="grey_guilds">#ff000000</color>
+      <color name="grey_unread">#ff8a8e94</color>
+      <color name="highlighted_text_material_dark">#6680cbc4</color>
+      <color name="highlighted_text_material_light">#66009688</color>
+***************
+*** 108,114 ****
+      <color name="hypesquad_house2">#fff47b67</color>
+      <color name="hypesquad_house3">#ff45ddc0</color>
+      <color name="league_of_legends">#ff021f25</color>
+!     <color name="link">#ff00b0f4</color>
+      <color name="link_light">#ff0067e0</color>
+      <color name="material_blue_grey_800">#ff37474f</color>
+      <color name="material_blue_grey_900">#ff263238</color>
+--- 108,114 ----
+      <color name="hypesquad_house2">#fff47b67</color>
+      <color name="hypesquad_house3">#ff45ddc0</color>
+      <color name="league_of_legends">#ff021f25</color>
+!     <color name="link">#ff50f148</color>
+      <color name="link_light">#ff0067e0</color>
+      <color name="material_blue_grey_800">#ff37474f</color>
+      <color name="material_blue_grey_900">#ff263238</color>
+***************
+*** 154,171 ****
+      <color name="primary_400">#ff72767d</color>
+      <color name="primary_400_alpha_30">#4d72767d</color>
+      <color name="primary_400_alpha_60">#9972767d</color>
+!     <color name="primary_500">#ff4f545c</color>
+!     <color name="primary_500_alpha_30">#4d4f545c</color>
+!     <color name="primary_500_alpha_60">#994f545c</color>
+      <color name="primary_560">#ff40444b</color>
+!     <color name="primary_600">#ff36393f</color>
+!     <color name="primary_600_alpha_60">#9936393f</color>
+!     <color name="primary_630">#ff2f3136</color>
+!     <color name="primary_630_alpha_60">#992f3136</color>
+!     <color name="primary_630_alpha_90">#e62f3136</color>
+      <color name="primary_660">#ff292b2f</color>
+!     <color name="primary_700">#ff202225</color>
+!     <color name="primary_700_alpha_60">#99202225</color>
+      <color name="primary_800">#ff18191c</color>
+      <color name="primary_800_alpha_60">#9918191c</color>
+      <color name="primary_800_alpha_90">#e618191c</color>
+--- 154,171 ----
+      <color name="primary_400">#ff72767d</color>
+      <color name="primary_400_alpha_30">#4d72767d</color>
+      <color name="primary_400_alpha_60">#9972767d</color>
+!     <color name="primary_500">#ff0f0f0f</color>
+!     <color name="primary_500_alpha_30">#4d0f0f0f</color>
+!     <color name="primary_500_alpha_60">#99404040</color>
+      <color name="primary_560">#ff40444b</color>
+!     <color name="primary_600">#ff000000</color>
+!     <color name="primary_600_alpha_60">#99000000</color>
+!     <color name="primary_630">#ff000000</color>
+!     <color name="primary_630_alpha_60">#99000000</color>
+!     <color name="primary_630_alpha_90">#e6000000</color>
+      <color name="primary_660">#ff292b2f</color>
+!     <color name="primary_700">#ff0f0f0f</color>
+!     <color name="primary_700_alpha_60">#990f0f0f</color>
+      <color name="primary_800">#ff18191c</color>
+      <color name="primary_800_alpha_60">#9918191c</color>
+      <color name="primary_800_alpha_90">#e618191c</color>
+***************
+*** 196,204 ****
+      <color name="primary_text_default_material_light">#de000000</color>
+      <color name="primary_text_disabled_material_dark">#4dffffff</color>
+      <color name="primary_text_disabled_material_light">#39000000</color>
+!     <color name="purple_brand">#ff738bd7</color>
+!     <color name="purple_brand_alpha_10">#1a738bd7</color>
+!     <color name="purple_brand_dark">#ff697ec4</color>
+      <color name="purple_brand_hint">#ffc9d2f0</color>
+      <color name="purple_brand_notification">#ff5161ff</color>
+      <color name="reaction_background_me_dark">#4d5c6a9e</color>
+--- 196,204 ----
+      <color name="primary_text_default_material_light">#de000000</color>
+      <color name="primary_text_disabled_material_dark">#4dffffff</color>
+      <color name="primary_text_disabled_material_light">#39000000</color>
+!     <color name="purple_brand">#ff9c4249</color>
+!     <color name="purple_brand_alpha_10">#1a9c4249</color>
+!     <color name="purple_brand_dark">#ff000000</color>
+      <color name="purple_brand_hint">#ffc9d2f0</color>
+      <color name="purple_brand_notification">#ff5161ff</color>
+      <color name="reaction_background_me_dark">#4d5c6a9e</color>
+***************
+*** 262,268 ****
+      <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
+      <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
+      <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+!     <color name="tooltip_background_dark">#e6616161</color>
+      <color name="tooltip_background_light">#e6ffffff</color>
+      <color name="transparent">@android:color/transparent</color>
+      <color name="twitch">#ff593695</color>
+--- 262,268 ----
+      <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
+      <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
+      <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+!     <color name="tooltip_background_dark">#e6000000</color>
+      <color name="tooltip_background_light">#e6ffffff</color>
+      <color name="transparent">@android:color/transparent</color>
+      <color name="twitch">#ff593695</color>
+diff -crB from/res/values/styles.xml to/res/values/styles.xml
+*** from/res/values/styles.xml	2020-01-03 17:10:08.935504504 +0200
+--- to/res/values/styles.xml	2020-01-03 17:10:40.633272083 +0200
+***************
+*** 384,390 ****
+          <item name="tabTextColor">@color/white_alpha_40</item>
+          <item name="theme_backspace_icon">@drawable/ic_backspace_white_24dp</item>
+          <item name="theme_chat_block_quote_divider">@color/primary_500</item>
+!         <item name="theme_chat_blocked_bg">#ff34373c</item>
+          <item name="theme_chat_blocked_text">@color/grey_unread</item>
+          <item name="theme_chat_code">@color/grey_channels</item>
+          <item name="theme_chat_codeblock_border">@color/grey_account</item>
+--- 384,390 ----
+          <item name="tabTextColor">@color/white_alpha_40</item>
+          <item name="theme_backspace_icon">@drawable/ic_backspace_white_24dp</item>
+          <item name="theme_chat_block_quote_divider">@color/primary_500</item>
+!         <item name="theme_chat_blocked_bg">@color/primary_500</item>
+          <item name="theme_chat_blocked_text">@color/grey_unread</item>
+          <item name="theme_chat_code">@color/grey_channels</item>
+          <item name="theme_chat_codeblock_border">@color/grey_account</item>
+***************
+*** 396,407 ****
+          <item name="theme_chat_input_button_tint_colors">@color/chat_input_button_tint_colors_dark</item>
+          <item name="theme_chat_input_content_tab_bg">@drawable/drawable_rect_rounded_dark</item>
+          <item name="theme_chat_input_divider">@color/dark_grey_2_alpha_10</item>
+!         <item name="theme_chat_input_edit">#ff3e4145</item>
+          <item name="theme_chat_input_photo_selection_icon">@drawable/ic_img_selected_dark_theme</item>
+          <item name="theme_chat_input_text">@color/white_alpha_70</item>
+          <item name="theme_chat_input_text_placeholder">@color/white_alpha_20</item>
+          <item name="theme_chat_loading_spinner_color">@color/white</item>
+!         <item name="theme_chat_mentioned_me">#1afaa61a</item>
+          <item name="theme_chat_reaction_background">@drawable/drawable_bg_reaction_dark</item>
+          <item name="theme_chat_reaction_text_color">@drawable/drawable_reaction_text_color_dark</item>
+          <item name="theme_chat_spoiler_bg">@color/primary_700</item>
+--- 396,407 ----
+          <item name="theme_chat_input_button_tint_colors">@color/chat_input_button_tint_colors_dark</item>
+          <item name="theme_chat_input_content_tab_bg">@drawable/drawable_rect_rounded_dark</item>
+          <item name="theme_chat_input_divider">@color/dark_grey_2_alpha_10</item>
+!         <item name="theme_chat_input_edit">@color/primary_600</item>
+          <item name="theme_chat_input_photo_selection_icon">@drawable/ic_img_selected_dark_theme</item>
+          <item name="theme_chat_input_text">@color/white_alpha_70</item>
+          <item name="theme_chat_input_text_placeholder">@color/white_alpha_20</item>
+          <item name="theme_chat_loading_spinner_color">@color/white</item>
+!         <item name="theme_chat_mentioned_me">@color/purple_brand_alpha_10</item>
+          <item name="theme_chat_reaction_background">@drawable/drawable_bg_reaction_dark</item>
+          <item name="theme_chat_reaction_text_color">@drawable/drawable_reaction_text_color_dark</item>
+          <item name="theme_chat_spoiler_bg">@color/primary_700</item>
+***************
+*** 464,470 ****
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">#ff2b2e31</item>
+      </style>
+      <style name="AppTheme.Dark.Evil" parent="@style/AppTheme.Dark">
+          <item name="colorAccent">@color/brand_600</item>
+--- 464,470 ----
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">@color/primary_630</item>
+      </style>
+      <style name="AppTheme.Dark.Evil" parent="@style/AppTheme.Dark">
+          <item name="colorAccent">@color/brand_600</item>
+***************
+*** 494,500 ****
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">#ff2b2e31</item>
+      </style>
+      <style name="AppTheme.Dark.Notice.PositiveRed" parent="@style/AppTheme.Dark.Notice">
+          <item name="buttonBarPositiveButtonStyle">@style/UiKit.Button.Red.Fit</item>
+--- 494,500 ----
+          <item name="colorControlActivated">@color/brand_500</item>
+          <item name="colorControlNormal">@color/primary_100</item>
+          <item name="colorPrimary">@color/primary_600</item>
+!         <item name="colorPrimaryDark">@color/primary_630</item>
+      </style>
+      <style name="AppTheme.Dark.Notice.PositiveRed" parent="@style/AppTheme.Dark.Notice">
+          <item name="buttonBarPositiveButtonStyle">@style/UiKit.Button.Red.Fit</item>
+diff -crB from/smali/com/discord/app/AppActivity$d.smali to/smali/com/discord/app/AppActivity$d.smali
+*** from/smali/com/discord/app/AppActivity$d.smali	2020-01-03 17:10:10.578549379 +0200
+--- to/smali/com/discord/app/AppActivity$d.smali	2020-01-03 17:11:35.260497105 +0200
+***************
+*** 115,121 ****
+      .line 7
+      iget-object v0, p0, Lcom/discord/app/AppActivity$d;->this$0:Lcom/discord/app/AppActivity;
+  
+!     const v1, 0x7f06013c
+  
+      invoke-static {v0, v1}, Lcom/discord/utilities/color/ColorCompat;->setStatusBarColorResourceId(Landroid/app/Activity;I)V
+  
+--- 115,121 ----
+      .line 7
+      iget-object v0, p0, Lcom/discord/app/AppActivity$d;->this$0:Lcom/discord/app/AppActivity;
+  
+!     const v1, 0x7f060021
+  
+      invoke-static {v0, v1}, Lcom/discord/utilities/color/ColorCompat;->setStatusBarColorResourceId(Landroid/app/Activity;I)V
+  

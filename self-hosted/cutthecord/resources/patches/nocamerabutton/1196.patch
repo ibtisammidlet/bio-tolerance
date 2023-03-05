@@ -1,0 +1,20 @@
+diff -crB from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-07-09 23:31:36.230000000 +0300
+--- to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-07-09 23:31:57.640000000 +0300
+***************
+*** 371,377 ****
+  
+      if-eqz v5, :cond_5
+  
+!     const/4 v10, 0x0
+  
+      goto :goto_2
+  
+--- 371,377 ----
+  
+      if-eqz v5, :cond_5
+  
+!     const/16 v10, 0x8
+  
+      goto :goto_2
+  

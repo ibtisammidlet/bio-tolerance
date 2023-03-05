@@ -1,0 +1,22 @@
+diff -crB from/AndroidManifest.xml to/AndroidManifest.xml
+*** from/AndroidManifest.xml	2020-12-08 18:13:28.198490900 +0000
+--- to/AndroidManifest.xml	2020-12-08 18:10:38.788471600 +0000
+***************
+*** 30,37 ****
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+      <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark" android:usesCleartextTraffic="@bool/use_cleartext_traffic">
+          <activity android:name="com.discord.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
+!         <activity android:name="com.discord.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
+!         <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN"/>
+                  <category android:name="android.intent.category.LAUNCHER"/>
+--- 30,37 ----
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+      <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark" android:usesCleartextTraffic="@bool/use_cleartext_traffic">
+          <activity android:name="com.discord.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
+!         <activity android:name="com.discord.app.AppActivity" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
+!         <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN"/>
+                  <category android:name="android.intent.category.LAUNCHER"/>

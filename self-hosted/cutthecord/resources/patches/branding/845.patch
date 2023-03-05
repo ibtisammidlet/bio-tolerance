@@ -1,0 +1,127 @@
+diff -crB -x dist -x build com.discord-845-base/AndroidManifest.xml com.discord-845/AndroidManifest.xml
+*** com.discord-845-base/AndroidManifest.xml	2019-02-15 01:55:27.908549787 +0300
+--- com.discord-845/AndroidManifest.xml	2019-02-15 02:01:22.783462112 +0300
+***************
+*** 1,4 ****
+! <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" package="com.discord" platformBuildVersionCode="845" platformBuildVersionName="8.4.5g">
+      <uses-feature android:name="android.hardware.camera" android:required="false"/>
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+      <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+--- 1,4 ----
+! <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" android:installLocation="auto" package="com.cutthecord.CTCBRANCH" platformBuildVersionCode="845CTCBUILD" platformBuildVersionName="8.4.5g-cutthecord-CTCBUILD">
+      <uses-feature android:name="android.hardware.camera" android:required="false"/>
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+      <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+***************
+*** 95,101 ****
+          </receiver>
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+          <service android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
+!         <provider android:authorities="com.discord.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+          </provider>
+          <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+--- 95,101 ----
+          </receiver>
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+          <service android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
+!         <provider android:authorities="top.distok.cutthecord.CTCBRANCH.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+          </provider>
+          <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+***************
+*** 140,148 ****
+              </intent-filter>
+          </service>
+          <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+!         <provider android:authorities="com.discord.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+          <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+!         <provider android:authorities="com.discord.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+          <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+--- 140,148 ----
+              </intent-filter>
+          </service>
+          <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+!         <provider android:authorities="top.distok.cutthecord.CTCBRANCH.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+          <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+!         <provider android:authorities="top.distok.cutthecord.CTCBRANCH.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+          <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+***************
+*** 181,188 ****
+                  <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+              </intent-filter>
+          </receiver>
+!         <provider android:authorities="com.discord.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+!         <provider android:authorities="com.discord.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+          <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+      </application>
+  </manifest>
+\ No newline at end of file
+--- 181,188 ----
+                  <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+              </intent-filter>
+          </receiver>
+!         <provider android:authorities="top.distok.cutthecord.CTCBRANCH.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+!         <provider android:authorities="top.distok.cutthecord.CTCBRANCH.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+          <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+      </application>
+  </manifest>
+\ No newline at end of file
+diff -crB -x dist -x build com.discord-845-base/apktool.yml com.discord-845/apktool.yml
+*** com.discord-845-base/apktool.yml	2019-02-15 01:55:27.908549787 +0300
+--- com.discord-845/apktool.yml	2019-02-15 02:01:22.783462112 +0300
+***************
+*** 345,349 ****
+    tag: null
+  version: 2.4.0-896569-SNAPSHOT
+  versionInfo:
+!   versionCode: '845'
+!   versionName: 8.4.5g
+--- 345,349 ----
+    tag: null
+  version: 2.4.0-896569-SNAPSHOT
+  versionInfo:
+!   versionCode: '845CTCBUILD'
+!   versionName: 8.4.5g-cutthecord-CTCBUILD
+diff -crB -x dist -x build com.discord-845-base/res/values/strings.xml com.discord-845/res/values/strings.xml
+*** com.discord-845-base/res/values/strings.xml	2019-02-15 01:55:28.051883758 +0300
+--- com.discord-845/res/values/strings.xml	2019-02-15 02:01:22.786795460 +0300
+***************
+*** 1158,1164 ****
+      <string name="disconnect_account_body">Disconnecting your account might remove you from servers you joined via this account.</string>
+      <string name="disconnect_account_title">Disconnect %1$s</string>
+      <string name="disconnect_from_voice">Disconnect from Voice</string>
+!     <string name="discord">Discord</string>
+      <string name="discord_desc_long">Free and secure chat for gamers, works on both your desktop and your phone.</string>
+      <string name="discord_desc_short">Team voice &amp; text chat</string>
+      <string name="discord_gg">discord.gg/</string>
+--- 1158,1164 ----
+      <string name="disconnect_account_body">Disconnecting your account might remove you from servers you joined via this account.</string>
+      <string name="disconnect_account_title">Disconnect %1$s</string>
+      <string name="disconnect_from_voice">Disconnect from Voice</string>
+!     <string name="discord">CTCNAME</string>
+      <string name="discord_desc_long">Free and secure chat for gamers, works on both your desktop and your phone.</string>
+      <string name="discord_desc_short">Team voice &amp; text chat</string>
+      <string name="discord_gg">discord.gg/</string>
+***************
+*** 2727,2733 ****
+      <string name="notification_reply_failed">Failed to reply to %1$s</string>
+      <string name="notification_reply_success">Replied to %1$s</string>
+      <string name="notification_settings">Notification Settings</string>
+!     <string name="notification_title_discord">Discord</string>
+      <string name="notification_title_start_game">"Somebody Playin'"</string>
+      <string name="notifications">Notifications</string>
+      <string name="nsfw_accept">Continue</string>
+--- 2727,2733 ----
+      <string name="notification_reply_failed">Failed to reply to %1$s</string>
+      <string name="notification_reply_success">Replied to %1$s</string>
+      <string name="notification_settings">Notification Settings</string>
+!     <string name="notification_title_discord">CTCNAME</string>
+      <string name="notification_title_start_game">"Somebody Playin'"</string>
+      <string name="notifications">Notifications</string>
+      <string name="nsfw_accept">Continue</string>
+

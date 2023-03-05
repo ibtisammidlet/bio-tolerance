@@ -1,0 +1,54 @@
+diff -crB com.discord-964-base/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali com.discord-964/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali
+*** com.discord-964-base/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali	2019-10-01 23:18:34.424827650 +0300
+--- com.discord-964/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali	2019-10-01 23:18:09.171329729 +0300
+***************
+*** 426,440 ****
+  
+      move-result-object v2
+  
+!     invoke-virtual {p1}, Lcom/discord/widgets/user/profile/WidgetUserProfileStrip$Model;->getUser()Lcom/discord/models/domain/ModelUser;
+! 
+!     move-result-object v4
+! 
+!     invoke-virtual {v4}, Lcom/discord/models/domain/ModelUser;->getUsername()Ljava/lang/String;
+! 
+!     move-result-object v4
+! 
+!     check-cast v4, Ljava/lang/CharSequence;
+  
+      invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+--- 426,432 ----
+  
+      move-result-object v2
+  
+!     const-string v4, ""
+  
+      invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+***************
+*** 443,457 ****
+  
+      move-result-object v2
+  
+!     invoke-virtual {p1}, Lcom/discord/widgets/user/profile/WidgetUserProfileStrip$Model;->getUser()Lcom/discord/models/domain/ModelUser;
+! 
+!     move-result-object p1
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->getDiscriminatorWithPadding()Ljava/lang/String;
+! 
+!     move-result-object p1
+! 
+!     check-cast p1, Ljava/lang/CharSequence;
+  
+      invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+--- 435,441 ----
+  
+      move-result-object v2
+  
+!     const-string p1, ""
+  
+      invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+

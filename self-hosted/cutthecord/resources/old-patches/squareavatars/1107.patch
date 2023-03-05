@@ -1,0 +1,21 @@
+diff -crB from/res/values/styles.xml to/res/values/styles.xml
+*** from/res/values/styles.xml	2020-04-21 18:08:03.310681312 +0100
+--- to/res/values/styles.xml	2020-04-21 18:08:31.490447513 +0100
+***************
+*** 1017,1023 ****
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">true</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>
+--- 1017,1024 ----
+          <item name="actualImageScaleType">fitCenter</item>
+          <item name="placeholderImage">@drawable/asset_default_avatar_32dp</item>
+          <item name="placeholderImageScaleType">fitCenter</item>
+!         <item name="roundAsCircle">false</item>
+!         <item name="roundedCornerRadius">3dp</item>
+      </style>
+      <style name="Avatar.Chat" parent="@style/Avatar.Large">
+          <item name="android:layout_width">@dimen/avatar_size_chat</item>

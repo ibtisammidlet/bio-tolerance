@@ -1,0 +1,54 @@
+diff -crB from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-10-15 15:05:27.990101186 +0100
+--- to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-10-15 15:05:35.536848989 +0100
+***************
+*** 368,374 ****
+  
+      if-nez v5, :cond_4
+  
+!     const/4 v10, 0x0
+  
+      goto :goto_1
+  
+--- 368,374 ----
+  
+      if-nez v5, :cond_4
+  
+!     const/16 v10, 0x8
+  
+      goto :goto_1
+  
+***************
+*** 385,391 ****
+  
+      if-eqz v5, :cond_5
+  
+!     const/4 v10, 0x0
+  
+      goto :goto_2
+  
+--- 385,391 ----
+  
+      if-eqz v5, :cond_5
+  
+!     const/16 v10, 0x8
+  
+      goto :goto_2
+  
+***************
+*** 407,413 ****
+      goto :goto_3
+  
+      :cond_6
+!     const/16 v5, 0x8
+  
+      :goto_3
+      invoke-virtual {v6, v5}, Landroid/view/View;->setVisibility(I)V
+--- 407,413 ----
+      goto :goto_3
+  
+      :cond_6
+!     const/16 v5, 0x0
+  
+      :goto_3
+      invoke-virtual {v6, v5}, Landroid/view/View;->setVisibility(I)V

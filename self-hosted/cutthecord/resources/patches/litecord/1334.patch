@@ -1,0 +1,328 @@
+diff -crB from/smali/com/discord/app/App.smali to/smali/com/discord/app/App.smali
+*** from/smali/com/discord/app/App.smali	2020-11-16 13:22:49.319198422 +0000
+--- to/smali/com/discord/app/App.smali	2020-11-16 13:34:54.517646744 +0000
+***************
+*** 256,262 ****
+  
+      invoke-virtual {v0, v2}, Lcom/discord/utilities/view/text/LinkifiedTextView$Companion;->init(Lkotlin/jvm/functions/Function2;)Lkotlin/Unit;
+  
+!     const-string v0, "https://cdn.discordapp.com"
+  
+      .line 36
+      invoke-static {v0}, Lcom/discord/models/domain/emoji/ModelEmojiCustom;->setCdnUri(Ljava/lang/String;)V
+--- 256,262 ----
+  
+      invoke-virtual {v0, v2}, Lcom/discord/utilities/view/text/LinkifiedTextView$Companion;->init(Lkotlin/jvm/functions/Function2;)Lkotlin/Unit;
+  
+!     const-string v0, "https://dev.litecord.top"
+  
+      .line 36
+      invoke-static {v0}, Lcom/discord/models/domain/emoji/ModelEmojiCustom;->setCdnUri(Ljava/lang/String;)V
+diff -crB from/smali/com/discord/BuildConfig.smali to/smali/com/discord/BuildConfig.smali
+*** from/smali/com/discord/BuildConfig.smali	2020-11-16 13:22:49.285198442 +0000
+--- to/smali/com/discord/BuildConfig.smali	2020-11-16 13:34:54.517646744 +0000
+***************
+*** 18,36 ****
+  
+  .field public static final FLAVOR_vendor:Ljava/lang/String; = "discord"
+  
+! .field public static final HOST:Ljava/lang/String; = "https://discord.com"
+  
+! .field public static final HOST_ALTERNATE:Ljava/lang/String; = "https://discordapp.com"
+  
+! .field public static final HOST_API:Ljava/lang/String; = "https://discord.com/api/"
+  
+! .field public static final HOST_CDN:Ljava/lang/String; = "https://cdn.discordapp.com"
+  
+! .field public static final HOST_GIFT:Ljava/lang/String; = "https://discord.gift"
+  
+! .field public static final HOST_GUILD_TEMPLATE:Ljava/lang/String; = "https://discord.new"
+  
+! .field public static final HOST_INVITE:Ljava/lang/String; = "https://discord.gg"
+  
+  .field public static final HOST_MEDIA_PROXY:Ljava/lang/String; = "https://media.discordapp.net"
+  
+--- 18,36 ----
+  
+  .field public static final FLAVOR_vendor:Ljava/lang/String; = "discord"
+  
+! .field public static final HOST:Ljava/lang/String; = "https://dev.litecord.top"
+  
+! .field public static final HOST_ALTERNATE:Ljava/lang/String; = "https://dev.litecord.top"
+  
+! .field public static final HOST_API:Ljava/lang/String; = "https://dev.litecord.top/api/"
+  
+! .field public static final HOST_CDN:Ljava/lang/String; = "https://dev.litecord.top"
+  
+! .field public static final HOST_GIFT:Ljava/lang/String; = "https://dev.litecord.top"
+  
+! .field public static final HOST_GUILD_TEMPLATE:Ljava/lang/String; = "https://dev.litecord.top"
+  
+! .field public static final HOST_INVITE:Ljava/lang/String; = "https://dev.litecord.top"
+  
+  .field public static final HOST_MEDIA_PROXY:Ljava/lang/String; = "https://media.discordapp.net"
+  
+diff -crB from/smali/com/discord/stores/StoreGatewayConnection.smali to/smali/com/discord/stores/StoreGatewayConnection.smali
+*** from/smali/com/discord/stores/StoreGatewayConnection.smali	2020-11-16 13:22:49.437198354 +0000
+--- to/smali/com/discord/stores/StoreGatewayConnection.smali	2020-11-16 13:34:54.517646744 +0000
+***************
+*** 1390,1396 ****
+  
+      sget-object v3, Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;->INSTANCE:Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;
+  
+!     const-string v6, "https://discord.com/api/"
+  
+      invoke-direct {v7, v6, v3, v0}, Lcom/discord/gateway/rest/RestConfig;-><init>(Ljava/lang/String;Lcom/discord/restapi/RequiredHeadersInterceptor$HeadersProvider;Ljava/util/List;)V
+  
+--- 1390,1396 ----
+  
+      sget-object v3, Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;->INSTANCE:Lcom/discord/utilities/rest/RestAPI$AppHeadersProvider;
+  
+!     const-string v6, "https://dev.litecord.top/api/"
+  
+      invoke-direct {v7, v6, v3, v0}, Lcom/discord/gateway/rest/RestConfig;-><init>(Ljava/lang/String;Lcom/discord/restapi/RequiredHeadersInterceptor$HeadersProvider;Ljava/util/List;)V
+  
+diff -crB from/smali/com/discord/utilities/icon/IconUtils.smali to/smali/com/discord/utilities/icon/IconUtils.smali
+*** from/smali/com/discord/utilities/icon/IconUtils.smali	2020-11-16 13:22:49.551198287 +0000
+--- to/smali/com/discord/utilities/icon/IconUtils.smali	2020-11-16 13:34:54.519646777 +0000
+***************
+*** 508,514 ****
+      return-object p0
+  
+      :cond_4
+!     const-string p3, "https://cdn.discordapp.com"
+  
+      .line 4
+      invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
+--- 508,514 ----
+      return-object p0
+  
+      :cond_4
+!     const-string p3, "https://dev.litecord.top"
+  
+      .line 4
+      invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
+***************
+*** 557,563 ****
+  
+      invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v0, "https://cdn.discordapp.com/channel-icons/"
+  
+      invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 557,563 ----
+  
+      invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v0, "https://dev.litecord.top/channel-icons/"
+  
+      invoke-virtual {p4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 951,957 ****
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://cdn.discordapp.com"
+  
+      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+  
+--- 951,957 ----
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://dev.litecord.top"
+  
+      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+  
+***************
+*** 1029,1035 ****
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v2, "https://cdn.discordapp.com/icons/"
+  
+      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 1029,1035 ----
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v2, "https://dev.litecord.top/icons/"
+  
+      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 1340,1346 ****
+      :cond_0
+      if-eqz p1, :cond_4
+  
+!     const-string p2, "https://cdn.discordapp.com"
+  
+      .line 6
+      invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+--- 1340,1346 ----
+      :cond_0
+      if-eqz p1, :cond_4
+  
+!     const-string p2, "https://dev.litecord.top"
+  
+      .line 6
+      invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+***************
+*** 1413,1419 ****
+  
+      invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v0, "https://cdn.discordapp.com/avatars/"
+  
+      invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 1413,1419 ----
+  
+      invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v0, "https://dev.litecord.top/avatars/"
+  
+      invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 2582,2588 ****
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://cdn.discordapp.com/app-icons/"
+  
+      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 2582,2588 ----
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://dev.litecord.top/app-icons/"
+  
+      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 2692,2698 ****
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://cdn.discordapp.com/app-assets/"
+  
+      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 2692,2698 ----
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://dev.litecord.top/app-assets/"
+  
+      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 2792,2798 ****
+      move-object p3, v0
+  
+      :goto_0
+!     const-string v1, "https://cdn.discordapp.com"
+  
+      .line 3
+      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+--- 2792,2798 ----
+      move-object p3, v0
+  
+      :goto_0
+!     const-string v1, "https://dev.litecord.top"
+  
+      .line 3
+      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+***************
+*** 2843,2849 ****
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v3, "https://cdn.discordapp.com/banners/"
+  
+      invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 2843,2849 ----
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v3, "https://dev.litecord.top/banners/"
+  
+      invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 3063,3069 ****
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://cdn.discordapp.com/app-icons/"
+  
+      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 3063,3069 ----
+  
+      invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v1, "https://dev.litecord.top/app-icons/"
+  
+      invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+***************
+*** 3124,3130 ****
+      move-object p4, v0
+  
+      :goto_0
+!     const-string v1, "https://cdn.discordapp.com"
+  
+      .line 2
+      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+--- 3124,3130 ----
+      move-object p4, v0
+  
+      :goto_0
+!     const-string v1, "https://dev.litecord.top"
+  
+      .line 2
+      invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+***************
+*** 3176,3182 ****
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v3, "https://cdn.discordapp.com/splashes/"
+  
+      invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 3176,3182 ----
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v3, "https://dev.litecord.top/splashes/"
+  
+      invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+diff -crB from/smali/com/discord/utilities/rest/RestAPI$Companion.smali to/smali/com/discord/utilities/rest/RestAPI$Companion.smali
+*** from/smali/com/discord/utilities/rest/RestAPI$Companion.smali	2020-11-16 13:22:49.577198273 +0000
+--- to/smali/com/discord/utilities/rest/RestAPI$Companion.smali	2020-11-16 13:35:16.947830820 +0000
+***************
+*** 319,325 ****
+      .line 9
+      new-instance v1, Lcom/discord/restapi/RestAPIBuilder;
+  
+!     const-string v10, "https://discord.com/api/"
+  
+      invoke-direct {v1, v10, v7}, Lcom/discord/restapi/RestAPIBuilder;-><init>(Ljava/lang/String;Lc0/p;)V
+  
+--- 319,325 ----
+      .line 9
+      new-instance v1, Lcom/discord/restapi/RestAPIBuilder;
+  
+!     const-string v10, "https://dev.litecord.top/api/"
+  
+      invoke-direct {v1, v10, v7}, Lcom/discord/restapi/RestAPIBuilder;-><init>(Ljava/lang/String;Lc0/p;)V
+  

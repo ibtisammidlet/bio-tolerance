@@ -1,0 +1,21 @@
+diff -crB -x dist -x build com.discord-854-base/smali/com/discord/widgets/settings/WidgetSettings.smali com.discord-854/smali/com/discord/widgets/settings/WidgetSettings.smali
+*** com.discord-854-base/smali/com/discord/widgets/settings/WidgetSettings.smali	2019-03-03 19:12:57.652474233 +0300
+--- com.discord-854/smali/com/discord/widgets/settings/WidgetSettings.smali	2019-03-03 19:19:13.860961991 +0300
+***************
+*** 1414,1420 ****
+  
+      invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string v1, " - 8.5.4 (854)"
+  
+      invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 1414,1420 ----
+  
+      invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string v1, " - 8.5.4 (854), with Cutthecord patches"
+  
+      invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+

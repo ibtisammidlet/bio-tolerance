@@ -1,0 +1,54 @@
+diff --color -crB com.discord-87202-base/smali_classes3/com/lytefast/flexinput/fragment/FlexInputFragment$d.smali com.discord-87202/smali_classes3/com/lytefast/flexinput/fragment/FlexInputFragment$d.smali
+*** com.discord-87202-base/smali_classes3/com/lytefast/flexinput/fragment/FlexInputFragment$d.smali	2021-08-22 22:08:14.202391194 +0300
+--- com.discord-87202/smali_classes3/com/lytefast/flexinput/fragment/FlexInputFragment$d.smali	2021-08-22 22:14:01.302308963 +0300
+***************
+*** 183,189 ****
+  
+      if-nez v4, :cond_5
+  
+!     const/4 v9, 0x0
+  
+      goto :goto_0
+  
+--- 183,189 ----
+  
+      if-nez v4, :cond_5
+  
+!     const/16 v9, 0x8
+  
+      goto :goto_0
+  
+***************
+*** 206,212 ****
+  
+      if-eqz v4, :cond_6
+  
+!     const/4 v9, 0x0
+  
+      goto :goto_1
+  
+--- 206,212 ----
+  
+      if-eqz v4, :cond_6
+  
+!     const/16 v9, 0x8
+  
+      goto :goto_1
+  
+***************
+*** 234,240 ****
+      goto :goto_2
+  
+      :cond_7
+!     const/16 v4, 0x8
+  
+      :goto_2
+      invoke-virtual {v5, v4}, Landroid/widget/ImageButton;->setVisibility(I)V
+--- 234,240 ----
+      goto :goto_2
+  
+      :cond_7
+!     const/16 v4, 0x0
+  
+      :goto_2
+      invoke-virtual {v5, v4}, Landroid/widget/ImageButton;->setVisibility(I)V

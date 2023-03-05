@@ -1,0 +1,250 @@
+diff -crB com.discord-984-base/AndroidManifest.xml com.discord-984/AndroidManifest.xml
+*** com.discord-984-base/AndroidManifest.xml	2019-11-14 22:33:10.106785708 +0300
+--- com.discord-984/AndroidManifest.xml	2019-11-14 22:57:01.714687835 +0300
+***************
+*** 1,4 ****
+! <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="auto" package="com.discord" platformBuildVersionCode="984" platformBuildVersionName="9.8.4">
+      <uses-feature android:name="android.hardware.camera" android:required="false"/>
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+      <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+--- 1,4 ----
+! <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" android:installLocation="auto" package="com.cutthecord.CTCBRANCH" platformBuildVersionCode="984CTCBUILD" platformBuildVersionName="9.8.4-cutthecord-CTCBUILD">
+      <uses-feature android:name="android.hardware.camera" android:required="false"/>
+      <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+      <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+***************
+*** 19,30 ****
+      <uses-permission android:name="android.permission.VIBRATE"/>
+      <uses-permission android:name="android.permission.WAKE_LOCK"/>
+      <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+!     <permission android:description="@string/app_permission_connect_desc" android:label="@string/app_permission_connect_label" android:name="com.discord.permission.CONNECT" android:protectionLevel="dangerous"/>
+      <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+      <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+      <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+!     <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:requestLegacyExternalStorage="true" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark" android:usesCleartextTraffic="@bool/use_cleartext_traffic">
+          <activity android:name="com.discord.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
+          <activity android:name="com.discord.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
+          <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+--- 19,30 ----
+      <uses-permission android:name="android.permission.VIBRATE"/>
+      <uses-permission android:name="android.permission.WAKE_LOCK"/>
+      <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+!     <permission android:description="@string/app_permission_connect_desc" android:label="@string/app_permission_connect_label" android:name="com.cutthecord.CTCBRANCH.permission.CONNECT" android:protectionLevel="dangerous"/>
+      <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+      <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+      <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+      <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+!     <application android:allowBackup="true" android:debuggable="true" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_logo_square" android:label="@string/discord" android:largeHeap="true" android:name="com.discord.app.App" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="true" android:theme="@style/AppTheme.Dark" android:usesCleartextTraffic="@bool/use_cleartext_traffic">
+          <activity android:name="com.discord.samsung.SamsungConnectActivity" android:theme="@style/AppTheme.Translucent"/>
+          <activity android:name="com.discord.app.AppActivity" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Dark" android:windowSoftInputMode="adjustResize|stateHidden"/>
+          <activity android:exported="true" android:launchMode="singleTask" android:name="com.discord.app.AppActivity$Main" android:screenOrientation="fullUser" android:theme="@style/AppTheme.Loading" android:windowSoftInputMode="adjustResize|stateHidden">
+***************
+*** 85,91 ****
+                  <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+              </intent-filter>
+          </service>
+!         <service android:exported="true" android:name="com.discord.app.DiscordConnectService" android:permission="com.discord.permission.CONNECT">
+              <intent-filter>
+                  <action android:name="com.discord.intent.action.CONNECT"/>
+                  <data android:host="app" android:pathPattern="/connect/.*" android:scheme="discord"/>
+--- 85,91 ----
+                  <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+              </intent-filter>
+          </service>
+!         <service android:exported="true" android:name="com.discord.app.DiscordConnectService" android:permission="com.cutthecord.permission.CONNECT">
+              <intent-filter>
+                  <action android:name="com.discord.intent.action.CONNECT"/>
+                  <data android:host="app" android:pathPattern="/connect/.*" android:scheme="discord"/>
+***************
+*** 115,121 ****
+          </receiver>
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+          <service android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
+!         <provider android:authorities="com.discord.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+          </provider>
+          <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="true"/>
+--- 115,121 ----
+          </receiver>
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+          <service android:name="com.discord.utilities.voice.VoiceEngineForegroundService"/>
+!         <provider android:authorities="com.cutthecord.CTCBRANCH.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+          </provider>
+          <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="true"/>
+***************
+*** 141,147 ****
+              </intent-filter>
+          </receiver>
+          <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+!         <provider android:authorities="com.discord.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+          <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+          <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+              <intent-filter>
+--- 141,147 ----
+              </intent-filter>
+          </receiver>
+          <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+!         <provider android:authorities="top.distok.cutthecord.CTCBRANCH.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+          <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+          <receiver android:enabled="true" android:exported="true" android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
+              <intent-filter>
+***************
+*** 151,157 ****
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+          <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+!         <provider android:authorities="com.discord.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+          <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+--- 151,157 ----
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+          <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+          <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+!         <provider android:authorities="com.cutthecord.CTCBRANCH.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+          <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+          <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+***************
+*** 191,199 ****
+              </intent-filter>
+          </receiver>
+          <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+!         <provider android:authorities="com.discord.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+!         <provider android:authorities="com.discord.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+!         <meta-data android:name="firebase_crashlytics_ndk_enabled" android:value="true"/>
+          <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+      </application>
+  </manifest>
+\ No newline at end of file
+--- 191,199 ----
+              </intent-filter>
+          </receiver>
+          <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+!         <provider android:authorities="com.cutthecord.CTCBRANCH.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+!         <provider android:authorities="com.cutthecord.CTCBRANCH.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+!         <meta-data android:name="firebase_crashlytics_ndk_enabled" android:value="false"/>
+          <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+      </application>
+  </manifest>
+\ No newline at end of file
+Only in com.discord-984: AndroidManifest.xml.orig
+Only in com.discord-984: AndroidManifest.xml.rej
+diff -crB com.discord-984-base/apktool.yml com.discord-984/apktool.yml
+*** com.discord-984-base/apktool.yml	2019-11-14 22:32:24.769871049 +0300
+--- com.discord-984/apktool.yml	2019-11-14 22:56:22.034448251 +0300
+***************
+*** 179,183 ****
+    tag: null
+  version: 2.4.1-197d46-SNAPSHOT
+  versionInfo:
+!   versionCode: '984'
+!   versionName: 9.8.4
+--- 179,183 ----
+    tag: null
+  version: 2.4.1-197d46-SNAPSHOT
+  versionInfo:
+!   versionCode: '984CTCBUILD'
+!   versionName: 9.8.4-cutthecord-CTCBUILD
+Only in com.discord-984: apktool.yml.orig
+diff -crB com.discord-984-base/res/values/strings.xml com.discord-984/res/values/strings.xml
+*** com.discord-984-base/res/values/strings.xml	2019-11-14 22:32:18.039834236 +0300
+--- com.discord-984/res/values/strings.xml	2019-11-14 22:56:41.611233120 +0300
+***************
+*** 1376,1382 ****
+      <string name="disconnect_account_body">Disconnecting your account might remove you from servers you joined via this account.</string>
+      <string name="disconnect_account_title">Disconnect %1$s</string>
+      <string name="disconnect_from_voice">Disconnect from Voice</string>
+!     <string name="discord">Discord</string>
+      <string name="discord_desc_long">Free and secure chat for gamers, works on both your desktop and your phone.</string>
+      <string name="discord_desc_short">Team voice &amp; text chat</string>
+      <string name="discord_gg">discord.gg/</string>
+--- 1376,1382 ----
+      <string name="disconnect_account_body">Disconnecting your account might remove you from servers you joined via this account.</string>
+      <string name="disconnect_account_title">Disconnect %1$s</string>
+      <string name="disconnect_from_voice">Disconnect from Voice</string>
+!     <string name="discord">CTCNAME</string>
+      <string name="discord_desc_long">Free and secure chat for gamers, works on both your desktop and your phone.</string>
+      <string name="discord_desc_short">Team voice &amp; text chat</string>
+      <string name="discord_gg">discord.gg/</string>
+***************
+*** 3277,3283 ****
+      <string name="notification_reply_failed">Failed to reply to %1$s</string>
+      <string name="notification_reply_success">Replied to %1$s</string>
+      <string name="notification_settings">Notification Settings</string>
+!     <string name="notification_title_discord">Discord</string>
+      <string name="notification_title_start_game">"Somebody Playin'"</string>
+      <string name="notification_voice_status_body">Join them: %1$s</string>
+      <string name="notification_voice_status_body_no_status">Join the party!</string>
+--- 3277,3283 ----
+      <string name="notification_reply_failed">Failed to reply to %1$s</string>
+      <string name="notification_reply_success">Replied to %1$s</string>
+      <string name="notification_settings">Notification Settings</string>
+!     <string name="notification_title_discord">CTCNAME</string>
+      <string name="notification_title_start_game">"Somebody Playin'"</string>
+      <string name="notification_voice_status_body">Join them: %1$s</string>
+      <string name="notification_voice_status_body_no_status">Join the party!</string>
+***************
+*** 4590,4596 ****
+      <string name="subscriptions_title">Subscriptions</string>
+      <string name="suggestions">Suggestions</string>
+      <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+!     <string name="support">Support</string>
+      <string name="suppress_all_embeds">Remove all embeds</string>
+      <string name="suppressed">Suppressed</string>
+      <string name="suppressed_afk_body">"It seems you've gone AFK on us. We've went ahead and moved you to the AFK channel."</string>
+--- 4590,4596 ----
+      <string name="subscriptions_title">Subscriptions</string>
+      <string name="suggestions">Suggestions</string>
+      <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
+!     <string name="support">CutTheCord Repo</string>
+      <string name="suppress_all_embeds">Remove all embeds</string>
+      <string name="suppressed">Suppressed</string>
+      <string name="suppressed_afk_body">"It seems you've gone AFK on us. We've went ahead and moved you to the AFK channel."</string>
+Only in com.discord-984/res/values: strings.xml.orig
+Only in com.discord-984/res/values: strings.xml.rej
+diff -crB com.discord-984-base/smali/com/discord/app/e.smali com.discord-984/smali/com/discord/app/e.smali
+*** com.discord-984-base/smali/com/discord/app/e.smali	2019-11-14 22:32:20.866516365 +0300
+--- com.discord-984/smali/com/discord/app/e.smali	2019-11-14 22:56:22.037781605 +0300
+***************
+*** 56,62 ****
+      .line 16
+      sput-object v0, Lcom/discord/app/e;->uZ:Ljava/lang/String;
+  
+!     const-string v0, "https://support.discordapp.com"
+  
+      .line 18
+      sput-object v0, Lcom/discord/app/e;->va:Ljava/lang/String;
+--- 56,62 ----
+      .line 16
+      sput-object v0, Lcom/discord/app/e;->uZ:Ljava/lang/String;
+  
+!     const-string v0, "https://gitdab.com/distok/cutthecord"
+  
+      .line 18
+      sput-object v0, Lcom/discord/app/e;->va:Ljava/lang/String;
+Only in com.discord-984/smali/com/discord/app: e.smali.orig
+diff -crB com.discord-984-base/smali/com/discord/utilities/captcha/CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali com.discord-984/smali/com/discord/utilities/captcha/CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali
+*** com.discord-984-base/smali/com/discord/utilities/captcha/CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali	2019-11-14 22:32:21.259851850 +0300
+--- com.discord-984/smali/com/discord/utilities/captcha/CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali	2019-11-14 22:56:22.037781605 +0300
+***************
+*** 78,84 ****
+      .line 65
+      new-instance v0, Landroid/content/Intent;
+  
+!     const-string v1, "https://discordapp.com/app"
+  
+      .line 67
+      invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+--- 78,84 ----
+      .line 65
+      new-instance v0, Landroid/content/Intent;
+  
+!     const-string v1, "https://gitdab.com/distok/cutthecord/issues/22#issuecomment-82"
+  
+      .line 67
+      invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+Only in com.discord-984/smali/com/discord/utilities/captcha: CaptchaHelper$showCaptchaHelpDialog$$inlined$let$lambda$1.smali.orig
+

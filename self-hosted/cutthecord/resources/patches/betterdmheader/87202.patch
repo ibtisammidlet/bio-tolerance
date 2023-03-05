@@ -1,0 +1,37 @@
+diff -crB from/smali_classes2/com/discord/widgets/home/WidgetHomeHeaderManager$getOnConfigureAction$1.smali to/smali_classes2/com/discord/widgets/home/WidgetHomeHeaderManager$getOnConfigureAction$1.smali
+*** from/smali_classes2/com/discord/widgets/home/WidgetHomeHeaderManager$getOnConfigureAction$1.smali	2020-11-19 15:23:43.685245089 +0000
+--- to/smali_classes2/com/discord/widgets/home/WidgetHomeHeaderManager$getOnConfigureAction$1.smali	2020-11-19 15:26:07.886953277 +0000
+***************
+*** 181,187 ****
+
+      invoke-static {v3, v9}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+!     invoke-interface {v3, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+      .line 7
+      invoke-interface {p1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+--- 181,187 ----
+
+      invoke-static {v3, v9}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+!     invoke-interface {v3, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+      .line 7
+      invoke-interface {p1, v8}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+***************
+*** 360,366 ****
+
+      invoke-static {v3, v9}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+!     invoke-interface {v3, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+      .line 19
+      invoke-interface {p1, v6}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
+--- 360,366 ----
+
+      invoke-static {v3, v9}, Ld0/z/d/m;->checkNotNullExpressionValue(Ljava/lang/Object;Ljava/lang/String;)V
+
+!     invoke-interface {v3, v2}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
+
+      .line 19
+      invoke-interface {p1, v6}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;

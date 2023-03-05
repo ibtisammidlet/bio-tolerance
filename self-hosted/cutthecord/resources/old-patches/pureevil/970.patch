@@ -1,0 +1,48 @@
+diff -crB com.discord-970-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali com.discord-970/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali
+*** com.discord-970-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2019-10-10 08:36:54.540387242 +0300
+--- com.discord-970/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2019-10-10 08:53:49.152282087 +0300
+***************
+*** 77,87 ****
+      const-string v0, "meUser"
+  
+      .line 186
+!     invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result v2
+  
+      const-string v1, "fontScale"
+  
+--- 77,83 ----
+      const-string v0, "meUser"
+  
+      .line 186
+!     const/4 v2, 0x1
+  
+      const-string v1, "fontScale"
+  
+***************
+*** 95,105 ****
+      const-string p3, "isAlphaTesterOrStaff"
+  
+      .line 188
+!     invoke-static {p4, p3}, Lkotlin/jvm/internal/l;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
+! 
+!     move-result v4
+  
+      .line 189
+      invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+--- 91,97 ----
+      const-string p3, "isAlphaTesterOrStaff"
+  
+      .line 188
+!     const/4 v4, 0x1
+  
+      .line 189
+      invoke-static {p1, v0}, Lkotlin/jvm/internal/l;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+Only in com.discord-970/smali/com/discord/widgets/settings: WidgetSettingsAppearance$Model$Companion$get$1.smali.orig
+Only in com.discord-970/smali/com/discord/widgets/settings: WidgetSettingsAppearance$Model$Companion$get$1.smali.rej
+

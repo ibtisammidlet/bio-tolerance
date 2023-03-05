@@ -1,0 +1,39 @@
+diff -crB com.discord-896-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali com.discord-896/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali
+*** com.discord-896-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2019-05-12 12:13:47.341179553 +0300
+--- com.discord-896/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2019-05-12 17:56:09.818038790 +0300
+***************
+*** 77,96 ****
+      const-string v0, "meUser"
+  
+      .line 187
+!     invoke-static {p1, v0}, Lkotlin/jvm/internal/j;->g(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result v2
+  
+      const-string v1, "fontScale"
+  
+      .line 188
+!     invoke-static {p3, v1}, Lkotlin/jvm/internal/j;->g(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
+! 
+!     move-result v3
+  
+      const-string p3, "isAlphaTesterOrStaff"
+  
+--- 77,88 ----
+      const-string v0, "meUser"
+  
+      .line 187
+!     const/4 v2, 0x1
+  
+      const-string v1, "fontScale"
+  
+      .line 188
+!     const/4 v3, 0x1
+  
+      const-string p3, "isAlphaTesterOrStaff"
+  
+

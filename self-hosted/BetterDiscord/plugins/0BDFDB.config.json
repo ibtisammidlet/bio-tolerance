@@ -1,0 +1,22 @@
+{
+	"all": {
+		"changeLogs": {
+			"BDFDB": "3.0.1",
+			"FriendNotifications": "1.8.5",
+			"ImageUtilities": "5.0.1"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showToasts": true,
+			"showSupportBadges": false,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "93bee26a74725124741ecaf5639da6a4cf7d4ba7",
+			"0BDFDB.raw.css": "2a8546736bcc355d5fc8cb6aa87fff9901ea12ae"
+		}
+	}
+}

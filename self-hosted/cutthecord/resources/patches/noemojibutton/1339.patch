@@ -1,0 +1,20 @@
+diff -crB from/smali/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali to/smali/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali
+*** from/smali/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali	2020-09-13 11:49:34.339166635 +0100
+--- to/smali/com/discord/widgets/chat/input/WidgetChatInputAttachments$configureFlexInputFragment$1.smali	2020-09-13 11:49:53.575360799 +0100
+***************
+*** 261,267 ****
+  
+      if-eqz v0, :cond_1
+  
+!     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+      :goto_0
+      return-void
+--- 261,267 ----
+  
+      if-eqz v0, :cond_1
+  
+!     # invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+      :goto_0
+      return-void

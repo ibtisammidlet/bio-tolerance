@@ -1,0 +1,20 @@
+diff -crB from/smali/com/discord/utilities/icon/IconUtils.smali to/smali/com/discord/utilities/icon/IconUtils.smali
+*** from/smali/com/discord/utilities/icon/IconUtils.smali	2020-09-29 13:35:45.326880125 +0100
+--- to/smali/com/discord/utilities/icon/IconUtils.smali	2020-09-29 13:35:56.952303623 +0100
+***************
+*** 1433,1438 ****
+--- 1433,1446 ----
+  
+      invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
++     # Set avatar image size to 256
++ 
++     const-string v0, "?size=256"
++ 
++     invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++ 
++     const-string v0, "https://cdn.discordapp.com/avatars/"
++ 
+      invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+  
+      move-result-object p0

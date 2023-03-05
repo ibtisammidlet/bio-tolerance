@@ -1,0 +1,24 @@
+Only in com.discord-1144: build
+Only in com.discord-1144: dist
+diff -crB com.discord-1144-base/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali com.discord-1144/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** com.discord-1144-base/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-05-17 16:38:28.831942620 +0300
+--- com.discord-1144/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-05-17 16:58:44.766148240 +0300
+***************
+*** 365,371 ****
+  
+      if-eqz p1, :cond_1
+  
+!     const/4 v0, 0x0
+  
+      invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+--- 365,371 ----
+  
+      if-eqz p1, :cond_1
+  
+!     const/16 v0, 0x8
+  
+      invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+Only in com.discord-1144/smali_classes2/com/lytefast/flexinput/fragment: FlexInputFragment.smali.orig
+

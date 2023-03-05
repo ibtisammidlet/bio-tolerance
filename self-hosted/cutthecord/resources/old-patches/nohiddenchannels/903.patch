@@ -1,0 +1,49 @@
+diff -crB com.discord-903-base/smali/com/discord/models/domain/ModelChannel.smali com.discord-903/smali/com/discord/models/domain/ModelChannel.smali
+*** com.discord-903-base/smali/com/discord/models/domain/ModelChannel.smali	2019-05-24 23:40:49.520802264 +0300
+--- com.discord-903/smali/com/discord/models/domain/ModelChannel.smali	2019-05-25 02:48:42.334585852 +0300
+***************
+*** 431,437 ****
+  .end method
+  
+  .method private computeName()Ljava/lang/String;
+!     .locals 1
+  
+      .line 272
+      invoke-virtual {p0}, Lcom/discord/models/domain/ModelChannel;->isPrivate()Z
+--- 431,437 ----
+  .end method
+  
+  .method private computeName()Ljava/lang/String;
+!     .locals 2
+  
+      .line 272
+      invoke-virtual {p0}, Lcom/discord/models/domain/ModelChannel;->isPrivate()Z
+***************
+*** 2083,2095 ****
+      .end annotation
+  
+      .line 246
+!     iget-object v0, p0, Lcom/discord/models/domain/ModelChannel;->permissionOverwrites:Ljava/util/Map;
+  
+!     if-eqz v0, :cond_0
+  
+!     return-object v0
+  
+!     :cond_0
+      sget-object v0, Lcom/discord/models/domain/ModelChannel;->EMPTY_PERMISSION_OVERWRITES:Ljava/util/Map;
+  
+      return-object v0
+--- 2083,2095 ----
+      .end annotation
+  
+      .line 246
+!     #iget-object v0, p0, Lcom/discord/models/domain/ModelChannel;->permissionOverwrites:Ljava/util/Map;
+  
+!     #if-eqz v0, :cond_0
+  
+!     #return-object v0
+  
+!     #:cond_0
+      sget-object v0, Lcom/discord/models/domain/ModelChannel;->EMPTY_PERMISSION_OVERWRITES:Ljava/util/Map;
+  
+      return-object v0

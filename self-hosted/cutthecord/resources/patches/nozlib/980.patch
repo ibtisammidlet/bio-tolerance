@@ -1,0 +1,37 @@
+diff -crB com.discord-980-base/smali/com/discord/gateway/GatewaySocket.smali com.discord-980/smali/com/discord/gateway/GatewaySocket.smali
+*** com.discord-980-base/smali/com/discord/gateway/GatewaySocket.smali	2019-10-31 11:15:16.495805313 +0300
+--- com.discord-980/smali/com/discord/gateway/GatewaySocket.smali	2019-10-31 11:19:01.880331853 +0300
+***************
+*** 1054,1060 ****
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string p1, "/?encoding=json&v=6&compress=zlib-stream"
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 1054,1060 ----
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string p1, "/?encoding=json&v=6"
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+Only in com.discord-980/smali/com/discord/gateway: GatewaySocket.smali.orig
+Only in com.discord-980/smali/com/discord/gateway: GatewaySocket.smali.rej
+diff -crB com.discord-980-base/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali com.discord-980/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali
+*** com.discord-980-base/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali	2019-10-31 11:15:16.505805365 +0300
+--- com.discord-980/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali	2019-10-31 11:18:39.126878014 +0300
+***************
+*** 66,71 ****
+--- 66,73 ----
+  
+      iput p2, p0, Lcom/discord/gateway/io/OutgoingPayload$Identify;->large_threshold:I
+  
++     const/4 p3, 0x0
++ 
+      iput-boolean p3, p0, Lcom/discord/gateway/io/OutgoingPayload$Identify;->compress:Z
+  
+      iput-object p4, p0, Lcom/discord/gateway/io/OutgoingPayload$Identify;->properties:Ljava/util/Map;
+

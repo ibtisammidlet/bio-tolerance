@@ -1,0 +1,179 @@
+diff -crB from/smali/com/discord/widgets/friends/NearbyManager.smali to/smali/com/discord/widgets/friends/NearbyManager.smali
+*** from/smali/com/discord/widgets/friends/NearbyManager.smali	2020-10-06 18:20:38.187767799 +0100
+--- to/smali/com/discord/widgets/friends/NearbyManager.smali	2020-10-06 18:22:01.088683416 +0100
+***************
+*** 475,609 ****
+  
+  # virtual methods
+  .method public final activateNearby()V
+!     .locals 9
+  
+-     .line 1
+-     iget-object v0, p0, Lcom/discord/widgets/friends/NearbyManager;->messagesClient:Lcom/google/android/gms/nearby/messages/MessagesClient;
+- 
+-     if-eqz v0, :cond_1
+- 
+-     .line 2
+-     iget-object v1, p0, Lcom/discord/widgets/friends/NearbyManager;->outboundMessage:Lcom/google/android/gms/nearby/messages/Message;
+- 
+-     if-eqz v1, :cond_1
+- 
+-     .line 3
+-     iget-object v2, p0, Lcom/discord/widgets/friends/NearbyManager;->messagePublishOptions:Lcom/google/android/gms/nearby/messages/PublishOptions;
+- 
+-     if-eqz v2, :cond_1
+- 
+-     .line 4
+-     iget-object v3, p0, Lcom/discord/widgets/friends/NearbyManager;->messageListener:Lcom/google/android/gms/nearby/messages/MessageListener;
+- 
+-     if-eqz v3, :cond_1
+- 
+-     .line 5
+-     iget-object v4, p0, Lcom/discord/widgets/friends/NearbyManager;->subscribeOptions:Lcom/google/android/gms/nearby/messages/SubscribeOptions;
+- 
+-     if-eqz v4, :cond_1
+- 
+-     .line 6
+-     iget-object v5, p0, Lcom/discord/widgets/friends/NearbyManager;->nearbyStateSubject:Lrx/subjects/BehaviorSubject;
+- 
+-     new-instance v6, Lcom/discord/widgets/friends/NearbyManager$NearbyState$Connected;
+- 
+-     new-instance v7, Ljava/util/HashSet;
+- 
+-     iget-object v8, p0, Lcom/discord/widgets/friends/NearbyManager;->nearbyUserIds:Ljava/util/HashSet;
+- 
+-     invoke-direct {v7, v8}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+- 
+-     invoke-direct {v6, v7}, Lcom/discord/widgets/friends/NearbyManager$NearbyState$Connected;-><init>(Ljava/util/Set;)V
+- 
+-     invoke-virtual {v5, v6}, Lrx/subjects/BehaviorSubject;->onNext(Ljava/lang/Object;)V
+- 
+-     .line 7
+-     check-cast v0, Lf/h/a/f/k/b/e/i;
+- 
+-     .line 8
+-     invoke-static {v1}, Lf/g/j/k/a;->t(Ljava/lang/Object;)Ljava/lang/Object;
+- 
+-     invoke-static {v2}, Lf/g/j/k/a;->t(Ljava/lang/Object;)Ljava/lang/Object;
+- 
+-     invoke-virtual {v0, v1}, Lf/h/a/f/k/b/e/i;->i(Ljava/lang/Object;)Lf/h/a/f/f/h/i/k;
+- 
+-     move-result-object v5
+- 
+-     .line 9
+-     iget-object v6, v2, Lcom/google/android/gms/nearby/messages/PublishOptions;->b:Lf/h/a/f/k/b/b;
+- 
+-     .line 10
+-     invoke-virtual {v0, v6}, Lf/h/a/f/k/b/e/i;->i(Ljava/lang/Object;)Lf/h/a/f/f/h/i/k;
+- 
+-     move-result-object v6
+- 
+-     new-instance v7, Lf/h/a/f/k/b/e/r;
+- 
+-     invoke-direct {v7, v0, v6, v5}, Lf/h/a/f/k/b/e/r;-><init>(Lf/h/a/f/k/b/e/i;Lf/h/a/f/f/h/i/k;Lf/h/a/f/f/h/i/k;)V
+- 
+-     new-instance v6, Lf/h/a/f/k/b/e/j;
+- 
+-     invoke-direct {v6, v0, v1, v7, v2}, Lf/h/a/f/k/b/e/j;-><init>(Lf/h/a/f/k/b/e/i;Lcom/google/android/gms/nearby/messages/Message;Lf/h/a/f/k/b/e/b0;Lcom/google/android/gms/nearby/messages/PublishOptions;)V
+- 
+-     new-instance v2, Lf/h/a/f/k/b/e/k;
+- 
+-     invoke-direct {v2, v1}, Lf/h/a/f/k/b/e/k;-><init>(Lcom/google/android/gms/nearby/messages/Message;)V
+- 
+-     invoke-virtual {v0, v5, v6, v2}, Lf/h/a/f/k/b/e/i;->g(Lf/h/a/f/f/h/i/k;Lf/h/a/f/k/b/e/a0;Lf/h/a/f/k/b/e/a0;)Lcom/google/android/gms/tasks/Task;
+- 
+-     .line 11
+-     invoke-static {v3}, Lf/g/j/k/a;->t(Ljava/lang/Object;)Ljava/lang/Object;
+- 
+-     invoke-static {v4}, Lf/g/j/k/a;->t(Ljava/lang/Object;)Ljava/lang/Object;
+- 
+-     .line 12
+-     iget-object v1, v4, Lcom/google/android/gms/nearby/messages/SubscribeOptions;->a:Lcom/google/android/gms/nearby/messages/Strategy;
+- 
+-     .line 13
+-     iget v1, v1, Lcom/google/android/gms/nearby/messages/Strategy;->k:I
+- 
+-     if-nez v1, :cond_0
+- 
+-     const/4 v1, 0x1
+- 
+-     goto :goto_0
+- 
+-     :cond_0
+-     const/4 v1, 0x0
+- 
+-     :goto_0
+-     const-string v2, "Strategy.setBackgroundScanMode() is only supported by background subscribe (the version which takes a PendingIntent)."
+- 
+-     .line 14
+-     invoke-static {v1, v2}, Lf/g/j/k/a;->i(ZLjava/lang/Object;)V
+- 
+-     invoke-virtual {v0, v3}, Lf/h/a/f/k/b/e/i;->i(Ljava/lang/Object;)Lf/h/a/f/f/h/i/k;
+- 
+-     move-result-object v1
+- 
+-     .line 15
+-     iget-object v2, v4, Lcom/google/android/gms/nearby/messages/SubscribeOptions;->c:Lf/h/a/f/k/b/d;
+- 
+-     .line 16
+-     invoke-virtual {v0, v2}, Lf/h/a/f/k/b/e/i;->i(Ljava/lang/Object;)Lf/h/a/f/f/h/i/k;
+- 
+-     move-result-object v2
+- 
+-     new-instance v3, Lf/h/a/f/k/b/e/s;
+- 
+-     invoke-direct {v3, v0, v2, v1}, Lf/h/a/f/k/b/e/s;-><init>(Lf/h/a/f/k/b/e/i;Lf/h/a/f/f/h/i/k;Lf/h/a/f/f/h/i/k;)V
+- 
+-     new-instance v2, Lf/h/a/f/k/b/e/l;
+- 
+-     invoke-direct {v2, v0, v1, v3, v4}, Lf/h/a/f/k/b/e/l;-><init>(Lf/h/a/f/k/b/e/i;Lf/h/a/f/f/h/i/k;Lf/h/a/f/k/b/e/d0;Lcom/google/android/gms/nearby/messages/SubscribeOptions;)V
+- 
+-     new-instance v3, Lf/h/a/f/k/b/e/m;
+- 
+-     invoke-direct {v3, v1}, Lf/h/a/f/k/b/e/m;-><init>(Lf/h/a/f/f/h/i/k;)V
+- 
+-     invoke-virtual {v0, v1, v2, v3}, Lf/h/a/f/k/b/e/i;->g(Lf/h/a/f/f/h/i/k;Lf/h/a/f/k/b/e/a0;Lf/h/a/f/k/b/e/a0;)Lcom/google/android/gms/tasks/Task;
+- 
+-     :cond_1
+      return-void
+  .end method
+  
+--- 475,482 ----
+  
+  # virtual methods
+  .method public final activateNearby()V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+***************
+*** 698,717 ****
+  .end method
+  
+  .method public final initialize(J)V
+!     .locals 1
+! 
+!     .line 1
+!     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+! 
+!     move-result-object v0
+! 
+!     iput-object v0, p0, Lcom/discord/widgets/friends/NearbyManager;->meUserId:Ljava/lang/Long;
+! 
+!     .line 2
+!     invoke-direct {p0, p1, p2}, Lcom/discord/widgets/friends/NearbyManager;->setupBroadcaster(J)V
+! 
+!     .line 3
+!     invoke-direct {p0}, Lcom/discord/widgets/friends/NearbyManager;->setupListener()V
+  
+      return-void
+  .end method
+--- 571,577 ----
+  .end method
+  
+  .method public final initialize(J)V
+!     .locals 0
+  
+      return-void
+  .end method

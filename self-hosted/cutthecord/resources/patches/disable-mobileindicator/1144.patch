@@ -1,0 +1,20 @@
+diff -crB from/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali to/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali
+*** from/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali	2020-03-28 04:48:20.568638298 +0300
+--- to/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali	2020-03-28 05:12:25.241750554 +0300
+***************
+*** 182,188 ****
+  
+      const-string v2, "browser"
+  
+!     const-string v3, "Discord Android"
+  
+      invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+  
+--- 182,188 ----
+  
+      const-string v2, "browser"
+  
+!     const-string v3, "Discord Client"
+  
+      invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+  

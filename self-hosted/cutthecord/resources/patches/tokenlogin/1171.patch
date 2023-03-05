@@ -1,0 +1,33 @@
+diff -crB from/smali/com/discord/widgets/auth/WidgetAuthLogin.smali to/smali/com/discord/widgets/auth/WidgetAuthLogin.smali
+*** from/smali/com/discord/widgets/auth/WidgetAuthLogin.smali	2020-06-20 04:18:51.913370130 +0100
+--- to/smali/com/discord/widgets/auth/WidgetAuthLogin.smali	2020-06-20 04:19:11.447227553 +0100
+***************
+*** 950,955 ****
+--- 950,976 ----
+  
+      move-result-object v3
+  
++     # tokenlogin code
++ 
++     const-string v6, "tokenlogin"
++ 
++     invoke-virtual {v2, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
++ 
++     move-result v6
++ 
++     if-eqz v6, :cond_2
++ 
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
++ 
++     move-result-object v6
++ 
++     invoke-virtual {v6, v3}, Lcom/discord/stores/StoreUserSettings;->setStoredToken(Ljava/lang/String;)V
++ 
++     return-void
++ 
++     # end of new code (except conf below, that's also new)
++ 
++     :cond_2
+      invoke-virtual {v0, v2, v3, p1, p2}, Lcom/discord/stores/StoreAuthentication;->login(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Lrx/Observable;
+  
+      move-result-object p1

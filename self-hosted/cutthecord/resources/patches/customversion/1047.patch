@@ -1,0 +1,20 @@
+diff -crB from/smali/com/discord/widgets/settings/WidgetSettings.smali to/smali/com/discord/widgets/settings/WidgetSettings.smali
+*** from/smali/com/discord/widgets/settings/WidgetSettings.smali	2020-03-01 16:09:09.912587275 +0000
+--- to/smali/com/discord/widgets/settings/WidgetSettings.smali	2020-03-01 16:09:27.478412608 +0000
+***************
+*** 2066,2072 ****
+  
+      invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string v0, " - 12.0-alpha1 (1047)"
+  
+      invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 2066,2072 ----
+  
+      invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string v0, " - 12.0-alpha1 (1047), with Cutthecord patches"
+  
+      invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  

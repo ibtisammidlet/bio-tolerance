@@ -1,0 +1,57 @@
+Only in com.discord: build
+Only in com.discord: dist
+diff --color -crB com.discord-base/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali com.discord/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** com.discord-base/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-07-29 21:27:30.480127538 +0300
+--- com.discord/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-07-29 23:19:53.075584660 +0300
+***************
+*** 362,368 ****
+  
+      if-nez v5, :cond_4
+  
+!     const/4 v10, 0x0
+  
+      goto :goto_1
+  
+--- 362,368 ----
+  
+      if-nez v5, :cond_4
+  
+!     const/16 v10, 0x8
+  
+      goto :goto_1
+  
+***************
+*** 379,385 ****
+  
+      if-eqz v5, :cond_5
+  
+!     const/4 v10, 0x0
+  
+      goto :goto_2
+  
+--- 379,385 ----
+  
+      if-eqz v5, :cond_5
+  
+!     const/16 v10, 0x8
+  
+      goto :goto_2
+  
+***************
+*** 401,407 ****
+      goto :goto_3
+  
+      :cond_6
+!     const/16 v5, 0x8
+  
+      :goto_3
+      invoke-virtual {v6, v5}, Landroid/view/View;->setVisibility(I)V
+--- 401,407 ----
+      goto :goto_3
+  
+      :cond_6
+!     const/16 v5, 0x0
+  
+      :goto_3
+      invoke-virtual {v6, v5}, Landroid/view/View;->setVisibility(I)V
+

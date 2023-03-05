@@ -1,0 +1,68 @@
+{
+	"all": {
+		"detailsSettings": {
+			"footnote": true,
+			"tooltip": false,
+			"tooltipDelay": 0
+		},
+		"engines": {
+			"Baidu": false,
+			"Bing": false,
+			"Google": false,
+			"GoogleLens": false,
+			"IQDB": false,
+			"ImgOps": false,
+			"Reddit": false,
+			"SauceNAO": false,
+			"Sogou": false,
+			"TinEye": false,
+			"WhatAnime": false,
+			"Yandex": false,
+			"_all": true
+		},
+		"galleryFilter": {
+			"3gp": true,
+			"avi": true,
+			"flv": true,
+			"jpeg": true,
+			"jpg": true,
+			"gif": true,
+			"mov": true,
+			"mp4": true,
+			"mpeg-1": true,
+			"mpeg-2": true,
+			"ogg": true,
+			"png": true,
+			"svg": true,
+			"webm": true,
+			"webp": true,
+			"wmv": true
+		},
+		"general": {
+			"nsfwMode": false
+		},
+		"places": {
+			"userAvatars": true,
+			"groupIcons": true,
+			"guildIcons": true,
+			"emojis": true
+		},
+		"rescaleSettings": {
+			"imageViewer": "NONE",
+			"messages": "NONE"
+		},
+		"viewerSettings": {
+			"zoomMode": true,
+			"galleryMode": true,
+			"details": true,
+			"copyImage": true,
+			"saveImage": true,
+			"jumpTo": true
+		},
+		"zoomSettings": {
+			"lensSize": 200,
+			"pixelMode": false,
+			"zoomLevel": 2
+		}
+	}
+}

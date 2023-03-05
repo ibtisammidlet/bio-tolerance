@@ -1,0 +1,540 @@
+diff -crB from/smali/com/discord/gateway/io/IncomingParser.smali to/smali/com/discord/gateway/io/IncomingParser.smali
+*** from/smali/com/discord/gateway/io/IncomingParser.smali	2020-08-01 14:44:26.287759774 +0300
+--- to/smali/com/discord/gateway/io/IncomingParser.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 762,767 ****
+--- 762,778 ----
+  
+      .line 57
+      :goto_2
++ 
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
++ 
++     move-result-object v0
++ 
++     invoke-virtual {v0}, Lcom/discord/stores/StoreUserSettings;->getNoDelete()Z
++ 
++     move-result v4
++ 
++     if-nez v4, :cond_b
++ 
+      new-instance v0, Lcom/discord/models/domain/ModelMessageDelete;
+  
+      invoke-direct {v0}, Lcom/discord/models/domain/ModelMessageDelete;-><init>()V
+diff -crB from/smali/com/discord/models/domain/ModelChannel.smali to/smali/com/discord/models/domain/ModelChannel.smali
+*** from/smali/com/discord/models/domain/ModelChannel.smali	2020-08-01 14:44:26.307759905 +0300
+--- to/smali/com/discord/models/domain/ModelChannel.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 2285,2290 ****
+--- 2285,2300 ----
+          }
+      .end annotation
+  
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
++ 
++     move-result-object v0
++ 
++     invoke-virtual {v0}, Lcom/discord/stores/StoreUserSettings;->getLeakChannels()Z
++ 
++     move-result v0
++ 
++     if-eqz v0, :cond_0
++ 
+      .line 1
+      iget-object v0, p0, Lcom/discord/models/domain/ModelChannel;->permissionOverwrites:Ljava/util/Map;
+  
+diff -crB from/smali/com/discord/models/domain/ModelMessageEmbed.smali to/smali/com/discord/models/domain/ModelMessageEmbed.smali
+*** from/smali/com/discord/models/domain/ModelMessageEmbed.smali	2020-08-01 14:44:26.327760036 +0300
+--- to/smali/com/discord/models/domain/ModelMessageEmbed.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 2021,2027 ****
+  .end method
+  
+  .method public isVideo()Z
+!     .locals 2
+  
+      .line 1
+      iget-object v0, p0, Lcom/discord/models/domain/ModelMessageEmbed;->type:Ljava/lang/String;
+--- 2021,2027 ----
+  .end method
+  
+  .method public isVideo()Z
+!     .locals 3
+  
+      .line 1
+      iget-object v0, p0, Lcom/discord/models/domain/ModelMessageEmbed;->type:Ljava/lang/String;
+***************
+*** 2030,2038 ****
+  
+      invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+  
+!     move-result v0
+  
+!     return v0
+  .end method
+  
+  .method public toString()Ljava/lang/String;
+--- 2030,2057 ----
+  
+      invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+  
+!     move-result v1
+  
+!     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
+! 
+!     move-result-object v2
+! 
+!     invoke-virtual {v2}, Lcom/discord/stores/StoreUserSettings;->getAutoplayGifs()Z
+! 
+!     move-result v2
+! 
+!     if-nez v2, :cond_0
+! 
+!     const-string/jumbo v2, "gifv"
+! 
+!     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+! 
+!     move-result v2
+! 
+!     or-int v1, v1, v2
+! 
+!     :cond_0
+!     return v1
+  .end method
+  
+  .method public toString()Ljava/lang/String;
+diff -crB from/smali/com/discord/stores/StoreUserSettings.smali to/smali/com/discord/stores/StoreUserSettings.smali
+*** from/smali/com/discord/stores/StoreUserSettings.smali	2020-08-01 14:44:26.557761540 +0300
+--- to/smali/com/discord/stores/StoreUserSettings.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 396,401 ****
+--- 396,685 ----
+      return-void
+  .end method
+  
++ .method public getAutoplayGifs()Z
++     .locals 3
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "CACHE_KEY_CTC_AUTOPLAY_GIFS"
++ 
++     const/4 v2, 0x1
++ 
++     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++ 
++     move-result v0
++ 
++     return v0
++ .end method
++ 
++ .method public setAutoplayGifs(Z)V
++     .locals 2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     const-string v1, "CACHE_KEY_CTC_AUTOPLAY_GIFS"
++ 
++     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
++ .method public getLeakChannels()Z
++     .locals 3
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "CACHE_KEY_CTC_LEAK_CHANNELS"
++ 
++     const/4 v2, 0x1
++ 
++     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++ 
++     move-result v0
++ 
++     return v0
++ .end method
++ 
++ .method public setLeakChannels(Z)V
++     .locals 2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     const-string v1, "CACHE_KEY_CTC_LEAK_CHANNELS"
++ 
++     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
++ .method public getImageSpoiler()Z
++     .locals 3
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "CACHE_KEY_CTC_IMAGE_SPOILER"
++ 
++     const/4 v2, 0x0
++ 
++     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++ 
++     move-result v0
++ 
++     return v0
++ .end method
++ 
++ .method public setImageSpoiler(Z)V
++     .locals 2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     const-string v1, "CACHE_KEY_CTC_IMAGE_SPOILER"
++ 
++     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
++ 
++ .method public getNoDelete()Z
++     .locals 3
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "CACHE_KEY_CTC_NO_DELETE"
++ 
++     const/4 v2, 0x0
++ 
++     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++ 
++     move-result v0
++ 
++     return v0
++ .end method
++ 
++ .method public setNoDelete(Z)V
++     .locals 2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     const-string v1, "CACHE_KEY_CTC_NO_DELETE"
++ 
++     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
++ .method public getShowTyping()Z
++     .locals 3
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "CACHE_KEY_CTC_SHOW_TYPING"
++ 
++     const/4 v2, 0x1
++ 
++     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
++ 
++     move-result v0
++ 
++     return v0
++ .end method
++ 
++ .method public setShowTyping(Z)V
++     .locals 2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreUserSettings;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     const-string v1, "CACHE_KEY_CTC_SHOW_TYPING"
++ 
++     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
++ 
++ .method public getStoredToken()Ljava/lang/String;
++     .locals 3
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreAuthentication;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "none"
++ 
++     const-string v2, "STORE_AUTHED_TOKEN"
++ 
++     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
++ 
++     move-result-object v0
++ 
++     return-object v0
++ .end method
++ 
++ 
++ .method public setStoredToken(Ljava/lang/String;)V
++     .locals 2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreAuthentication;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     const-string v1, "STORE_AUTHED_TOKEN"
++ 
++     invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
++ .method public getAccountToken(Ljava/lang/String;)Ljava/lang/String;
++     .locals 3
++ 
++     const-string v2, "STORE_AUTHED_TOKEN_CTC_USER_"
++ 
++     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
++ 
++     move-result-object p1
++ 
++     new-instance v0, Ljava/lang/StringBuilder;
++ 
++     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
++ 
++     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++ 
++     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++ 
++     move-result-object v2
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreAuthentication;->prefs:Landroid/content/SharedPreferences;
++ 
++     const-string v1, "none"
++ 
++     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
++ 
++     move-result-object v0
++ 
++     return-object v0
++ .end method
++ 
++ 
++ .method public setAccountToken(Ljava/lang/String;Ljava/lang/String;)V
++     .locals 2
++ 
++     const-string v1, "STORE_AUTHED_TOKEN_CTC_USER_"
++ 
++     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
++ 
++     move-result-object p1
++ 
++     new-instance v0, Ljava/lang/StringBuilder;
++ 
++     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
++ 
++     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++ 
++     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++ 
++     move-result-object v1
++ 
++     iget-object v0, p0, Lcom/discord/stores/StoreAuthentication;->prefs:Landroid/content/SharedPreferences;
++ 
++     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object v0
++ 
++     invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
++ 
++     move-result-object p1
++ 
++     invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
++ 
++     return-void
++ .end method
++ 
+  .method private getAdjustedTheme(Ljava/lang/String;)Ljava/lang/String;
+      .locals 1
+  
+diff -crB from/smali/com/discord/utilities/rest/SendUtils$getPart$1$1.smali to/smali/com/discord/utilities/rest/SendUtils$getPart$1$1.smali
+*** from/smali/com/discord/utilities/rest/SendUtils$getPart$1$1.smali	2020-08-01 14:44:26.644428773 +0300
+--- to/smali/com/discord/utilities/rest/SendUtils$getPart$1$1.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 46,51 ****
+--- 46,85 ----
+      return-void
+  .end method
+  
++ .method public static final interceptFilename(Ljava/lang/String;)Ljava/lang/String;
++     .locals 3
++ 
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
++ 
++     move-result-object v0
++ 
++     invoke-virtual {v0}, Lcom/discord/stores/StoreUserSettings;->getImageSpoiler()Z
++ 
++     move-result v1
++ 
++     if-eqz v1, :cond_1
++ 
++     new-instance v2, Ljava/lang/StringBuilder;
++ 
++     const-string v1, "SPOILER_"
++ 
++     invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
++ 
++     invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++ 
++     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++ 
++     move-result-object p0
++ 
++     # I commented this out and do this in StoreMessages now as this'd only work for a single image
++     # const/4 v1, 0x0
++ 
++     # invoke-virtual {v0, v1}, Lcom/discord/stores/StoreUserSettings;->setImageSpoiler(Z)V
++ 
++     :cond_1
++     return-object p0
++ .end method
++ 
+  
+  # virtual methods
+  .method public final invoke(Lokhttp3/RequestBody;Ljava/lang/String;Landroid/graphics/Bitmap$CompressFormat;)Lcom/discord/utilities/rest/SendUtils$FileUpload;
+***************
+*** 77,82 ****
+--- 111,120 ----
+  
+      move-result-object v3
+  
++     invoke-static {v3}, Lcom/discord/utilities/rest/SendUtils$getPart$1$1;->interceptFilename(Ljava/lang/String;)Ljava/lang/String;
++ 
++     move-result-object v3
++ 
+      .line 4
+      iget-object p1, p0, Lcom/discord/utilities/rest/SendUtils$getPart$1$1;->this$0:Lcom/discord/utilities/rest/SendUtils$getPart$1;
+  
+diff -crB from/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali to/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali
+*** from/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali	2020-08-01 14:44:26.797763109 +0300
+--- to/smali/com/discord/widgets/chat/input/WidgetChatInputEditText$1.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 59,64 ****
+--- 59,74 ----
+  
+      invoke-virtual {v0}, Lcom/discord/widgets/chat/input/WidgetChatInputEditText;->saveText()V
+  
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
++ 
++     move-result-object v0
++ 
++     invoke-virtual {v0}, Lcom/discord/stores/StoreUserSettings;->getShowTyping()Z
++ 
++     move-result v0
++ 
++     if-eqz v0, :cond_1
++ 
+      .line 4
+      invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+  
+diff -crB from/smali/com/discord/widgets/chat/input/WidgetChatInputSend.smali to/smali/com/discord/widgets/chat/input/WidgetChatInputSend.smali
+*** from/smali/com/discord/widgets/chat/input/WidgetChatInputSend.smali	2020-08-01 14:44:26.801096464 +0300
+--- to/smali/com/discord/widgets/chat/input/WidgetChatInputSend.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 60,65 ****
+--- 60,89 ----
+      return p0
+  .end method
+  
++ .method public static final access$SetInput(Lcom/discord/widgets/chat/input/WidgetChatInputSend;Lcom/discord/widgets/chat/input/WidgetChatInputEditText;Ljava/lang/CharSequence;)Z
++     .locals 1
++ 
++     .line 147
++     invoke-virtual {p1, p2}, Lcom/discord/widgets/chat/input/WidgetChatInputEditText;->setText(Ljava/lang/CharSequence;)V
++ 
++     .line 148
++     invoke-virtual {p1}, Lcom/discord/widgets/chat/input/WidgetChatInputEditText;->clearLastTypingEmission()V
++ 
++     .line 151
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getChat()Lcom/discord/stores/StoreChat;
++ 
++     move-result-object p1
++ 
++     const/4 v0, 0x0
++ 
++     .line 152
++     invoke-virtual {p1, v0}, Lcom/discord/stores/StoreChat;->setEditingMessage(Lcom/discord/stores/StoreChat$EditingMessage;)V
++ 
++     const/4 p1, 0x1
++ 
++     return p1
++ .end method
++ 
+  .method private final clearInput(Lcom/discord/widgets/chat/input/WidgetChatInputEditText;Lcom/lytefast/flexinput/viewmodel/FlexInputViewModel;Ljava/lang/Boolean;)Z
+      .locals 1
+  
+diff -crB from/smali/com/discord/widgets/chat/list/InlineMediaView.smali to/smali/com/discord/widgets/chat/list/InlineMediaView.smali
+*** from/smali/com/discord/widgets/chat/list/InlineMediaView.smali	2020-08-01 14:44:26.824429950 +0300
+--- to/smali/com/discord/widgets/chat/list/InlineMediaView.smali	2020-08-01 14:44:50.484584664 +0300
+***************
+*** 1289,1294 ****
+--- 1289,1304 ----
+  
+      move-result v1
+  
++     invoke-static {}, Lcom/discord/stores/StoreStream;->getUserSettings()Lcom/discord/stores/StoreUserSettings;
++ 
++     move-result-object v7
++ 
++     invoke-virtual {v7}, Lcom/discord/stores/StoreUserSettings;->getAutoplayGifs()Z
++ 
++     move-result v7
++ 
++     and-int v1, v1, v7
++ 
+      if-eqz v1, :cond_6
+  
+      const/4 v7, 0x1

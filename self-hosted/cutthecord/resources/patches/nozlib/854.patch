@@ -1,0 +1,35 @@
+diff -crB -x dist -x build com.discord-848-base/smali/com/discord/gateway/GatewaySocket.smali com.discord-848/smali/com/discord/gateway/GatewaySocket.smali
+*** com.discord-848-base/smali/com/discord/gateway/GatewaySocket.smali	2019-02-17 12:23:56.167569077 +0300
+--- com.discord-848/smali/com/discord/gateway/GatewaySocket.smali	2019-02-17 12:35:50.464681682 +0300
+***************
+*** 1019,1025 ****
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string p1, "/?encoding=json&v=6&compress=zlib-stream"
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 1019,1025 ----
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+!     const-string p1, "/?encoding=json&v=6"
+  
+      invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+diff -crB -x dist -x build com.discord-848-base/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali com.discord-848/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali
+*** com.discord-848-base/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali	2019-02-17 12:23:56.167569077 +0300
+--- com.discord-848/smali/com/discord/gateway/io/OutgoingPayload$Identify.smali	2019-02-17 12:35:50.461348334 +0300
+***************
+*** 59,64 ****
+--- 59,66 ----
+  
+      const/4 v0, 0x0
+  
++     const/4 p3, 0x0
++ 
+      .line 27
+      invoke-direct {p0, v0}, Lcom/discord/gateway/io/OutgoingPayload;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+  
+

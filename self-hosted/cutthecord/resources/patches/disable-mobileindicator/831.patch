@@ -1,0 +1,20 @@
+diff -crB -x dist com.discord-831/smali/com/discord/utilities/analytics/AnalyticsUtils.smali com.discord-831-patched/smali/com/discord/utilities/analytics/AnalyticsUtils.smali
+*** com.discord-831/smali/com/discord/utilities/analytics/AnalyticsUtils.smali  2019-01-18 19:12:19.106603636 +0300
+--- com.discord-831-patched/smali/com/discord/utilities/analytics/AnalyticsUtils.smali  2019-01-18 19:12:36.296691801 +0300
+***************
+*** 197,203 ****
+
+      const-string v1, "browser"
+
+!     const-string v2, "Discord Android"
+
+      .line 87
+      invoke-static {v1, v2}, Lkotlin/q;->w(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+--- 197,203 ----
+
+      const-string v1, "browser"
+
+!     const-string v2, "Discord Client"
+
+      .line 87
+      invoke-static {v1, v2}, Lkotlin/q;->w(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;

@@ -1,0 +1,1276 @@
+diff -crB from/AndroidManifest.xml to/AndroidManifest.xml
+*** from/AndroidManifest.xml	2020-02-12 23:54:38.722336676 +0000
+--- to/AndroidManifest.xml	2020-02-12 23:54:47.876256910 +0000
+***************
+*** 126,133 ****
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+          </provider>
+          <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="true"/>
+!         <meta-data android:name="io.fabric.ApiKey" android:value="eaccfe98b3572a0a8721a8c3b10f9909018f5ec6"/>
+!         <meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="AIzaSyD-4L6bgKMixqBRtrG2UktVXK6IexXlsog"/>
+          <activity android:name="com.yalantis.ucrop.UCropActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+          <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+              <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+--- 126,133 ----
+              <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+          </provider>
+          <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="true"/>
+!         <meta-data android:name="io.fabric.ApiKey" android:value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+!         <meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+          <activity android:name="com.yalantis.ucrop.UCropActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+          <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+              <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+diff -crB from/res/values/strings.xml to/res/values/strings.xml
+*** from/res/values/strings.xml	2020-02-12 23:54:11.192576563 +0000
+--- to/res/values/strings.xml	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 1007,1013 ****
+      <string name="cloud_sync_modal_or">OR</string>
+      <string name="collapse">Collapse</string>
+      <string name="collapse_category">Collapse Category</string>
+!     <string name="com.crashlytics.android.build_id">f98fc0f9-2aad-4841-a6e9-0ced66b70c0f</string>
+      <string name="coming_soon">Coming Soon</string>
+      <string name="command_giphy_description">Search Animated GIFs on the Web</string>
+      <string name="command_me_description">Displays text with emphasis.</string>
+--- 1007,1013 ----
+      <string name="cloud_sync_modal_or">OR</string>
+      <string name="collapse">Collapse</string>
+      <string name="collapse_category">Collapse Category</string>
+!     <string name="com.crashlytics.android.build_id">00000000-0000-0000-0000-000000000000</string>
+      <string name="coming_soon">Coming Soon</string>
+      <string name="command_giphy_description">Search Animated GIFs on the Web</string>
+      <string name="command_me_description">Displays text with emphasis.</string>
+diff -crB from/smali/com/discord/utilities/analytics/AdjustConfig$AdjustLifecycleListener.smali to/smali/com/discord/utilities/analytics/AdjustConfig$AdjustLifecycleListener.smali
+*** from/smali/com/discord/utilities/analytics/AdjustConfig$AdjustLifecycleListener.smali	2020-02-12 23:54:13.464556765 +0000
+--- to/smali/com/discord/utilities/analytics/AdjustConfig$AdjustLifecycleListener.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 42,135 ****
+  .end method
+  
+  .method public onActivityPaused(Landroid/app/Activity;)V
+!     .locals 2
+  
+-     .line 1
+-     invoke-static {}, Lp/a/b/b/g/e;->c()Le/c/a/c0;
+- 
+-     move-result-object p1
+- 
+-     .line 2
+-     invoke-virtual {p1}, Le/c/a/c0;->a()Z
+- 
+-     move-result v0
+- 
+-     if-nez v0, :cond_0
+- 
+-     goto :goto_0
+- 
+-     .line 3
+-     :cond_0
+-     iget-object p1, p1, Le/c/a/c0;->d:Le/c/a/s0;
+- 
+-     check-cast p1, Le/c/a/g;
+- 
+-     .line 4
+-     iget-object v0, p1, Le/c/a/g;->h:Le/c/a/g$j;
+- 
+-     const/4 v1, 0x1
+- 
+-     iput-boolean v1, v0, Le/c/a/g$j;->c:Z
+- 
+-     .line 5
+-     iget-object v0, p1, Le/c/a/g;->a:Le/c/a/p0;
+- 
+-     new-instance v1, Le/c/a/n;
+- 
+-     invoke-direct {v1, p1}, Le/c/a/n;-><init>(Le/c/a/g;)V
+- 
+-     .line 6
+-     iget-object p1, v0, Le/c/a/p0;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+- 
+-     invoke-virtual {p1, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+- 
+-     :goto_0
+      return-void
+  .end method
+  
+  .method public onActivityResumed(Landroid/app/Activity;)V
+!     .locals 2
+! 
+!     .line 1
+!     invoke-static {}, Lp/a/b/b/g/e;->c()Le/c/a/c0;
+! 
+!     move-result-object p1
+! 
+!     .line 2
+!     invoke-virtual {p1}, Le/c/a/c0;->a()Z
+! 
+!     move-result v0
+! 
+!     if-nez v0, :cond_0
+! 
+!     goto :goto_0
+! 
+!     .line 3
+!     :cond_0
+!     iget-object p1, p1, Le/c/a/c0;->d:Le/c/a/s0;
+! 
+!     check-cast p1, Le/c/a/g;
+! 
+!     .line 4
+!     iget-object v0, p1, Le/c/a/g;->h:Le/c/a/g$j;
+! 
+!     const/4 v1, 0x0
+! 
+!     iput-boolean v1, v0, Le/c/a/g$j;->c:Z
+! 
+!     .line 5
+!     iget-object v0, p1, Le/c/a/g;->a:Le/c/a/p0;
+! 
+!     new-instance v1, Le/c/a/j;
+! 
+!     invoke-direct {v1, p1}, Le/c/a/j;-><init>(Le/c/a/g;)V
+! 
+!     .line 6
+!     iget-object p1, v0, Le/c/a/p0;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+! 
+!     invoke-virtual {p1, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+  
+-     :goto_0
+      return-void
+  .end method
+  
+--- 42,55 ----
+  .end method
+  
+  .method public onActivityPaused(Landroid/app/Activity;)V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+  .method public onActivityResumed(Landroid/app/Activity;)V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+diff -crB from/smali/com/discord/utilities/analytics/AdjustConfig.smali to/smali/com/discord/utilities/analytics/AdjustConfig.smali
+*** from/smali/com/discord/utilities/analytics/AdjustConfig.smali	2020-02-12 23:54:13.464556765 +0000
+--- to/smali/com/discord/utilities/analytics/AdjustConfig.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 12,18 ****
+  
+  
+  # static fields
+! .field public static final ADJUST_APP_TOKEN:Ljava/lang/String; = "d8fcx8xdmrr4"
+  
+  .field public static final ADJUST_ENVIRONMENT:Ljava/lang/String;
+  
+--- 12,18 ----
+  
+  
+  # static fields
+! .field public static final ADJUST_APP_TOKEN:Ljava/lang/String; = "aaaaaaaaaaaa"
+  
+  .field public static final ADJUST_ENVIRONMENT:Ljava/lang/String;
+  
+diff -crB from/smali/com/discord/utilities/analytics/AnalyticsTracker$AdjustEventTracker.smali to/smali/com/discord/utilities/analytics/AnalyticsTracker$AdjustEventTracker.smali
+*** from/smali/com/discord/utilities/analytics/AnalyticsTracker$AdjustEventTracker.smali	2020-02-12 23:54:13.466556748 +0000
+--- to/smali/com/discord/utilities/analytics/AnalyticsTracker$AdjustEventTracker.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 15,23 ****
+  
+  
+  # static fields
+! .field public static final EVENT_TOKEN_LOGIN:Ljava/lang/String; = "ctt5aq"
+  
+! .field public static final EVENT_TOKEN_REGISTER:Ljava/lang/String; = "ebn8ke"
+  
+  .field public static final INSTANCE:Lcom/discord/utilities/analytics/AnalyticsTracker$AdjustEventTracker;
+  
+--- 15,23 ----
+  
+  
+  # static fields
+! .field public static final EVENT_TOKEN_LOGIN:Ljava/lang/String; = "aaaaaa"
+  
+! .field public static final EVENT_TOKEN_REGISTER:Ljava/lang/String; = "aaaaaa"
+  
+  .field public static final INSTANCE:Lcom/discord/utilities/analytics/AnalyticsTracker$AdjustEventTracker;
+  
+***************
+*** 48,78 ****
+  
+  # virtual methods
+  .method public final trackLogin()V
+!     .locals 2
+! 
+!     .line 1
+!     new-instance v0, Le/c/a/w;
+! 
+!     const-string v1, "ctt5aq"
+! 
+!     invoke-direct {v0, v1}, Le/c/a/w;-><init>(Ljava/lang/String;)V
+! 
+!     invoke-static {v0}, Lp/a/b/b/g/e;->a(Le/c/a/w;)V
+  
+      return-void
+  .end method
+  
+  .method public final trackRegister()V
+!     .locals 2
+! 
+!     .line 1
+!     new-instance v0, Le/c/a/w;
+! 
+!     const-string v1, "ebn8ke"
+! 
+!     invoke-direct {v0, v1}, Le/c/a/w;-><init>(Ljava/lang/String;)V
+! 
+!     invoke-static {v0}, Lp/a/b/b/g/e;->a(Le/c/a/w;)V
+  
+      return-void
+  .end method
+--- 48,60 ----
+  
+  # virtual methods
+  .method public final trackLogin()V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+  .method public final trackRegister()V
+!     .locals 0
+  
+      return-void
+  .end method
+diff -crB from/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali to/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali
+*** from/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali	2020-02-12 23:54:13.466556748 +0000
+--- to/smali/com/discord/utilities/analytics/AnalyticSuperProperties.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 169,175 ****
+  .method private final setBaselineProperties()V
+      .locals 5
+  
+!     const/16 v0, 0x8
+  
+      new-array v0, v0, [Lkotlin/Pair;
+  
+--- 169,175 ----
+  .method private final setBaselineProperties()V
+      .locals 5
+  
+!     const/16 v0, 0x4
+  
+      new-array v0, v0, [Lkotlin/Pair;
+  
+***************
+*** 237,319 ****
+  
+      aput-object v3, v0, v1
+  
+-     const/4 v1, 0x4
+- 
+-     .line 7
+-     new-instance v2, Ljava/lang/StringBuilder;
+- 
+-     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+- 
+-     sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+- 
+-     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+- 
+-     const-string v3, ", "
+- 
+-     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+- 
+-     sget-object v3, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
+- 
+-     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+- 
+-     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+- 
+-     move-result-object v2
+- 
+-     .line 8
+-     new-instance v3, Lkotlin/Pair;
+- 
+-     const-string v4, "device"
+- 
+-     invoke-direct {v3, v4, v2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+- 
+-     aput-object v3, v0, v1
+- 
+-     const/4 v1, 0x5
+- 
+-     .line 9
+-     new-instance v2, Lkotlin/Pair;
+- 
+-     const-string v3, "os"
+- 
+-     const-string v4, "Android"
+- 
+-     invoke-direct {v2, v3, v4}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+- 
+-     aput-object v2, v0, v1
+- 
+-     const/4 v1, 0x6
+- 
+-     .line 10
+-     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+- 
+-     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+- 
+-     move-result-object v2
+- 
+-     .line 11
+-     new-instance v3, Lkotlin/Pair;
+- 
+-     const-string v4, "os_sdk_version"
+- 
+-     invoke-direct {v3, v4, v2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+- 
+-     aput-object v3, v0, v1
+- 
+-     const/4 v1, 0x7
+- 
+-     .line 12
+-     sget-object v2, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+- 
+-     .line 13
+-     new-instance v3, Lkotlin/Pair;
+- 
+-     const-string v4, "os_version"
+- 
+-     invoke-direct {v3, v4, v2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+- 
+-     aput-object v3, v0, v1
+- 
+      .line 14
+      invoke-static {v0}, Lt/q/l;->mapOf([Lkotlin/Pair;)Ljava/util/Map;
+  
+--- 237,242 ----
+***************
+*** 443,851 ****
+  .end method
+  
+  .method public final setAdvertiserId(Ljava/lang/String;)V
+!     .locals 1
+! 
+!     if-eqz p1, :cond_0
+! 
+!     const-string v0, "device_advertiser_id"
+! 
+!     .line 1
+!     invoke-static {v0, p1}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+! 
+!     move-result-object p1
+! 
+!     const-string v0, "java.util.Collections.si\u2026(pair.first, pair.second)"
+! 
+!     invoke-static {p1, v0}, Lt/u/b/j;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     .line 2
+!     invoke-direct {p0, p1}, Lcom/discord/utilities/analytics/AnalyticSuperProperties;->updateSuperProperties(Ljava/util/Map;)V
+  
+      return-void
+- 
+-     :cond_0
+-     const-string p1, "advertiserId"
+- 
+-     .line 3
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     const/4 p1, 0x0
+- 
+-     throw p1
+  .end method
+  
+  .method public final setCampaignProperties(Landroid/content/Intent;)V
+!     .locals 7
+! 
+!     if-eqz p1, :cond_9
+! 
+!     .line 1
+!     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+! 
+!     move-result-object p1
+! 
+!     if-eqz p1, :cond_8
+! 
+!     const-string v0, "referrer"
+! 
+!     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+! 
+!     move-result-object p1
+! 
+!     if-eqz p1, :cond_8
+! 
+!     const-string v1, "intent.extras?.getString\u2026PERTY_REFERRER) ?: return"
+! 
+!     invoke-static {p1, v1}, Lt/u/b/j;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     const/4 v1, 0x1
+! 
+!     new-array v2, v1, [Lkotlin/Pair;
+! 
+!     .line 2
+!     new-instance v3, Lkotlin/Pair;
+! 
+!     invoke-direct {v3, v0, p1}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+! 
+!     const/4 v0, 0x0
+! 
+!     aput-object v3, v2, v0
+! 
+!     .line 3
+!     invoke-static {v2}, Lt/q/l;->mutableMapOf([Lkotlin/Pair;)Ljava/util/Map;
+! 
+!     move-result-object v2
+! 
+!     const-string v3, "&"
+! 
+!     .line 4
+!     filled-new-array {v3}, [Ljava/lang/String;
+! 
+!     move-result-object v3
+! 
+!     const/4 v4, 0x6
+! 
+!     invoke-static {p1, v3, v0, v0, v4}, Lt/a0/s;->split$default(Ljava/lang/CharSequence;[Ljava/lang/String;ZII)Ljava/util/List;
+! 
+!     move-result-object p1
+! 
+!     .line 5
+!     new-instance v3, Ljava/util/ArrayList;
+! 
+!     const/16 v5, 0xa
+! 
+!     invoke-static {p1, v5}, Le/k/a/b/e/p/g;->collectionSizeOrDefault(Ljava/lang/Iterable;I)I
+! 
+!     move-result v5
+! 
+!     invoke-direct {v3, v5}, Ljava/util/ArrayList;-><init>(I)V
+! 
+!     .line 6
+!     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+! 
+!     move-result-object p1
+! 
+!     :goto_0
+!     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+! 
+!     move-result v5
+! 
+!     if-eqz v5, :cond_0
+! 
+!     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+! 
+!     move-result-object v5
+! 
+!     .line 7
+!     check-cast v5, Ljava/lang/String;
+! 
+!     const-string v6, "="
+! 
+!     .line 8
+!     filled-new-array {v6}, [Ljava/lang/String;
+! 
+!     move-result-object v6
+! 
+!     invoke-static {v5, v6, v0, v0, v4}, Lt/a0/s;->split$default(Ljava/lang/CharSequence;[Ljava/lang/String;ZII)Ljava/util/List;
+  
+-     move-result-object v5
+- 
+-     invoke-interface {v3, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+- 
+-     goto :goto_0
+- 
+-     .line 9
+-     :cond_0
+-     new-instance p1, Ljava/util/ArrayList;
+- 
+-     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+- 
+-     .line 10
+-     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+- 
+-     move-result-object v3
+- 
+-     :cond_1
+-     :goto_1
+-     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+- 
+-     move-result v4
+- 
+-     if-eqz v4, :cond_3
+- 
+-     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+- 
+-     move-result-object v4
+- 
+-     move-object v5, v4
+- 
+-     check-cast v5, Ljava/util/List;
+- 
+-     .line 11
+-     invoke-interface {v5}, Ljava/util/List;->size()I
+- 
+-     move-result v5
+- 
+-     const/4 v6, 0x2
+- 
+-     if-ne v5, v6, :cond_2
+- 
+-     const/4 v5, 0x1
+- 
+-     goto :goto_2
+- 
+-     :cond_2
+-     const/4 v5, 0x0
+- 
+-     :goto_2
+-     if-eqz v5, :cond_1
+- 
+-     invoke-interface {p1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+- 
+-     goto :goto_1
+- 
+-     .line 12
+-     :cond_3
+-     new-instance v3, Ljava/util/ArrayList;
+- 
+-     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+- 
+-     .line 13
+-     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+- 
+-     move-result-object p1
+- 
+-     :cond_4
+-     :goto_3
+-     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+- 
+-     move-result v4
+- 
+-     if-eqz v4, :cond_6
+- 
+-     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+- 
+-     move-result-object v4
+- 
+-     move-object v5, v4
+- 
+-     check-cast v5, Ljava/util/List;
+- 
+-     .line 14
+-     invoke-interface {v5, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+- 
+-     move-result-object v5
+- 
+-     check-cast v5, Ljava/lang/String;
+- 
+-     .line 15
+-     invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
+- 
+-     move-result v6
+- 
+-     sparse-switch v6, :sswitch_data_0
+- 
+-     goto :goto_5
+- 
+-     :sswitch_0
+-     const-string v6, "utm_source"
+- 
+-     .line 16
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_1
+-     const-string v6, "location"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_2
+-     const-string v6, "utm_medium"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_3
+-     const-string v6, "search_engine"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_4
+-     const-string v6, "mp_keyword"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_5
+-     const-string v6, "utm_term"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_6
+-     const-string v6, "utm_campaign"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_7
+-     const-string v6, "referring_domain"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     goto :goto_4
+- 
+-     :sswitch_8
+-     const-string v6, "utm_content"
+- 
+-     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+- 
+-     move-result v5
+- 
+-     if-eqz v5, :cond_5
+- 
+-     :goto_4
+-     const/4 v5, 0x1
+- 
+-     goto :goto_6
+- 
+-     :cond_5
+-     :goto_5
+-     const/4 v5, 0x0
+- 
+-     :goto_6
+-     if-eqz v5, :cond_4
+- 
+-     .line 17
+-     invoke-interface {v3, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+- 
+-     goto :goto_3
+- 
+-     .line 18
+-     :cond_6
+-     invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+- 
+-     move-result-object p1
+- 
+-     :goto_7
+-     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+- 
+-     move-result v3
+- 
+-     if-eqz v3, :cond_7
+- 
+-     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+- 
+-     move-result-object v3
+- 
+-     .line 19
+-     check-cast v3, Ljava/util/List;
+- 
+-     .line 20
+-     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+- 
+-     move-result-object v4
+- 
+-     check-cast v4, Ljava/lang/String;
+- 
+-     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+- 
+-     move-result-object v3
+- 
+-     check-cast v3, Ljava/lang/String;
+- 
+-     invoke-interface {v2, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+- 
+-     goto :goto_7
+- 
+-     .line 21
+-     :cond_7
+-     invoke-direct {p0, v2}, Lcom/discord/utilities/analytics/AnalyticSuperProperties;->updateSuperProperties(Ljava/util/Map;)V
+- 
+-     :cond_8
+      return-void
+- 
+-     :cond_9
+-     const-string p1, "intent"
+- 
+-     .line 22
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     const/4 p1, 0x0
+- 
+-     throw p1
+- 
+-     :sswitch_data_0
+-     .sparse-switch
+-         -0x5bc8ed18 -> :sswitch_8
+-         -0x40f32acd -> :sswitch_7
+-         -0x3db0f7f -> :sswitch_6
+-         0x31ad945d -> :sswitch_5
+-         0x3d3a7f4d -> :sswitch_4
+-         0x3f4764b9 -> :sswitch_3
+-         0x70a1a726 -> :sswitch_2
+-         0x714f9fb5 -> :sswitch_1
+-         0x7b737fcc -> :sswitch_0
+-     .end sparse-switch
+  .end method
+--- 366,378 ----
+  .end method
+  
+  .method public final setAdvertiserId(Ljava/lang/String;)V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+  .method public final setCampaignProperties(Landroid/content/Intent;)V
+!     .locals 0
+  
+      return-void
+  .end method
+diff -crB from/smali/com/discord/utilities/analytics/AnalyticsUtils$Tracker.smali to/smali/com/discord/utilities/analytics/AnalyticsUtils$Tracker.smali
+*** from/smali/com/discord/utilities/analytics/AnalyticsUtils$Tracker.smali	2020-02-12 23:54:13.468556730 +0000
+--- to/smali/com/discord/utilities/analytics/AnalyticsUtils$Tracker.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 149,157 ****
+  .method public static final synthetic access$drainEventsQueue(Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;)V
+      .locals 0
+  
+-     .line 1
+-     invoke-direct {p0}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->drainEventsQueue()V
+- 
+      return-void
+  .end method
+  
+--- 149,154 ----
+***************
+*** 174,261 ****
+  .end method
+  
+  .method private final declared-synchronized drainEventsQueue()V
+!     .locals 4
+! 
+!     monitor-enter p0
+! 
+!     .line 1
+!     :try_start_0
+!     invoke-direct {p0}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->getCanDrain()Z
+! 
+!     move-result v0
+!     :try_end_0
+!     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+! 
+!     if-nez v0, :cond_0
+! 
+!     .line 2
+!     monitor-exit p0
+! 
+!     return-void
+! 
+!     .line 3
+!     :cond_0
+!     :try_start_1
+!     new-instance v0, Ljava/util/ArrayList;
+! 
+!     iget-object v1, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->eventsQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
+! 
+!     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+! 
+!     .line 4
+!     iget-object v1, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->eventsQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
+! 
+!     invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
+! 
+!     .line 5
+!     iget-object v1, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->restAPI:Lcom/discord/utilities/rest/RestAPI;
+! 
+!     .line 6
+!     new-instance v2, Lcom/discord/restapi/RestAPIParams$Science;
+! 
+!     iget-object v3, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->analyticsToken:Ljava/lang/String;
+! 
+!     invoke-direct {v2, v3, v0}, Lcom/discord/restapi/RestAPIParams$Science;-><init>(Ljava/lang/String;Ljava/util/List;)V
+! 
+!     invoke-virtual {v1, v2}, Lcom/discord/utilities/rest/RestAPI;->science(Lcom/discord/restapi/RestAPIParams$Science;)Lrx/Observable;
+! 
+!     move-result-object v1
+! 
+!     const/4 v2, 0x0
+! 
+!     const/4 v3, 0x1
+! 
+!     .line 7
+!     invoke-static {v2, v3}, Le/a/b/k;->a(ZI)Lrx/Observable$c;
+! 
+!     move-result-object v2
+! 
+!     invoke-virtual {v1, v2}, Lrx/Observable;->a(Lrx/Observable$c;)Lrx/Observable;
+! 
+!     move-result-object v1
+! 
+!     .line 8
+!     sget-object v2, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker$drainEventsQueue$1;->INSTANCE:Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker$drainEventsQueue$1;
+! 
+!     new-instance v3, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker$drainEventsQueue$2;
+! 
+!     invoke-direct {v3, p0, v0}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker$drainEventsQueue$2;-><init>(Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;Ljava/util/ArrayList;)V
+! 
+!     invoke-virtual {v1, v2, v3}, Lrx/Observable;->a(Lrx/functions/Action1;Lrx/functions/Action1;)Lrx/Subscription;
+!     :try_end_1
+!     .catchall {:try_start_1 .. :try_end_1} :catchall_0
+! 
+!     .line 9
+!     monitor-exit p0
+  
+      return-void
+- 
+-     :catchall_0
+-     move-exception v0
+- 
+-     monitor-exit p0
+- 
+-     throw v0
+  .end method
+  
+  .method private final getCanDrain()Z
+--- 171,179 ----
+  .end method
+  
+  .method private final declared-synchronized drainEventsQueue()V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+  .method private final getCanDrain()Z
+***************
+*** 529,560 ****
+  .method public static synthetic setTrackingData$default(Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;Ljava/lang/String;ZILjava/lang/Object;)V
+      .locals 0
+  
+-     and-int/lit8 p3, p3, 0x2
+- 
+-     if-eqz p3, :cond_0
+- 
+-     const/4 p2, 0x0
+- 
+-     .line 1
+-     :cond_0
+-     invoke-virtual {p0, p1, p2}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->setTrackingData(Ljava/lang/String;Z)V
+- 
+      return-void
+  .end method
+  
+  .method public static synthetic track$default(Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)V
+      .locals 0
+  
+-     and-int/lit8 p3, p3, 0x2
+- 
+-     if-eqz p3, :cond_0
+- 
+-     const/4 p2, 0x0
+- 
+-     .line 1
+-     :cond_0
+-     invoke-virtual {p0, p1, p2}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->track(Ljava/lang/String;Ljava/util/Map;)V
+- 
+      return-void
+  .end method
+  
+--- 447,458 ----
+***************
+*** 596,837 ****
+  .method public final declared-synchronized setTrackingData(Ljava/lang/String;Z)V
+      .locals 0
+  
+-     monitor-enter p0
+- 
+-     .line 1
+-     :try_start_0
+-     invoke-direct {p0}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->drainEventsQueue()V
+- 
+-     .line 2
+-     iput-object p1, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->analyticsToken:Ljava/lang/String;
+- 
+-     .line 3
+-     iput-boolean p2, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->fingerprinted:Z
+- 
+-     .line 4
+-     invoke-direct {p0}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->drainEventsQueue()V
+-     :try_end_0
+-     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+- 
+-     .line 5
+-     monitor-exit p0
+- 
+      return-void
+- 
+-     :catchall_0
+-     move-exception p1
+- 
+-     monitor-exit p0
+- 
+-     throw p1
+  .end method
+  
+  .method public final track(Ljava/lang/String;Ljava/util/Map;)V
+!     .locals 2
+!     .annotation system Ldalvik/annotation/Signature;
+!         value = {
+!             "(",
+!             "Ljava/lang/String;",
+!             "Ljava/util/Map<",
+!             "Ljava/lang/String;",
+!             "+",
+!             "Ljava/lang/Object;",
+!             ">;)V"
+!         }
+!     .end annotation
+! 
+!     if-eqz p1, :cond_1
+! 
+!     .line 7
+!     iget-object v0, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->eventsQueue:Ljava/util/concurrent/ConcurrentLinkedQueue;
+! 
+!     new-instance v1, Lcom/discord/restapi/RestAPIParams$Science$Event;
+! 
+!     if-eqz p2, :cond_0
+! 
+!     goto :goto_0
+! 
+!     :cond_0
+!     invoke-static {}, Lt/q/l;->emptyMap()Ljava/util/Map;
+! 
+!     move-result-object p2
+! 
+!     :goto_0
+!     invoke-direct {v1, p1, p2}, Lcom/discord/restapi/RestAPIParams$Science$Event;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+! 
+!     invoke-virtual {v0, v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
+! 
+!     const-wide/16 p1, 0x5dc
+! 
+!     .line 8
+!     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+! 
+!     invoke-static {p1, p2, v0}, Lrx/Observable;->i(JLjava/util/concurrent/TimeUnit;)Lrx/Observable;
+! 
+!     move-result-object p1
+! 
+!     .line 9
+!     new-instance p2, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker$track$1;
+! 
+!     invoke-direct {p2, p0}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker$track$1;-><init>(Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;)V
+! 
+!     invoke-virtual {p1, p2}, Lrx/Observable;->c(Lrx/functions/Action1;)Lrx/Subscription;
+  
+      return-void
+- 
+-     :cond_1
+-     const-string p1, "event"
+- 
+-     .line 10
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     const/4 p1, 0x0
+- 
+-     throw p1
+  .end method
+  
+  .method public final track(Lkotlin/Pair;JLkotlin/jvm/functions/Function0;)V
+!     .locals 2
+!     .annotation system Ldalvik/annotation/Signature;
+!         value = {
+!             "(",
+!             "Lkotlin/Pair<",
+!             "Ljava/lang/String;",
+!             "Ljava/lang/Long;",
+!             ">;J",
+!             "Lkotlin/jvm/functions/Function0<",
+!             "+",
+!             "Ljava/util/Map<",
+!             "Ljava/lang/String;",
+!             "+",
+!             "Ljava/lang/Object;",
+!             ">;>;)V"
+!         }
+!     .end annotation
+! 
+!     const/4 v0, 0x0
+! 
+!     if-eqz p1, :cond_2
+! 
+!     if-eqz p4, :cond_1
+! 
+!     .line 1
+!     invoke-direct {p0, p1}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->isEventThrottled(Lkotlin/Pair;)Z
+! 
+!     move-result v0
+! 
+!     if-eqz v0, :cond_0
+! 
+!     return-void
+! 
+!     .line 2
+!     :cond_0
+!     invoke-virtual {p1}, Lkotlin/Pair;->component1()Ljava/lang/Object;
+! 
+!     move-result-object v0
+! 
+!     check-cast v0, Ljava/lang/String;
+! 
+!     .line 3
+!     invoke-interface {p4}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
+! 
+!     move-result-object p4
+! 
+!     check-cast p4, Ljava/util/Map;
+! 
+!     invoke-virtual {p0, v0, p4}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->track(Ljava/lang/String;Ljava/util/Map;)V
+! 
+!     .line 4
+!     iget-object p4, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->clock:Lcom/discord/utilities/time/Clock;
+! 
+!     invoke-interface {p4}, Lcom/discord/utilities/time/Clock;->currentTimeMillis()J
+! 
+!     move-result-wide v0
+! 
+!     .line 5
+!     iget-object p4, p0, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->eventsThrottledUntilMillis:Ljava/util/concurrent/ConcurrentHashMap;
+! 
+!     add-long/2addr v0, p2
+! 
+!     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+! 
+!     move-result-object p2
+! 
+!     invoke-interface {p4, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  
+      return-void
+- 
+-     :cond_1
+-     const-string p1, "lazyPropertyProvider"
+- 
+-     .line 6
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     throw v0
+- 
+-     :cond_2
+-     const-string p1, "throttleKey"
+- 
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     throw v0
+  .end method
+  
+  .method public final trackFireBase(Ljava/lang/String;Ljava/util/Map;)V
+!     .locals 1
+!     .annotation system Ldalvik/annotation/Signature;
+!         value = {
+!             "(",
+!             "Ljava/lang/String;",
+!             "Ljava/util/Map<",
+!             "Ljava/lang/String;",
+!             "+",
+!             "Ljava/lang/Object;",
+!             ">;)V"
+!         }
+!     .end annotation
+! 
+!     const/4 v0, 0x0
+! 
+!     if-eqz p1, :cond_2
+! 
+!     if-eqz p2, :cond_1
+! 
+!     .line 1
+!     new-instance v0, Landroid/os/Bundle;
+! 
+!     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+! 
+!     invoke-direct {p0, v0, p2}, Lcom/discord/utilities/analytics/AnalyticsUtils$Tracker;->putMap(Landroid/os/Bundle;Ljava/util/Map;)Landroid/os/Bundle;
+! 
+!     move-result-object p2
+! 
+!     .line 2
+!     sget-object v0, Lcom/discord/utilities/analytics/AnalyticsUtils;->INSTANCE:Lcom/discord/utilities/analytics/AnalyticsUtils;
+! 
+!     invoke-static {v0}, Lcom/discord/utilities/analytics/AnalyticsUtils;->access$getFireBaseInstance$p(Lcom/discord/utilities/analytics/AnalyticsUtils;)Lcom/google/firebase/analytics/FirebaseAnalytics;
+! 
+!     move-result-object v0
+! 
+!     if-eqz v0, :cond_0
+! 
+!     invoke-virtual {v0, p1, p2}, Lcom/google/firebase/analytics/FirebaseAnalytics;->a(Ljava/lang/String;Landroid/os/Bundle;)V
+  
+-     :cond_0
+      return-void
+- 
+-     :cond_1
+-     const-string p1, "properties"
+- 
+-     .line 3
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     throw v0
+- 
+-     :cond_2
+-     const-string p1, "event"
+- 
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     throw v0
+  .end method
+--- 494,516 ----
+  .method public final declared-synchronized setTrackingData(Ljava/lang/String;Z)V
+      .locals 0
+  
+      return-void
+  .end method
+  
+  .method public final track(Ljava/lang/String;Ljava/util/Map;)V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+  .method public final track(Lkotlin/Pair;JLkotlin/jvm/functions/Function0;)V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+  .method public final trackFireBase(Ljava/lang/String;Ljava/util/Map;)V
+!     .locals 0
+  
+      return-void
+  .end method
+diff -crB from/smali/com/discord/utilities/integrations/SpotifyHelper$openPlayStoreForSpotify$1.smali to/smali/com/discord/utilities/integrations/SpotifyHelper$openPlayStoreForSpotify$1.smali
+*** from/smali/com/discord/utilities/integrations/SpotifyHelper$openPlayStoreForSpotify$1.smali	2020-02-12 23:54:13.536556138 +0000
+--- to/smali/com/discord/utilities/integrations/SpotifyHelper$openPlayStoreForSpotify$1.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 45,51 ****
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v2, "https://app.adjust.com/ndjczk?campaign="
+  
+      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+--- 45,51 ----
+  
+      invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+  
+!     const-string v2, "https://play.google.com/store/apps/details?id=com.spotify.music&trash="
+  
+      invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  
+diff -crB from/smali/com/discord/utilities/receiver/CampaignReceiver.smali to/smali/com/discord/utilities/receiver/CampaignReceiver.smali
+*** from/smali/com/discord/utilities/receiver/CampaignReceiver.smali	2020-02-12 23:54:13.592555650 +0000
+--- to/smali/com/discord/utilities/receiver/CampaignReceiver.smali	2020-02-12 23:54:47.878256894 +0000
+***************
+*** 16,62 ****
+  
+  # virtual methods
+  .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+!     .locals 1
+! 
+!     const/4 v0, 0x0
+! 
+!     if-eqz p1, :cond_1
+! 
+!     if-eqz p2, :cond_0
+! 
+!     .line 1
+!     new-instance v0, Le/c/a/d0;
+! 
+!     invoke-direct {v0}, Le/c/a/d0;-><init>()V
+! 
+!     invoke-virtual {v0, p1, p2}, Le/c/a/d0;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+! 
+!     .line 2
+!     new-instance v0, Le/k/a/b/b/a;
+! 
+!     invoke-direct {v0}, Le/k/a/b/b/a;-><init>()V
+! 
+!     invoke-virtual {v0, p1, p2}, Le/k/a/b/b/a;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+! 
+!     .line 3
+!     sget-object p1, Lcom/discord/utilities/analytics/AnalyticSuperProperties;->INSTANCE:Lcom/discord/utilities/analytics/AnalyticSuperProperties;
+! 
+!     invoke-virtual {p1, p2}, Lcom/discord/utilities/analytics/AnalyticSuperProperties;->setCampaignProperties(Landroid/content/Intent;)V
+  
+      return-void
+- 
+-     :cond_0
+-     const-string p1, "intent"
+- 
+-     .line 4
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     throw v0
+- 
+-     :cond_1
+-     const-string p1, "context"
+- 
+-     invoke-static {p1}, Lt/u/b/j;->a(Ljava/lang/String;)V
+- 
+-     throw v0
+  .end method
+--- 16,22 ----
+  
+  # virtual methods
+  .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+!     .locals 0
+  
+      return-void
+  .end method

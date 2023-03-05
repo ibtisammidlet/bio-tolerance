@@ -1,0 +1,52 @@
+diff -crB com.discord-1006-base/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali com.discord-1006/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali
+*** com.discord-1006-base/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali	2019-12-13 11:10:57.747460720 +0300
+--- com.discord-1006/smali/com/discord/widgets/user/profile/WidgetUserProfileStrip.smali	2019-12-13 12:26:17.836834966 +0300
+***************
+*** 434,446 ****
+  
+      move-result-object v2
+  
+!     invoke-virtual {p1}, Lcom/discord/widgets/user/profile/WidgetUserProfileStrip$Model;->getUser()Lcom/discord/models/domain/ModelUser;
+! 
+!     move-result-object v4
+! 
+!     invoke-virtual {v4}, Lcom/discord/models/domain/ModelUser;->getUsername()Ljava/lang/String;
+! 
+!     move-result-object v4
+  
+      invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+--- 434,440 ----
+  
+      move-result-object v2
+  
+!     const-string v4, ""
+  
+      invoke-virtual {v2, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+***************
+*** 449,461 ****
+  
+      move-result-object v2
+  
+!     invoke-virtual {p1}, Lcom/discord/widgets/user/profile/WidgetUserProfileStrip$Model;->getUser()Lcom/discord/models/domain/ModelUser;
+! 
+!     move-result-object p1
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->getDiscriminatorWithPadding()Ljava/lang/String;
+! 
+!     move-result-object p1
+  
+      invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+--- 443,449 ----
+  
+      move-result-object v2
+  
+!     const-string p1, ""
+  
+      invoke-virtual {v2, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+  
+Only in com.discord-1006/smali/com/discord/widgets/user/profile: WidgetUserProfileStrip.smali.orig
+Only in com.discord-1006/smali/com/discord/widgets/user/profile: WidgetUserProfileStrip.smali.rej
+

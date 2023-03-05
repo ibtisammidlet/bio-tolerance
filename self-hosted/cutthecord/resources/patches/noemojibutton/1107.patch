@@ -1,0 +1,37 @@
+diff -crB from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali
+*** from/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-04-21 18:08:06.534654570 +0100
+--- to/smali_classes2/com/lytefast/flexinput/fragment/FlexInputFragment.smali	2020-04-21 18:08:29.146466965 +0100
+***************
+*** 354,360 ****
+  
+      if-eqz p1, :cond_1
+  
+!     const/4 v0, 0x0
+  
+      invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+--- 354,360 ----
+  
+      if-eqz p1, :cond_1
+  
+!     const/16 v0, 0x8
+  
+      invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+  
+***************
+*** 1543,1549 ****
+      .line 2
+      iget-object v0, p0, Lcom/lytefast/flexinput/fragment/FlexInputFragment;->v:[Lf/b/a/b/a$b;
+  
+!     const/4 v1, 0x0
+  
+      const-string v2, "pageSuppliers"
+  
+--- 1543,1549 ----
+      .line 2
+      iget-object v0, p0, Lcom/lytefast/flexinput/fragment/FlexInputFragment;->v:[Lf/b/a/b/a$b;
+  
+!     const/16 v1, 0x8
+  
+      const-string v2, "pageSuppliers"
+  

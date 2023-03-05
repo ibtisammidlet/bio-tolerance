@@ -1,0 +1,45 @@
+diff -crB com.discord-902-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali com.discord-902/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali
+*** com.discord-902-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2019-05-23 08:24:34.436793339 +0300
+--- com.discord-902/smali/com/discord/widgets/settings/WidgetSettingsAppearance$Model$Companion$get$1.smali	2019-05-23 08:31:33.308611414 +0300
+***************
+*** 77,87 ****
+      const-string v0, "meUser"
+  
+      .line 187
+!     invoke-static {p1, v0}, Lkotlin/jvm/internal/k;->g(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result v2
+  
+      const-string v1, "fontScale"
+  
+--- 77,83 ----
+      const-string v0, "meUser"
+  
+      .line 187
+!     const/4 v2, 0x1
+  
+      const-string v1, "fontScale"
+  
+***************
+*** 95,105 ****
+      const-string p3, "isAlphaTesterOrStaff"
+  
+      .line 189
+!     invoke-static {p4, p3}, Lkotlin/jvm/internal/k;->g(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
+! 
+!     move-result v4
+  
+      .line 190
+      invoke-static {p1, v0}, Lkotlin/jvm/internal/k;->g(Ljava/lang/Object;Ljava/lang/String;)V
+--- 91,97 ----
+      const-string p3, "isAlphaTesterOrStaff"
+  
+      .line 189
+!     const/4 v4, 0x1
+  
+      .line 190
+      invoke-static {p1, v0}, Lkotlin/jvm/internal/k;->g(Ljava/lang/Object;Ljava/lang/String;)V

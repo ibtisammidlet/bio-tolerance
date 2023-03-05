@@ -1,0 +1,81 @@
+diff -crB com.discord-896-base/smali/com/discord/stores/StoreEmoji.smali com.discord-896/smali/com/discord/stores/StoreEmoji.smali
+*** com.discord-896-base/smali/com/discord/stores/StoreEmoji.smali	2019-05-12 12:13:46.831159818 +0300
+--- com.discord-896/smali/com/discord/stores/StoreEmoji.smali	2019-05-12 12:18:56.659462281 +0300
+***************
+*** 101,137 ****
+  
+      const/4 v1, 0x0
+  
+!     const-string v2, "thinking"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x1
+  
+!     const-string v2, "ok_hand"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x2
+  
+!     const-string v2, "eyes"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x3
+  
+!     const-string v2, "sweat_drops"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x4
+  
+!     const-string v2, "joy"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x5
+  
+!     const-string v2, "pig"
+  
+      aput-object v2, v0, v1
+  
+--- 101,137 ----
+  
+      const/4 v1, 0x0
+  
+!     const-string v2, "star"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x1
+  
+!     const-string v2, "thinking"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x2
+  
+!     const-string v2, "ok_hand"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x3
+  
+!     const-string v2, "eyes"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x4
+  
+!     const-string v2, "sweat_drops"
+  
+      aput-object v2, v0, v1
+  
+      const/4 v1, 0x5
+  
+!     const-string v2, "joy"
+  
+      aput-object v2, v0, v1
+  
+

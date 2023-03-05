@@ -1,0 +1,99 @@
+diff -crB from/smali/com/discord/widgets/friends/NearbyManager.smali to/smali/com/discord/widgets/friends/NearbyManager.smali
+*** from/smali/com/discord/widgets/friends/NearbyManager.smali	2020-11-16 13:22:49.797198145 +0000
+--- to/smali/com/discord/widgets/friends/NearbyManager.smali	2020-11-16 13:33:15.674833097 +0000
+***************
+*** 463,517 ****
+  
+  # virtual methods
+  .method public final activateNearby()V
+!     .locals 9
+  
+-     .line 1
+-     iget-object v0, p0, Lcom/discord/widgets/friends/NearbyManager;->messagesClient:Lcom/google/android/gms/nearby/messages/MessagesClient;
+- 
+-     if-eqz v0, :cond_0
+- 
+-     .line 2
+-     iget-object v1, p0, Lcom/discord/widgets/friends/NearbyManager;->outboundMessage:Lcom/google/android/gms/nearby/messages/Message;
+- 
+-     if-eqz v1, :cond_0
+- 
+-     .line 3
+-     iget-object v2, p0, Lcom/discord/widgets/friends/NearbyManager;->messagePublishOptions:Lcom/google/android/gms/nearby/messages/PublishOptions;
+- 
+-     if-eqz v2, :cond_0
+- 
+-     .line 4
+-     iget-object v3, p0, Lcom/discord/widgets/friends/NearbyManager;->messageListener:Lcom/google/android/gms/nearby/messages/MessageListener;
+- 
+-     if-eqz v3, :cond_0
+- 
+-     .line 5
+-     iget-object v4, p0, Lcom/discord/widgets/friends/NearbyManager;->subscribeOptions:Lcom/google/android/gms/nearby/messages/SubscribeOptions;
+- 
+-     if-eqz v4, :cond_0
+- 
+-     .line 6
+-     iget-object v5, p0, Lcom/discord/widgets/friends/NearbyManager;->nearbyStateSubject:Lrx/subjects/BehaviorSubject;
+- 
+-     new-instance v6, Lcom/discord/widgets/friends/NearbyManager$NearbyState$Connected;
+- 
+-     new-instance v7, Ljava/util/HashSet;
+- 
+-     iget-object v8, p0, Lcom/discord/widgets/friends/NearbyManager;->nearbyUserIds:Ljava/util/HashSet;
+- 
+-     invoke-direct {v7, v8}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+- 
+-     invoke-direct {v6, v7}, Lcom/discord/widgets/friends/NearbyManager$NearbyState$Connected;-><init>(Ljava/util/Set;)V
+- 
+-     invoke-virtual {v5, v6}, Lrx/subjects/BehaviorSubject;->onNext(Ljava/lang/Object;)V
+- 
+-     .line 7
+-     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/nearby/messages/MessagesClient;->f(Lcom/google/android/gms/nearby/messages/Message;Lcom/google/android/gms/nearby/messages/PublishOptions;)Lcom/google/android/gms/tasks/Task;
+- 
+-     .line 8
+-     invoke-virtual {v0, v3, v4}, Lcom/google/android/gms/nearby/messages/MessagesClient;->g(Lcom/google/android/gms/nearby/messages/MessageListener;Lcom/google/android/gms/nearby/messages/SubscribeOptions;)Lcom/google/android/gms/tasks/Task;
+- 
+-     :cond_0
+      return-void
+  .end method
+  
+--- 463,470 ----
+  
+  # virtual methods
+  .method public final activateNearby()V
+!     .locals 0
+  
+      return-void
+  .end method
+  
+***************
+*** 599,618 ****
+  .end method
+  
+  .method public final initialize(J)V
+!     .locals 1
+! 
+!     .line 1
+!     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+! 
+!     move-result-object v0
+! 
+!     iput-object v0, p0, Lcom/discord/widgets/friends/NearbyManager;->meUserId:Ljava/lang/Long;
+! 
+!     .line 2
+!     invoke-direct {p0, p1, p2}, Lcom/discord/widgets/friends/NearbyManager;->setupBroadcaster(J)V
+! 
+!     .line 3
+!     invoke-direct {p0}, Lcom/discord/widgets/friends/NearbyManager;->setupListener()V
+  
+      return-void
+  .end method
+--- 552,558 ----
+  .end method
+  
+  .method public final initialize(J)V
+!     .locals 0
+  
+      return-void
+  .end method

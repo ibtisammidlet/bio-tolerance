@@ -1,0 +1,69 @@
+diff -crB fromsmali/com/discord/models/domain/ModelMessageEmbed.smali to/smali/com/discord/models/domain/ModelMessageEmbed.smali
+*** fromsmali/com/discord/models/domain/ModelMessageEmbed.smali	2021-05-31 14:05:53.000000000 +0300
+--- to/smali/com/discord/models/domain/ModelMessageEmbed.smali	2021-05-31 15:40:24.000000000 +0300
+***************
+*** 1674,1706 ****
+  .end method
+  
+  .method public isSpoilerAttachment()Z
+!     .locals 2
+! 
+!     .line 1
+!     invoke-virtual {p0}, Lcom/discord/models/domain/ModelMessageEmbed;->isAttachment()Z
+! 
+!     move-result v0
+! 
+!     if-eqz v0, :cond_0
+! 
+!     iget-object v0, p0, Lcom/discord/models/domain/ModelMessageEmbed;->title:Ljava/lang/String;
+! 
+!     const-string v1, "SPOILER_"
+! 
+!     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+! 
+!     move-result v0
+! 
+!     if-eqz v0, :cond_0
+! 
+!     const/4 v0, 0x1
+! 
+!     goto :goto_0
+! 
+!     :cond_0
+      const/4 v0, 0x0
+  
+-     :goto_0
+      return v0
+  .end method
+  
+--- 1674,1682 ----
+  .end method
+  
+  .method public isSpoilerAttachment()Z
+!     .locals 1
+      const/4 v0, 0x0
+  
+      return v0
+  .end method
+  
+diff -crB fromsmali/com/discord/utilities/textprocessing/node/SpoilerNode.smali to/smali/com/discord/utilities/textprocessing/node/SpoilerNode.smali
+*** fromsmali/com/discord/utilities/textprocessing/node/SpoilerNode.smali	2021-05-31 14:05:55.000000000 +0300
+--- to/smali/com/discord/utilities/textprocessing/node/SpoilerNode.smali	2021-05-31 15:40:24.000000000 +0300
+***************
+*** 249,256 ****
+  .method public isRevealed()Z
+      .locals 1
+  
+!     .line 1
+!     iget-boolean v0, p0, Lcom/discord/utilities/textprocessing/node/SpoilerNode;->isRevealed:Z
+  
+      return v0
+  .end method
+--- 249,255 ----
+  .method public isRevealed()Z
+      .locals 1
+  
+!     const/4 v0, 0x1
+  
+      return v0
+  .end method

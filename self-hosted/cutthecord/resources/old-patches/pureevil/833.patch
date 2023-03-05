@@ -1,0 +1,26 @@
+diff -crB -x dist -x build com.discord-832-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$onViewBoundOrOnResume$1.smali com.discord-832/smali/com/discord/widgets/settings/WidgetSettingsAppearance$onViewBoundOrOnResume$1.smali
+*** com.discord-832-base/smali/com/discord/widgets/settings/WidgetSettingsAppearance$onViewBoundOrOnResume$1.smali  2019-01-19 04:41:50.846430038 +0300
+--- com.discord-832/smali/com/discord/widgets/settings/WidgetSettingsAppearance$onViewBoundOrOnResume$1.smali   2019-01-20 02:28:45.741380899 +0300
+***************
+*** 71,83 ****
+  
+      check-cast v0, Landroid/view/View;
+  
+!     const-string v1, "it"
+! 
+!     invoke-static {p1, v1}, Lkotlin/jvm/internal/j;->g(Ljava/lang/Object;Ljava/lang/String;)V
+! 
+!     invoke-virtual {p1}, Lcom/discord/models/domain/ModelUser;->isStaff()Z
+! 
+!     move-result p1
+  
+      invoke-static {v0, p1}, Lcom/discord/utilities/view/extensions/ViewExtensions;->setVisibilityBy(Landroid/view/View;Z)V
+  
+--- 71,77 ----
+  
+      check-cast v0, Landroid/view/View;
+  
+!     const/4 p1, 0x1
+  
+      invoke-static {v0, p1}, Lcom/discord/utilities/view/extensions/ViewExtensions;->setVisibilityBy(Landroid/view/View;Z)V
+  
