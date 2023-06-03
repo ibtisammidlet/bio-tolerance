@@ -6,7 +6,6 @@ in tarminal channel you see
 
 -/accounts(for member list, can be exported to txt)
 
-
 things to know:
 -any message with 
 "buy" + link
@@ -26,7 +25,6 @@ servers invite links (only "online" role, other rules excluded)
 ideas:
 -auto deleted messages older then 30days in casual channel exclude pinned
 reason: headnotes like vegan modle of psychpathy.
--limiting who post in decent silly, for quility control.
-
 
 to add bad word>> https://atlas.bot/guilds/1001420842179239936/plugins/moderation/filters
+
