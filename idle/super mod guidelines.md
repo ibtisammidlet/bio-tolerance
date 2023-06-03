@@ -28,3 +28,4 @@ reason: headnotes like vegan modle of psychpathy.
 
 to add bad word>> https://atlas.bot/guilds/1001420842179239936/plugins/moderation/filters
 
+2023-6-3: autorole to noob after 24h
