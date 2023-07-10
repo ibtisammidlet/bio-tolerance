@@ -1,1 +1,0 @@
-{"version":3,"file":"Auth.js","sourceRoot":"","sources":["../../../../../../../src/util/config/types/subconfigurations/limits/ratelimits/Auth.ts"],"names":[],"mappings":";;;AAEA,MAAa,aAAa;IACzB,KAAK,GAAqB;QACzB,KAAK,EAAE,CAAC;QACR,MAAM,EAAE,EAAE;KACV,CAAC;IACF,QAAQ,GAAqB;QAC5B,KAAK,EAAE,CAAC;QACR,MAAM,EAAE,EAAE,GAAG,EAAE,GAAG,EAAE;KACpB,CAAC;CACF;AATD,sCASC"}

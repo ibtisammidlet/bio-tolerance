@@ -1,9 +1,0 @@
-<diffs>
-    <diff file="res/values/dimens.xml">
-        <replace sel="/resources/dimen[@name='guild_icon_radius']/text()">0.0dp</replace>
-    </diff>
-    <diff file="res/values/styles.xml">
-        <replace sel="resources/style[@name='Avatar']/item[@name='roundAsCircle']/text()">false</replace>
-        <add pos="after" sel="resources/style[@name='Avatar']/item[@name='roundAsCircle']"><item name="roundedCornerRadius">3dp</item></add>
-    </diff>
-</diffs>
