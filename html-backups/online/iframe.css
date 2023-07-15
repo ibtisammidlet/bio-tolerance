@@ -1,0 +1,9 @@
+
+
+body > div.preamble > div.preamble__entries-container > div:nth-child(1) {
+    display: none;
+}
+.preamble__guild-icon {
+    max-width: 44px !important;
+    max-height: 44px !important;
+}
