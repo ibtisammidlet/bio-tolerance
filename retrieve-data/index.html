@@ -1,6 +1,8 @@
 <html lang='en'>
 
 <head>
+<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.0/dist/jquery.min.js"></script>
+
     <meta charset='utf-8' />
     <title>Discord OAUTH</title>
 
@@ -47,7 +49,19 @@
                     if (req.status === 500) { // Error
                         document.getElementById('welcome_txt').innerText = `There was an error with that. Please try logging in again. Error Code: ${req.status}`;
                     } else if (req.status === 200) { // Successful
-                        document.getElementById("welcome_txt").innerText = `Welcome, ${req.responseText}!`
+					async function xxx(){
+                         document.getElementById("welcome_txt").innerText = `${req.responseText}`
+						$.ajax({
+								url: "http://localhost:3000/subbind",
+								type: 'GET',
+								data: await encodeURIComponent($("#welcome_txt").text()),
+								dataType: 'json', // added data type
+							success: function(res) {
+								console.log(res);
+								alert(res);
+							}
+						});	
+					}xxx();
                     } else { // Other
                         document.getElementById('welcome_txt').innerText = `An error occured. Please try logging in again. Error Code: ${req.status}`;
                     }

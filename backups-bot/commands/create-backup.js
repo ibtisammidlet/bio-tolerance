@@ -1,5 +1,8 @@
 const backup = require('discord-backup');
-const config = require('../config.json');
+const path = require('path');
+
+const configPath = path.join(__dirname, '..', '..', 'miu', 'config.json');
+const config = require(configPath);
 
 exports.run = async (client, message, args) => {
 

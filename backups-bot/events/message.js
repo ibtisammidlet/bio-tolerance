@@ -1,4 +1,7 @@
-const config = require('../config.json');
+const path = require('path');
+
+const configPath = path.join(__dirname, '..', '..', 'miu', 'config.json');
+const config = require(configPath);
 
 module.exports = (client, message) => {
     // Ignore all bots
