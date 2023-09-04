@@ -1,4 +1,3 @@
-dyno
 https://discord.com/api/oauth2/authorize?client_id=476259371912003597&permissions=66561&scope=bot%20applications.commands
 https://atlas.bot/get
 https://discordinvites.net/add
@@ -9,7 +8,7 @@ https://discord.com/api/oauth2/authorize?client_id=493224032167002123&permission
 https://dyno.gg/invite?utm_campaign=discord
 https://discord.com/api/oauth2/authorize?client_id=735147814878969968&permissions=2416143600&scope=applications.commands%20bot
 https://discord.com/api/oauth2/authorize?client_id=925836652558057552&permissions=536882176&scope=applications.commands%20bot
-https://invi-bot.xyz/
+https://invi-bot.xyz/ invite managment/accounts
 https://t2bot.io/discord/
 https://mee6.xyz/?utm_medium=referral&utm_source=discord&utm_content=cta_add_to_discord
 https://discord.com/api/oauth2/authorize?client_id=867469054931501078&permissions=68608&scope=applications.commands%20bot

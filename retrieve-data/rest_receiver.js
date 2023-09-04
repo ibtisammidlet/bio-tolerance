@@ -16,6 +16,38 @@ const server = http.createServer(function (req, res) {
   let body = query; // Assign query parameters to body variable
 
   console.log(decodeURIComponent(JSON.stringify(body))); // Decoding the query parameters
+
+
+/**
+const SQLite = require('sqlite3').verbose();
+const db = new SQLite.Database('bio.db');
+
+// Set up the table schema for the users table
+const schema = `
+    CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        myKey TEXT NOT NULL DEFAULT NULL
+    )
+`;
+db.run(schema);
+
+// Set up the JSON data to insert into the users table
+const data = json; //** {    myKey: 'key1',    myKey: 'key2',};
+
+// Insert a new row into the users table for each key-value pair in the data
+for (let [key, value] of Object.entries(data)) {
+    // Insert a new row into the users table with the key and value
+    db.run(`
+        INSERT INTO users (myKey)
+        VALUES (?)
+    `, [key]);
+}
+
+// Close the sqlite3 database
+db.close();
+ https://beta.character.ai/chat2?char=YntB_ZeqRq2l_aVf2gWDCZl4oBttQzDvhj9cXafWcF8 **/
+
+
   res.statusCode = 200;
   res.end("Response sent");
 });
