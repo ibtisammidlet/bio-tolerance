@@ -17,24 +17,35 @@ const server = http.createServer(function (req, res) {
 
   console.log(decodeURIComponent(JSON.stringify(body))); // Decoding the query parameters
 
+// Set up the JSON data to insert into the users table
+const data = body; // {    myKey: 'key1',    myKey: 'key2',};
 
-/**
+/** inject to sqlite **/
 const SQLite = require('sqlite3').verbose();
 const db = new SQLite.Database('bio.db');
 
-// Set up the table schema for the users table
+
+const jsonObject = {
+  "token_type": "Bearer",
+  "access_token": "HytWqfBDwI1l3Coi1hZlbYzn6bGDCF",
+  "expires_in": 604800,
+  "refresh_token": "E1jyiqbEgHninYg4hjqd7o2PATYDeb",
+  "scope": "identify connections guilds guilds.join email",
+  "username": "elena.final_fail#0",
+  "id": "711595336463941692",
+  "email": "justinmidlet@yandex.com",
+  "avatar": "https://cdn.discordapp.com/avatars/711595336463941692/0dd86a3f62bc677133a2475b92f06dcd.png"
+};
 const schema = `
     CREATE TABLE IF NOT EXISTS users (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        myKey TEXT NOT NULL DEFAULT NULL
+        ${Object.keys(jsonObject).map(key => `${key} TEXT NOT NULL DEFAULT NULL`).join(',\n')}
     )
 `;
 db.run(schema);
+// everything work till here
 
-// Set up the JSON data to insert into the users table
-const data = json; //** {    myKey: 'key1',    myKey: 'key2',};
 
-// Insert a new row into the users table for each key-value pair in the data
+
 for (let [key, value] of Object.entries(data)) {
     // Insert a new row into the users table with the key and value
     db.run(`
@@ -43,9 +54,10 @@ for (let [key, value] of Object.entries(data)) {
     `, [key]);
 }
 
+
 // Close the sqlite3 database
 db.close();
- https://beta.character.ai/chat2?char=YntB_ZeqRq2l_aVf2gWDCZl4oBttQzDvhj9cXafWcF8 **/
+// https://beta.character.ai/chat2?char=YntB_ZeqRq2l_aVf2gWDCZl4oBttQzDvhj9cXafWcF8 
 
 
   res.statusCode = 200;
