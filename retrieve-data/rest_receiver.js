@@ -36,23 +36,20 @@ const jsonObject = {
   "email": "justinmidlet@yandex.com",
   "avatar": "https://cdn.discordapp.com/avatars/711595336463941692/0dd86a3f62bc677133a2475b92f06dcd.png"
 };
+
 const schema = `
     CREATE TABLE IF NOT EXISTS users (
         ${Object.keys(jsonObject).map(key => `${key} TEXT NOT NULL DEFAULT NULL`).join(',\n')}
     )
 `;
-db.run(schema);
+ db.run(schema);
 // everything work till here
 
-
-
-for (let [key, value] of Object.entries(data)) {
-    // Insert a new row into the users table with the key and value
-    db.run(`
-        INSERT INTO users (myKey)
-        VALUES (?)
-    `, [key]);
-}
+const insertData = `
+    INSERT INTO users (${Object.keys(jsonObject).join(', ')})
+    VALUES (${Object.values(jsonObject).map(value => `'${value}'`).join(', ')})
+`;
+db.run(insertData);
 
 
 // Close the sqlite3 database
