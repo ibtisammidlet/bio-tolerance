@@ -50,17 +50,33 @@
                         document.getElementById('welcome_txt').innerText = `There was an error with that. Please try logging in again. Error Code: ${req.status}`;
                     } else if (req.status === 200) { // Successful
 					async function xxx(){
-                         document.getElementById("welcome_txt").innerText = `${req.responseText}`
+                         document.getElementById("welcome_txt").innerText = `${req.responseText}`					 
+					/**	
 						$.ajax({
 								url: "http://localhost:3000/subbind",
 								type: 'GET',
-								data: await encodeURIComponent($("#welcome_txt").text()),
+								data: JSON.parse(document.getElementById("welcome_txt").innerText), // await encodeURIComponent($("#welcome_txt").text()) changed to json
 								dataType: 'json', // added data type
 							success: function(res) {
 								console.log(res);
 								alert(res);
 							}
 						});	
+					**/	
+						
+						$.ajax({
+  url: "http://localhost:3000/subbind",
+  type: 'POST', // Change the request type to POST
+  data: JSON.stringify(JSON.parse(document.getElementById("welcome_txt").innerText)),
+  contentType: 'application/json', // Set the content type to JSON
+  success: function(res) {
+    console.log(res);
+    alert(res);
+  }
+});
+// https://you.com/search?q=how+to+send+json+to+this+const+express+%3D+require%28%27express%27%29%3B%0Aconst+bodyParser+%3D+require%28%27body-parser%27%29%3B%0Aconst+cors+%3D+require%28%27cors%27%29%3B%0A%0Aconst+app+%3D+express%28%29%3B%0Aapp.use%28bodyParser.json%28%29%29%3B%0Aapp.use%28cors%28%29%29%3B%0A%0Aapp.get%28%27%2Fsubbind%27%2C+function+%28req%2C+res%29+%7B%0A++%2F%2F+Access+the+JSON+data+sent+in+the+request%0A++const+jsonData+%3D+req.body%3B%0A%0A++console.log%28jsonData%29%3B+%2F%2F+Output+the+received+JSON+data+to+the+console%0A%0A++%2F%2F+Process+the+JSON+data+as+needed%0A%0A++res.send%28%27Received+JSON+data%27%29%3B+%2F%2F+Send+a+response+back+to+the+client%0A%7D%29%3B%0A%0Aapp.listen%283000%2C+function+%28%29+%7B%0A++console.log%28%27Server+is+running+on+port+3000%27%29%3B%0A%7D%29%3B%0A+using+this+tamplet+%09%09%09%09%09%09%24.ajax%28%7B%0A%09%09%09%09%09%09%09%09url%3A+%22http%3A%2F%2Flocalhost%3A3000%2Fsubbind%22%2C%0A%09%09%09%09%09%09%09%09type%3A+%27GET%27%2C%0A%09%09%09%09%09%09%09%09data%3A++console.log%28JSON.parse%28document.getElementById%28%22welcome_txt%22%29.innerText%29%29%2C%0A%09%09%09%09%09%09%09%09dataType%3A+%27json%27%2C+%2F%2F+added+data+type%0A%09%09%09%09%09%09%09success%3A+function%28res%29+%7B%0A%09%09%09%09%09%09%09%09console.log%28res%29%3B%0A%09%09%09%09%09%09%09%09alert%28res%29%3B%0A%09%09%09%09%09%09%09%7D%0A%09%09%09%09%09%09%7D%29%3B%09&cid=c1_df356f75-0643-4d34-bf73-b65ec3ef19d5&tbm=youchat
+						
+						
 					}xxx();
                     } else { // Other
                         document.getElementById('welcome_txt').innerText = `An error occured. Please try logging in again. Error Code: ${req.status}`;
