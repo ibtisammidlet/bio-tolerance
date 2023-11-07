@@ -50,7 +50,7 @@ html {
 replace src with one from https://raw.githack.com/ linking to github .html_Files.html file.  
   
 ## editional editing:  
-use notepad++ replace in files function to change <h1 class="name-3Uvkvr">Prefrontal</h1> to the new server name in all *.html_Files.html in this folder  
-![alt text](./res/Screenshot-2023-11-07-155010.png "Hover Text")    
+use notepad++ replace in files function to change "<h1 class="name-3Uvkvr">Prefrontal</h1>" to the new server name in all *.html_Files.html in this folder  
+![alt text](./Screenshot-2023-11-07-155010.png "Hover Text")    
   
 replace all containerDefault-YUSmu3 divs in html_Files.html files with the one in ind.html manually, this function was going to be coded by html_Files.html_patcher.js
