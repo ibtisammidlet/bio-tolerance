@@ -61,11 +61,9 @@ const jsonObject = {
 
 const schema = `
     CREATE TABLE IF NOT EXISTS users (
-        ${Object.keys(jsonObject).map(key => `${key} TEXT NOT NULL DEFAULT NULL`).join(',\n')}
+        ${Object.keys(jsonData).map(key => `${key} TEXT NOT NULL DEFAULT NULL`).join(',\n')}
     )
 `;
- db.run(schema);
-// everything work till here
 
 const insertData = `
     INSERT INTO users (${Object.keys(jsonObject).join(', ')})
