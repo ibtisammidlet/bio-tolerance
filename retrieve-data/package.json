@@ -17,7 +17,7 @@
     "url": "0.11.0"
   },
   "scripts": {
-    "build": "concurrently \"node express_rest_receiver.js\" \"node oauth.js\""
+    "vercel start": "concurrently \"node express_rest_receiver.js\" \"node oauth.js\""
   },
   "devDependencies": {
     "concurrently": "8.2.2"
