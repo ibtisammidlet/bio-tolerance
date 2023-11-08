@@ -1,6 +1,6 @@
 {
   "builds": [
-    { "src": "public/**", "use": "@vercel/static" },
-    { "src": "api/**", "use": "@vercel/node", "config": { "start": "node api/server.js" } }
+    { "src": "oauth.js", "use": "@vercel/node" },
+    { "src": "express_rest_receiver.js", "use": "@vercel/node" }
   ]
 }
