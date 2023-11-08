@@ -1,0 +1,6 @@
+{
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" },
+    { "src": "api/**", "use": "@vercel/node", "config": { "start": "node api/server.js" } }
+  ]
+}
