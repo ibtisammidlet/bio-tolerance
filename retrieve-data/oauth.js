@@ -12,7 +12,7 @@ const client_secret = 'yWQRZLMgyuMIqZJoWwdXmo40SKTntzNv'; // Paste your bot's se
 
 /* Define app variables */
 const app = Express(); // Create a web app
-const port = 80; // Port to host on /*** i need to use 443 port because router interface overcome node and i cant get the server raning to auth.biotune when i use port 80 */
+const port = 443; // Port to host on /*** i need to use 443 port because router interface overcome node and i cant get the server raning to auth.biotune when i use port 80 */
 
 /* Make a function to give us configuration for the Discord API */
 function make_config(authorization_token) { // Define the function
