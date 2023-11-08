@@ -2,6 +2,6 @@
   "builds": [
     { "src": "oauth.js", "use": "@vercel/node" },
     { "src": "express_rest_receiver.js", "use": "@vercel/node" },
-    { "src": "index.html", "use": "@vercel/node" }
+    { "src": "index.js", "use": "@vercel/node" }
   ]
 }
