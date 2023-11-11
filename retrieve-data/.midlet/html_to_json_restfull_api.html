@@ -1,0 +1,13 @@
+<script src="cheerio/dist/cheerio.min.js"></script>
+<script src="jsdom/jsdom.min.js"></script>
+
+<script>
+const { JSDOM } = require('jsdom');
+const cheerio = require('cheerio');
+
+const dom = new JSDOM('<!DOCTYPE html><html><head><title>My Page</title></head><body><div>Hello, world!</div></body></html>');
+const $ = cheerio.load(dom.document.body.innerHTML);
+
+const title = $('title').text();
+console.log(title);
+</script>

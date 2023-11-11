@@ -35,7 +35,7 @@
 
 <body>
     <br>
-    <a id='login-link' href='https://discord.com/api/oauth2/authorize?client_id=1001496087888142396&redirect_uri=https%3A%2F%2Fnode.biotune.org%2F&response_type=code&scope=identify%20email%20guilds.join'>Login with Discord</a><br><br>
+    <a id='login-link' href='https://discord.com/api/oauth2/authorize?client_id=1001496087888142396&redirect_uri=http%3A%2F%2Flocalhost%3A80&response_type=code&scope=identify%20email%20guilds.join'>Login with Discord</a><br><br>
     <p id='welcome_txt'></p>
 
     <script>
@@ -43,7 +43,7 @@
             if (location.href.indexOf("code") !== -1) { // Detect if you logged in or not
                 const code = location.href.substring(location.href.indexOf("code") + 5, location.href.length); // Get the code OAUTH gives you
                 const req = new XMLHttpRequest(); // Create a new XMLHttpRequest
-                req.open("POST", "https://node.biotune.org:80/user"); // Open the XMLHttpRequest; CHANGE THE PORT TO THE PORT YOU HAVE AS YOUR VARIABLE IN OAUTH.js.
+                req.open("POST", "http://localhost:80/user"); // Open the XMLHttpRequest; CHANGE THE PORT TO THE PORT YOU HAVE AS YOUR VARIABLE IN OAUTH.js.
                 req.send(code); // Send the code in the request
                 req.onload = () => { // Will run when the request is loaded
                     if (req.status === 500) { // Error
@@ -65,7 +65,7 @@
 					**/	
 						
 						$.ajax({
-  url: "https://node.biotune.org:3000/subbind",
+  url: "http://localhost:3000/subbind",
   type: 'POST', // Change the request type to POST
   data: JSON.stringify(JSON.parse(document.getElementById("welcome_txt").innerText)),
   contentType: 'application/json', // Set the content type to JSON
