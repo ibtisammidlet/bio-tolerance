@@ -28,5 +28,3 @@ var htmlstyle = '<style>html {width: '+wantedwidth+'px  !important; height: '+wi
 //* injecting css if window width is less then wanted width
 if(windowwidth > 0 && windowwidth <= wantedwidth-1) {$('head').append(htmlstyle+extracss);};
 });
-
-
