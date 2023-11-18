@@ -53,6 +53,4 @@ use notepad++ replace in files function to change `<h1 class="name-3Uvkvr">Prefr
   
 replace all containerDefault-YUSmu3 divs in html_Files.html files with the one in ind.html manually, this function was going to be coded by html_Files.html_patcher.js  
   
-++ jquery scripin height
-
 put `<link rel="stylesheet" href="iframe.css"><script type="text/javascript" src="pagination.js"></script>` on *.html files
