@@ -2,5 +2,5 @@
 
 nvm use 18.12.1
 timeout /t 10
-node express_rest_receiver.js
+npm start
 timeout /t 10
