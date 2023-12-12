@@ -1,0 +1,144 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage{color}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{placeins}
+\usepackage{chemfig}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{multicol}
+
+\usepackage{enumitem}
+%----------Commands----------
+
+\usetikzlibrary{decorations.markings}
+\catcode`\_=11
+\tikzset{
+  ddbond/.style args={#1}{ draw=none, decoration={%
+    markings,
+    mark=at position 0 with {
+      \coordinate (CF@startdeloc) at (0,\dimexpr#1\CF_doublesep/2) coordinate (CF@startaxis) at (0,\dimexpr-#1\CF_doublesep/2); },
+    mark=at position 1 with {
+      \coordinate (CF@enddeloc) at (0,\dimexpr#1\CF_doublesep/2) coordinate (CF@endaxis) at (0,\dimexpr-#1\CF_doublesep/2); \draw[dash pattern=on 2pt off 1.5pt] (CF@startdeloc)--(CF@enddeloc); \draw (CF@startaxis)--(CF@endaxis);
+      }
+    },
+    postaction={decorate}
+  }
+}
+\catcode`\_=8
+
+\DeclareMathOperator{\Id}{Id}
+
+\def\ZZ{\mathbb{Z}}
+\def\QQ{\mathbb{Q}}
+\def\PP{\mathbb{P}}
+\def\NN{\mathbb{N}}
+\def\OO{\mathcal{O}}
+\def\AA{\mathbb{A}}
+\def\BB{\mathbb{B}}
+\def\FF{\mathbb{F}}
+\def\LL{\mathbb{L}}
+\def\RR{\mathbb{R}}
+\def\CC{\mathbb{C}}
+\def\GG{\mathbb{G}}
+\def\lcm{\mathrm{lcm}}
+\def\wt{\widetilde}
+\def\F{\mathcal{F}}
+\def\aut{\mathrm{Aut}}
+\def\ve{\varepsilon}
+
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{problem}{Problem}[section]
+\newtheorem*{tip}{Pro Tip}
+\newtheorem*{remark}{Remark}
+\numberwithin{equation}{subsection}
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+
+	\bigskip
+}
+\author{Theron Boerner}
+\title{Amino Acids}
+\date{\today}
+
+\newcommand{\aminoacidchem}[1]{\chemfig{{\color{gray}C}(-[4]{\color{gray}{}^+H_3N})(-{\color{gray}COO^{-}})(-[6]{\color{gray}H})(-[2]#1)}}
+\newcommand{\aminoacid}[2]{%
+  \begin{figure}[ht]
+    \centering
+    \aminoacidchem{#2}
+    \caption{#1}
+  \end{figure}%
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Non-polar (hydrophobic)}
+
+\aminoacid{Glycine (Gly, G)}{H}
+\aminoacid{Alanine (Ala, A)}{}
+\aminoacid{Valine (Val, V)}{(-[4]H)(-[2])(-[0])}
+\aminoacid{Leucine (Leu, L)}{(-[:120](-[:210]H)(-[:120])(-[:30]))}
+\aminoacid{Isoleucine (Ile, I)}{(-[4]H)(-[2]C(-[2]))(-[0])}
+\aminoacid{Methionine (Met, M)}{(-[:120](-[:90]S(-[:120])))}
+\begin{figure}[ht]
+  \centering
+  %\chemfig{{\color{gray}C}(-[4]{\color{gray}{}^+H_2N})(-{\color{gray}COO^{-}})(-[6]{\color{gray}H})(-[:72]CH_2(-[:144]CH_2(-[:216]H_2C(-[:288]{\color{gray}{}^+H_2N}))))}
+  \chemfig{{}^+NH_2*5(-[,,,1]C([0]-{COO^-})(-[6]H)----[,,,1])}
+  \caption{Proline (Pro, P)}
+\end{figure}%
+\aminoacid{Phenylalanine (Phe, F)}{(-[3]*6(=-=-=-))}
+\aminoacid{Tryptophan (Trp, W)}{-[3]*5(-*6(-=-=-=)--N-=)}
+
+\clearpage
+\section{Polar (hydrophilic)}
+
+\aminoacid{Serine (Ser, S)}{(-[:120]O)}
+\aminoacid{Threonine (Thr, T)}{(-[2]O)(-[4]H)(-[0])}
+\aminoacid{Tyrosine (Tyr, Y)}{(-[3]*6(=-=(-[3]O)-=-))}
+\aminoacid{Cysteine (Cys, C)}{(-[:120]S)}
+\aminoacid{Asparagine (Asn, N)}{(-[:120](=[:165]O)(-[:90]N))}
+\aminoacid{Glutamine (Gln, Q)}{(-[:120](-[:90](=[3]O)(-[1]N)))}
+
+\clearpage
+\section{Pos. charged (hydrophilic)}
+
+\aminoacid{Lysine (Lys, K)}{(-[:120](-[:90](-[:120](-[:90]NH_3^+))))}
+\aminoacid{Arginine (Arg, R)}{(-[:120](-[:90](-[:120]N(-[2,,,,ddbond={-}](-[3,,,,ddbond={-}]N)(-[1,,,,ddbond={+}]N)(-[2,,,,draw=none]{}^{+})))))}
+\aminoacid{Histidine (His, H)}{-[3]*5(=-N-=N-)}
+
+\clearpage
+\section{Neg. charged (hydrophilic)}
+
+\aminoacid{Aspartate (Asp, D)}{(-[:120](-[:165,,,,ddbond={-}]O)(-[:90,,,,ddbond={+}]O)(-[:120,,,,draw=none]{}^{-}))}
+\aminoacid{Glutamate (Glu, E)}{(-[:120](-[:90](-[3,,,,ddbond={-}]O)(-[1,,,,ddbond={+}]O)(-[2,,,,draw=none]{}^{-})))}
+
+\end{document}
