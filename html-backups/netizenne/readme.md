@@ -44,7 +44,7 @@ html {
 }  
   
 </style> 
-  
+
 replace src with one from https://raw.githack.com/ linking to github .html_Files.html file.  
   
 ## editional editing:  
@@ -52,3 +52,33 @@ use notepad++ replace in files function to change `<h1 class="name-3Uvkvr">Prefr
 ![alt text](./Screenshot-2023-11-07-155010.png "Hover Text")    
   
 replace all containerDefault-YUSmu3 divs in html_Files.html files with the one in ind.html manually, this function was going to be coded by html_Files.html_patcher.js  
+
+added:  
+<script>  
+// v1.2   
+//* used document ready to solve the exct width did not calculated in some sites  
+$( document ).ready(function() {  
+  
+//* var of wantedwidth can be tuned  
+var wantedwidth = 768;  
+  
+//* var of extra css can be tuned  
+var extracss = '<style>h3.intro-title {font-size: 30px;}</style>';  
+  
+//* getting window width  
+var windowwidth = $(window).width();  
+
+//* devid window width by wanted width  
+var htmlscale = windowwidth / wantedwidth ;  
+  
+//* calc new height  
+var newheight = "<style>embed{min-height: "+1/htmlscale*100*1.15+"%;}</style>";  
+  
+//* setting html width as the wanted width and scale the page by the result of htmlscale var  
+var htmlstyle = '<style>html {width: '+wantedwidth+'px  !important; height: 100%; transform-origin: 0px 0px 0px !important; transform: translate(0px, 0px) scale(' + htmlscale + ');}</style>';  
+  
+//* injecting css if window width is less then wanted width  
+if(windowwidth > 0 && windowwidth <= wantedwidth-1) {$('head').append(newheight);};  
+});  
+</script>  
+to the blog post  
