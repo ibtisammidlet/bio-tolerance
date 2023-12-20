@@ -1,0 +1,416 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DiscordChatExporter/2.42.6": {
+        "dependencies": {
+          "CSharpier.MsBuild": "0.26.2",
+          "Cogwheel": "2.0.4",
+          "Deorcify": "1.0.2",
+          "DiscordChatExporter.Core": "2.42.6",
+          "DotnetRuntimeBootstrapper": "2.5.1",
+          "Gress": "2.1.1",
+          "MaterialDesignColors": "2.1.4",
+          "MaterialDesignThemes": "4.9.0",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77",
+          "Onova": "2.6.10",
+          "PropertyChanged.Fody": "4.1.0",
+          "Stylet": "1.3.6"
+        },
+        "runtime": {
+          "DiscordChatExporter.dll": {}
+        }
+      },
+      "AdvancedStringBuilder/0.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      },
+      "AngleSharp/1.0.5": {
+        "dependencies": {
+          "System.Text.Encoding.CodePages": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/AngleSharp.dll": {
+            "assemblyVersion": "1.0.5.0",
+            "fileVersion": "1.0.5.0"
+          }
+        }
+      },
+      "AsyncKeyedLock/6.2.2": {
+        "runtime": {
+          "lib/net5.0/AsyncKeyedLock.dll": {
+            "assemblyVersion": "6.2.2.0",
+            "fileVersion": "6.2.2.0"
+          }
+        }
+      },
+      "Cogwheel/2.0.4": {
+        "runtime": {
+          "lib/net5.0/Cogwheel.dll": {
+            "assemblyVersion": "2.0.4.0",
+            "fileVersion": "2.0.4.0"
+          }
+        }
+      },
+      "CSharpier.MsBuild/0.26.2": {},
+      "Deorcify/1.0.2": {},
+      "DotnetRuntimeBootstrapper/2.5.1": {},
+      "Fody/6.6.4": {},
+      "Gress/2.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Gress.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.0"
+          }
+        }
+      },
+      "JsonExtensions/1.2.0": {
+        "runtime": {
+          "lib/net5.0/JsonExtensions.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "MaterialDesignColors/2.1.4": {
+        "runtime": {
+          "lib/net7.0/MaterialDesignColors.dll": {
+            "assemblyVersion": "2.1.4.0",
+            "fileVersion": "2.1.4.0"
+          }
+        }
+      },
+      "MaterialDesignThemes/4.9.0": {
+        "dependencies": {
+          "MaterialDesignColors": "2.1.4",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.77"
+        },
+        "runtime": {
+          "lib/net7.0/MaterialDesignThemes.Wpf.dll": {
+            "assemblyVersion": "4.9.0.0",
+            "fileVersion": "4.9.0.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.0.0": {},
+      "Microsoft.Win32.SystemEvents/4.6.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0"
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
+        "runtime": {
+          "lib/net6.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.77.27830"
+          }
+        }
+      },
+      "Onova/2.6.10": {
+        "runtime": {
+          "lib/netcoreapp3.0/Onova.dll": {
+            "assemblyVersion": "2.6.10.0",
+            "fileVersion": "2.6.10.0"
+          }
+        }
+      },
+      "Polly/8.2.0": {
+        "dependencies": {
+          "Polly.Core": "8.2.0"
+        },
+        "runtime": {
+          "lib/net6.0/Polly.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.2.0.2702"
+          }
+        }
+      },
+      "Polly.Core/8.2.0": {
+        "runtime": {
+          "lib/net8.0/Polly.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.2.0.2702"
+          }
+        }
+      },
+      "PropertyChanged.Fody/4.1.0": {
+        "dependencies": {
+          "Fody": "6.6.4"
+        }
+      },
+      "RazorBlade/0.4.4": {
+        "runtime": {
+          "lib/net6.0/RazorBlade.dll": {
+            "assemblyVersion": "0.4.4.0",
+            "fileVersion": "0.4.4.0"
+          }
+        }
+      },
+      "Stylet/1.3.6": {
+        "dependencies": {
+          "System.Drawing.Common": "4.6.0"
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/Stylet.dll": {
+            "assemblyVersion": "1.3.6.0",
+            "fileVersion": "1.3.6.0"
+          }
+        }
+      },
+      "Superpower/3.0.0": {
+        "runtime": {
+          "lib/net5.0/Superpower.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "System.Drawing.Common/4.6.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.0.0",
+          "Microsoft.Win32.SystemEvents": "4.6.0"
+        }
+      },
+      "System.Text.Encoding.CodePages/7.0.0": {},
+      "WebMarkupMin.Core/2.14.0": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/WebMarkupMin.Core.dll": {
+            "assemblyVersion": "2.14.0.0",
+            "fileVersion": "2.14.0.0"
+          }
+        }
+      },
+      "YoutubeExplode/6.3.7": {
+        "dependencies": {
+          "AngleSharp": "1.0.5"
+        },
+        "runtime": {
+          "lib/net5.0/YoutubeExplode.dll": {
+            "assemblyVersion": "6.3.7.0",
+            "fileVersion": "6.3.7.0"
+          }
+        }
+      },
+      "DiscordChatExporter.Core/2.42.6": {
+        "dependencies": {
+          "AsyncKeyedLock": "6.2.2",
+          "Gress": "2.1.1",
+          "JsonExtensions": "1.2.0",
+          "Polly": "8.2.0",
+          "RazorBlade": "0.4.4",
+          "Superpower": "3.0.0",
+          "WebMarkupMin.Core": "2.14.0",
+          "YoutubeExplode": "6.3.7"
+        },
+        "runtime": {
+          "DiscordChatExporter.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DiscordChatExporter/2.42.6": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AdvancedStringBuilder/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IbN3r5whlJvi8MhCDPVpIb+NVScyUcKSdcJZrnoXFDyzPDISl3AbWouNBYIHRdZdfGuzqCQEhM1vkxbIKqQVaQ==",
+      "path": "advancedstringbuilder/0.1.0",
+      "hashPath": "advancedstringbuilder.0.1.0.nupkg.sha512"
+    },
+    "AngleSharp/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4IeYlrwnbjLloXFigls5JkdfxfkBUp5DKI+8sUl4OUZQ3VKcsVCb99bqlxJOTIuAHy6rT6pfb2Lq87n+Tp3IqQ==",
+      "path": "anglesharp/1.0.5",
+      "hashPath": "anglesharp.1.0.5.nupkg.sha512"
+    },
+    "AsyncKeyedLock/6.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LB7iArcNChVfIJ516K57P6/GuCfuRM3Rx+hwOvsez2zvR7WqJyfXvvkJTf1pXkQnk8DURVzjSaBil60uzsKEnw==",
+      "path": "asynckeyedlock/6.2.2",
+      "hashPath": "asynckeyedlock.6.2.2.nupkg.sha512"
+    },
+    "Cogwheel/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+WtYsa00KNdV0syMV7sAZoeAYm8Y03ztMxneTfk4M5obG248iZFDxvUSz+ovG2vhiMEthuPduA0mMNMKCCQRdA==",
+      "path": "cogwheel/2.0.4",
+      "hashPath": "cogwheel.2.0.4.nupkg.sha512"
+    },
+    "CSharpier.MsBuild/0.26.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/M9GEYrUkREdZDky5707WRjFb16IkzpBHck3Vs/09/IGOx3Fsyahy4QxOP0nysX6MPQyqOu0T712EabuEguZLA==",
+      "path": "csharpier.msbuild/0.26.2",
+      "hashPath": "csharpier.msbuild.0.26.2.nupkg.sha512"
+    },
+    "Deorcify/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-khu8MahgfbXc8eQxfZgRX38Jgu1ZLg+6aK906XtIkUpzMovhaPs4ZOWcUiDLtPz0a9m7TcQwtGtoeRgghO8mVw==",
+      "path": "deorcify/1.0.2",
+      "hashPath": "deorcify.1.0.2.nupkg.sha512"
+    },
+    "DotnetRuntimeBootstrapper/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ufbf8Qe9hwY/KojfimWX4Kqka3QFH4IoGiQj8LPRlyk68/ApHxsG+p6GeTwukY0sIgxA1VXUAFkbvnn9rbZyaw==",
+      "path": "dotnetruntimebootstrapper/2.5.1",
+      "hashPath": "dotnetruntimebootstrapper.2.5.1.nupkg.sha512"
+    },
+    "Fody/6.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vLZS+oa+ndUHYPlx/8n9bBTT3dHkCF0riml4paKq4D663+cZd47x1uagQo32D/gKFZ/sfmV1oqKaLmH0elxq4A==",
+      "path": "fody/6.6.4",
+      "hashPath": "fody.6.6.4.nupkg.sha512"
+    },
+    "Gress/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n/YK1XYM2xUhoPFRRJpoTk5qtWBwTkSZlWtxqb4JNX3pDfwoMiu6G+zs65y8Z8SfIUxhOhU5yO/v58WkZynECg==",
+      "path": "gress/2.1.1",
+      "hashPath": "gress.2.1.1.nupkg.sha512"
+    },
+    "JsonExtensions/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ujtrK6m5BQVQLEteLfl54upN7Z59c1ZqEKmU3OlYriqnV74dIgIlNM2vkcgn2AuZEItQDNORD/2H1biI/asOdg==",
+      "path": "jsonextensions/1.2.0",
+      "hashPath": "jsonextensions.1.2.0.nupkg.sha512"
+    },
+    "MaterialDesignColors/2.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C4Oy+qkjMoMPoZKyqYdCnIYtK8c0OSIHmNP73Vgc69NjiUG093xTkE7W/Ks54cTDS7fmWOtUHfwISTVTtb/YKg==",
+      "path": "materialdesigncolors/2.1.4",
+      "hashPath": "materialdesigncolors.2.1.4.nupkg.sha512"
+    },
+    "MaterialDesignThemes/4.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bp9Auw70j+9V7WsUMT4pc8ulVzfL0Eav/tyGgICDirxxhKJwhqtC/6PRkTUm+R1t9611xiDuk5pSUNdDV6vfOQ==",
+      "path": "materialdesignthemes/4.9.0",
+      "hashPath": "materialdesignthemes.4.9.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TsETIgVJb/AKoYfSP+iCxkuly5d3inZjTdx/ItZLk2CxY85v8083OBS3uai84kK3/baLnS5/b5XGs6zR7SuuHQ==",
+      "path": "microsoft.netcore.platforms/3.0.0",
+      "hashPath": "microsoft.netcore.platforms.3.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Edg+pFW5C8WJb680Za2kTV8TqUi6Ahl/WldRVoOVJ23UQLpDHFspa+umgFjkWZw24ETsU99Cg+ErZz683M4chg==",
+      "path": "microsoft.win32.systemevents/4.6.0",
+      "hashPath": "microsoft.win32.systemevents.4.6.0.nupkg.sha512"
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.77": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MCu674ZETgU18EbxfwIlRpUPJ02YbZenLsMCXTkpeA7KUBpXfFaOUDlEO+7UWu5AFnUoydg+aQENJkuaZPheMQ==",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.77",
+      "hashPath": "microsoft.xaml.behaviors.wpf.1.1.77.nupkg.sha512"
+    },
+    "Onova/2.6.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Duu7DulZ0os8kDY+qX/VlGBE/XPlgXOMc4+if1+cmH1eUpu57iwrTUrz7VX7tioxRl2NAXb75ldytBTRDZ7C2g==",
+      "path": "onova/2.6.10",
+      "hashPath": "onova.2.6.10.nupkg.sha512"
+    },
+    "Polly/8.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KZm8iG29y6Mse7YntYYJSf5fGWuhYLliWgZaG/8NcuXS4gN7SPdtPYpjCxQlHqxvMGubkWVrGp3MvUaI7SkyKA==",
+      "path": "polly/8.2.0",
+      "hashPath": "polly.8.2.0.nupkg.sha512"
+    },
+    "Polly.Core/8.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gnKp3+mxGFmkFs4eHcD9aex0JOF8zS1Y18c2A5ckXXTVqbs6XLcDyLKgSa/mUFqAnH3mn9+uVIM0RhAec/d3kA==",
+      "path": "polly.core/8.2.0",
+      "hashPath": "polly.core.8.2.0.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6v+f9cI8YjnZH2WBHuOqWEAo8DFFNGFIdU8xD3AsL6fhV6Y8oAmVWd7XKk49t8DpeUBwhR/X+97+6Epvek0Y3A==",
+      "path": "propertychanged.fody/4.1.0",
+      "hashPath": "propertychanged.fody.4.1.0.nupkg.sha512"
+    },
+    "RazorBlade/0.4.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-feSDIIpfcZFSo8ccj/Bk7RZZ/0UTrobPDwB1txnuVwMwCRLzKWI52Quf2VpMRMOFZXILVVASTYoG7+ysIA1FqQ==",
+      "path": "razorblade/0.4.4",
+      "hashPath": "razorblade.0.4.4.nupkg.sha512"
+    },
+    "Stylet/1.3.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SISR+DsPrgBww3AI5FtHx1tD9VkEfJWZYu+ykq5EFM2o7Se9zxNR6FAa2g5QadQa90NKMYxn/VZEQRDo7/pdkw==",
+      "path": "stylet/1.3.6",
+      "hashPath": "stylet.1.3.6.nupkg.sha512"
+    },
+    "Superpower/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bjKbAYWePooCAvPxQq+3KnmcLfRggMyRoXmtBMlmCG71bdwBHrO6rmRJ2DRIodg5aztNcxeZXBUVWT+H+MZUhw==",
+      "path": "superpower/3.0.0",
+      "hashPath": "superpower.3.0.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2A3spjjoPZnvpVh/sDTzd+0H8ZqTdr+hH/6obB8MMfG81EJ85PmxCKDBxhBVQiA25PliKAZ1sKogDcq9mSnFEA==",
+      "path": "system.drawing.common/4.6.0",
+      "hashPath": "system.drawing.common.4.6.0.nupkg.sha512"
+    },
+    "System.Text.Encoding.CodePages/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
+      "path": "system.text.encoding.codepages/7.0.0",
+      "hashPath": "system.text.encoding.codepages.7.0.0.nupkg.sha512"
+    },
+    "WebMarkupMin.Core/2.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fRydp8dkCWkC3RDL+7ABWLLTgAnFEb5k7flhWrTlyGatg0rpT4HArKnGmfgfQ27FVMa1lCOAzFE1ORF5y5Pzbw==",
+      "path": "webmarkupmin.core/2.14.0",
+      "hashPath": "webmarkupmin.core.2.14.0.nupkg.sha512"
+    },
+    "YoutubeExplode/6.3.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MWER4pgMGHdNGDINhafl7PxTnVJUT6bIpwDZIG+OdaMsYtlu30wTgkz496l16aah4R0GoJQLnOhw3ltUfhvsUQ==",
+      "path": "youtubeexplode/6.3.7",
+      "hashPath": "youtubeexplode.6.3.7.nupkg.sha512"
+    },
+    "DiscordChatExporter.Core/2.42.6": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
