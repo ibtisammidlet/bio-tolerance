@@ -1,37 +1,38 @@
 const fs = require('fs');
 
 // Array of embedlink variables
-const embedlinks = [  
-  "QwerkyScience - info - howthisworks-notanymore [420613019236565003].html_Files.html",
-  "QwerkyScience - info - partners [482717222230556682].html_Files.html",
-  "QwerkyScience - info - server-suggestions [922620472053612585].html_Files.html",
-  "QwerkyScience - info - whatisthis [421396934989709339].html_Files.html",
-  "QwerkyScience - QwerkyExclusives - content-stream [483025082877476865].html_Files.html",
-  "QwerkyScience - QwerkyExclusives - modlog [927377930206728302].html_Files.html",
-  "QwerkyScience - QwerkyFriends - art [307541159419576321].html_Files.html",
-  "QwerkyScience - QwerkyFriends - casual [593444179749634070].html_Files.html",
-  "QwerkyScience - QwerkyFriends - gaiges-dms [1000788500301479946].html_Files.html",
-  "QwerkyScience - QwerkyFriends - general [661390794896441354].html_Files.html",
-  "QwerkyScience - QwerkyFriends - music [772706120653471764].html_Files.html",
-  "QwerkyScience - QwerkyFriends - noodles-chat [661421134377517106].html_Files.html",
-  "QwerkyScience - QwerkyFriends - photos [656911291499413520].html_Files.html",
-  "QwerkyScience - QwerkyFriends - qwerky-cheer [883448992690765846].html_Files.html",
-  "QwerkyScience - QwerkyFriends - qwerky-memes [926109964588711948].html_Files.html",
-  "QwerkyScience - QwerkyFriends - qwerky-thoughts [966875239596318780].html_Files.html",
-  "QwerkyScience - QwerkyFriends - roles [927377604632252446].html_Files.html",
-  "QwerkyScience - QwerkyFriends - videos-chat [1090447780629205012].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - notes [458089198449197058].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - public-science-resources [551795942248939520].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - science-discussion [307540693826666507].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - science-resources [446687121483497482].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - stack-discussion [928049481151311872].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - synesthetic-training [863994785009369108].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - trip-reports [900219805267800114].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - videos [453251673956155392].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - virus-discussion [702391564491554836].html_Files.html",
-  "QwerkyScience - The Lab Of Madness - virus-science-resources [702380052477771926].html_Files.html",
-"QwerkyScience - Voice - voice-discussion [634180287575621632].html_Files.html"
-];
+const embedlinks = [
+ "QwerkyScience - info - howthisworks-notanymore [420613019236565003].html_Files.html",
+ "QwerkyScience - info - partners [482717222230556682].html_Files.html",
+ "QwerkyScience - info - server-suggestions [922620472053612585].html_Files.html",
+ "QwerkyScience - info - whatisthis [421396934989709339].html_Files.html",
+ "QwerkyScience - QwerkyExclusives - content-stream [483025082877476865].html_Files.html",
+ "QwerkyScience - QwerkyExclusives - modlog [927377930206728302].html_Files.html",
+ "QwerkyScience - QwerkyFriends - art [307541159419576321].html_Files.html",
+ "QwerkyScience - QwerkyFriends - casual [593444179749634070].html_Files.html",
+ "QwerkyScience - QwerkyFriends - gaiges-dms [1000788500301479946].html_Files.html",
+ "QwerkyScience - QwerkyFriends - general [661390794896441354].html_Files.html",
+ "QwerkyScience - QwerkyFriends - music [772706120653471764].html_Files.html",
+ "QwerkyScience - QwerkyFriends - noodles-chat [661421134377517106].html_Files.html",
+ "QwerkyScience - QwerkyFriends - photos [656911291499413520].html_Files.html",
+ "QwerkyScience - QwerkyFriends - qwerky-cheer [883448992690765846].html_Files.html",
+ "QwerkyScience - QwerkyFriends - qwerky-memes [926109964588711948].html_Files.html",
+ "QwerkyScience - QwerkyFriends - qwerky-thoughts [966875239596318780].html_Files.html",
+ "QwerkyScience - QwerkyFriends - roles [927377604632252446].html_Files.html",
+ "QwerkyScience - QwerkyFriends - videos-chat [1090447780629205012].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - notes [458089198449197058].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - public-science-resources [551795942248939520].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - science-discussion [307540693826666507].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - science-resources [446687121483497482].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - stack-discussion [928049481151311872].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - synesthetic-training [863994785009369108].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - trip-reports [900219805267800114].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - videos [453251673956155392].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - virus-discussion [702391564491554836].html_Files.html",
+ "QwerkyScience - The Lab Of Madness - virus-science-resources [702380052477771926].html_Files.html",
+ "QwerkyScience - Voice - voice-discussion [634180287575621632].html_Files.html"
+ ];
+
 
 // Loop through the embedlinks array and create a file for each link
 embedlinks.forEach((embedlink, index) => {
