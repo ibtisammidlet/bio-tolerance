@@ -180,6 +180,11 @@ emailall2= emailall2.slice(0, -4);
 console.log(emailall2)
 
 console.log("emailall2"+emailall2)
+usingarray4(emailall2);
+}
+
+const usingarray4 = async (emailall2) => {
+emailall2 = emailall2+` or (http.request.uri.query wildcard r"sellapp=1" and http.referer eq "https://sell.app/")`;
 using(emailall2);
 }
 
