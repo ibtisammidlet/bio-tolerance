@@ -1,0 +1,1380 @@
+<!DOCTYPE html><html lang=en><head><title>Citadel Station - ergothioneine</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/1022359715818242068/a_0a508e790d10eb1c679dc8794e4c0500.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Citadel Station</div><div class=preamble__entry>NZT database / ergothioneine</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1298844419893493870 class=chatlog__message-container data-message-id=1298844419893493870><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Thursday, October 24, 2024 4:04 AM"><a href=#chatlog__message-container-1298844419893493870>10/24/2024 4:04 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://www.nature.com/articles/s41538-024-00250-5#:~:text=Oral%20administration%20of%20the%20food,in%20the%20plasma%20and%20hippocampus">https://www.nature.com/articles/s41538-024-00250-5#:~:text=Oral%20administration%20of%20the%20food,in%20the%20plasma%20and%20hippocampus</a>.</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href=https://www.nature.com/articles/s41538-024-00250-5><div class="chatlog__markdown chatlog__markdown-preserve">TrkB phosphorylation in serum extracellular vesicles correlates wit...</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">npj Science of Food - TrkB phosphorylation in serum extracellular vesicles correlates with cognitive function enhanced by ergothioneine in humans</div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-1.discordapp.net/external/yh2KWvrG30lPn8bVNu6dTNF2T6k2l70wpcutk1z5s9s/https/media.springernature.com/m685/springer-static/image/art%253A10.1038%252Fs41538-024-00250-5/MediaObjects/41538_2024_250_Fig1_HTML.png> <img class=chatlog__embed-thumbnail src=https://images-ext-1.discordapp.net/external/yh2KWvrG30lPn8bVNu6dTNF2T6k2l70wpcutk1z5s9s/https/media.springernature.com/m685/springer-static/image/art%253A10.1038%252Fs41538-024-00250-5/MediaObjects/41538_2024_250_Fig1_HTML.png alt=Thumbnail loading=lazy> </a></div></div></div></div><div class=chatlog__reactions><div class=chatlog__reaction title=ok_hand><img class="chatlog__emoji chatlog__emoji--small" alt=👌 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44c.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div><div class=chatlog__reaction title=thinking><img class="chatlog__emoji chatlog__emoji--small" alt=🤔 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f914.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div><div id=chatlog__message-container-1298844537057181826 class=chatlog__message-container data-message-id=1298844537057181826><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, October 24, 2024 4:04 AM">4:04 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://www.sciencedirect.com/science/article/pii/S0891584924001357#:~:text=Abstract,about%20the%20role%20of%20ET">https://www.sciencedirect.com/science/article/pii/S0891584924001357#:~:text=Abstract,about%20the%20role%20of%20ET</a>.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1299470033457647709 class=chatlog__message-container data-message-id=1299470033457647709><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/193475378189303819/8eb44554739c1e5badd8a815a527eb71.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=butterbox data-user-id=193475378189303819>Butter□</span> <span class=chatlog__timestamp title="Friday, October 25, 2024 9:29 PM"><a href=#chatlog__message-container-1299470033457647709>10/25/2024 9:29 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.834597/full">https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.834597/full</a></span></div><div class=chatlog__embed><div class=chatlog__embed-color-pill style=background-color:rgba(12,77,237,255)></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href=https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2022.834597/full><div class="chatlog__markdown chatlog__markdown-preserve">Frontiers | Ergothioneine Improves Aerobic Performance Without Any ...</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">Physical activity is now recognized as an essential element of healthy lifestyles. However, intensive and repeated exercise practice produces a high level of...</div></div></div></div></div></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324158659835461642 class=chatlog__message-container data-message-id=1324158659835461642><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Thursday, January 2, 2025 12:33 AM"><a href=#chatlog__message-container-1324158659835461642>1/2/2025 12:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://www.sciencedirect.com/science/article/abs/pii/S0963996924016612#:~:text=Ergothioneine%20inhibits%20α-synuclein%20aggregation,elegans.&amp;text=Ergothioneine%20alleviates%20neuronal%20damage%20and%20behavioral%20impairment%20in%20PD%20mice">https://www.sciencedirect.com/science/article/abs/pii/S0963996924016612#:~:text=Ergothioneine%20inhibits%20α-synuclein%20aggregation,elegans.&amp;text=Ergothioneine%20alleviates%20neuronal%20damage%20and%20behavioral%20impairment%20in%20PD%20mice</a></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324524333808222258 class=chatlog__message-container data-message-id=1324524333808222258><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dennison data-user-id=769666804107837460>Denzel</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 12:46 AM"><a href=#chatlog__message-container-1324524333808222258>1/3/2025 12:46 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>did anyone try this</span></div></div></div></div><div id=chatlog__message-container-1324524358349230101 class=chatlog__message-container data-message-id=1324524358349230101><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, January 3, 2025 12:46 AM">12:46 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>drop some anecdotes</span></div></div></div></div><div id=chatlog__message-container-1324525212577955964 class=chatlog__message-container data-message-id=1324525212577955964><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, January 3, 2025 12:50 AM">12:50 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>its just a longevity thing is all i see on reddit barely talks about cognitive mechanism</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324536142795640843 class=chatlog__message-container data-message-id=1324536142795640843><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 1:33 AM"><a href=#chatlog__message-container-1324536142795640843>1/3/2025 1:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h1>Ergothioneine (ERG)</h1>Ergothioneine (ERG) is a unique amino acid with powerful antioxidant properties, discovered in 1909. It&#39;s naturally produced by fungi and some bacteria but must be obtained through diet in humans, as we possess a specialized transporter (SLC22A4/OCTN1) dedicated to its uptake and distribution[9]. 
+<h2>Brain Health</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Protects against cognitive decline and memory problems associated with aging[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Shields brain cells from cortisol&#39;s harmful effects and inflammation[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Supports mitochondrial energy production in neural cells[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Prevents neuronal cell death caused by oxidative stress[6]
+<h2>Skin Health</h2>✨ Reduces UV-induced skin damage and photoaging[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Protects DNA integrity in skin cells exposed to UV radiation[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💪"
+    title="muscle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"> Suppresses collagen-degrading enzymes activated by UV exposure[2]
+<h2>Cardiovascular Health</h2>❤️ Best metabolic marker for reduced cardiovascular risk out of 112 markers studied[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f31f.svg"> Associated with lower mortality risk in a 20-year follow-up study[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔋"
+    title="battery"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50b.svg"> Protects heart cells from oxidative stress damage[3]
+<h2>Cellular Protection</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Accumulates in tissues with high oxidative stress levels[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Protects mitochondrial DNA from damage[4]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Regenerates through interaction with glutathione[12]
+<h2>Mechanism of Action</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Transported via specialized SLC22A4/OCTN1 transporter throughout body[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Acts as direct antioxidant against reactive oxygen species[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Activates KEAP1-NRF2 pathway to upregulate antioxidant genes[4]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Modulates TNF-alpha activity to reduce inflammation[3]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Protects mitochondrial function and reduces ROS production[4]
+<h2>Quantitative Outcomes</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📊"
+    title="bar_chart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ca.svg"> 3-30x higher antioxidant capacity than glutathione[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Maintains ~2mM concentration in cells for oxidative stress protection[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Levels decrease significantly with age[2]
+<h2>Caveats</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ Limited human clinical trials available[2]
+❗ Optimal dosage not fully established[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Effects may vary based on individual oxidative stress levels[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Most research is preliminary or in vitro[11]
+<h2>Dosage</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Recommended daily dose: 5-10mg[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚖"
+    title="⚖"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2696.svg">️ Safety and efficacy not fully established for different populations[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Natural dietary sources include mushrooms and fermented foods[10]</span> <span class=chatlog__edited-timestamp title="Friday, January 3, 2025 1:33 AM">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324537580288475278 class=chatlog__message-container data-message-id=1324537580288475278><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dennison data-user-id=769666804107837460>Denzel</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 1:39 AM"><a href=#chatlog__message-container-1324537580288475278>1/3/2025 1:39 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>any cognitive anecdotes</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324667650735083530 class=chatlog__message-container data-message-id=1324667650735083530><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dennison>Denzel</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324537580288475278')"> any cognitive anecdotes </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dandelionxd data-user-id=290274768765190144>Dandelion</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 10:16 AM"><a href=#chatlog__message-container-1324667650735083530>1/3/2025 10:16 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>50mg+ clears up some brainfog for me especially after poor sleep</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324668143049637908 class=chatlog__message-container data-message-id=1324668143049637908><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dandelionxd>Dandelion</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324667650735083530')"> 50mg+ clears up some brainfog for me especially after poor sleep </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dennison data-user-id=769666804107837460>Denzel</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 10:18 AM"><a href=#chatlog__message-container-1324668143049637908>1/3/2025 10:18 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>damn thats lit</span></div></div></div></div><div id=chatlog__message-container-1324668179175313449 class=chatlog__message-container data-message-id=1324668179175313449><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, January 3, 2025 10:18 AM">10:18 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>whats the cost for 50 mg?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324668912163622985 class=chatlog__message-container data-message-id=1324668912163622985><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dennison>Denzel</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324668179175313449')"> whats the cost for 50 mg? </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dandelionxd data-user-id=290274768765190144>Dandelion</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 10:21 AM"><a href=#chatlog__message-container-1324668912163622985>1/3/2025 10:21 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>3 dollars from prohealth longevity but I think jc denton might be cheaper</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=skull><img class="chatlog__emoji chatlog__emoji--small" alt=💀 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f480.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324669074474663967 class=chatlog__message-container data-message-id=1324669074474663967><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dennison data-user-id=769666804107837460>Denzel</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 10:21 AM"><a href=#chatlog__message-container-1324669074474663967>1/3/2025 10:21 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>cool</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1324863018487775262 class=chatlog__message-container data-message-id=1324863018487775262><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=https://cdn.discordapp.com/embed/avatars/2.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dandelionxd>Dandelion</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324667650735083530')"> 50mg+ clears up some brainfog for me especially after poor sleep </span></div></div><div class=chatlog__header><span class=chatlog__author title=filthy__ data-user-id=758208708957569044>Koszos</span> <span class=chatlog__timestamp title="Friday, January 3, 2025 11:12 PM"><a href=#chatlog__message-container-1324863018487775262>1/3/2025 11:12 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>its a legit one but its gotta get cheaper</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1325046052377591870 class=chatlog__message-container data-message-id=1325046052377591870><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1020672763788271686/7974957427be201ea707b74213bb43a7.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dennison>Denzel</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324525212577955964')"> its just a longevity thing is all i see on reddit barely talks about cognitive mechanism </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(46,204,113) title=moriorinvictus753bc data-user-id=1020672763788271686>Swiss🇨🇭</span> <span class=chatlog__timestamp title="Saturday, January 4, 2025 11:19 AM"><a href=#chatlog__message-container-1325046052377591870>1/4/2025 11:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>it also improves cognitive function in healthy people, but it is more a longevity thing definitely</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1325908909650743387 class=chatlog__message-container data-message-id=1325908909650743387><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/276457929694117888/a4050ecaab48da12fae10d8f15fa8bd6.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/769666804107837460/3c286e883d9dfdad772eaf4228f1a817.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dennison>Denzel</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324537580288475278')"> any cognitive anecdotes </span></div></div><div class=chatlog__header><span class=chatlog__author title=bullchicken360 data-user-id=276457929694117888>͘               .</span> <span class=chatlog__timestamp title="Monday, January 6, 2025 8:28 PM"><a href=#chatlog__message-container-1325908909650743387>1/6/2025 8:28 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>IN busts neuroinflammatory brain fog from poor sleep etc</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1325911955864813670 class=chatlog__message-container data-message-id=1325911955864813670><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src=https://cdn.discordapp.com/embed/avatars/2.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/276457929694117888/a4050ecaab48da12fae10d8f15fa8bd6.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=bullchicken360>͘               .</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1325908909650743387')"> IN busts neuroinflammatory brain fog from poor sleep etc </span></div></div><div class=chatlog__header><span class=chatlog__author title=filthy__ data-user-id=758208708957569044>Koszos</span> <span class=chatlog__timestamp title="Monday, January 6, 2025 8:40 PM"><a href=#chatlog__message-container-1325911955864813670>1/6/2025 8:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>indeed</span></div></div></div></div><div id=chatlog__message-container-1325911997207810111 class=chatlog__message-container data-message-id=1325911997207810111><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, January 6, 2025 8:40 PM">8:40 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>where else can this powda be obtained</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1325912133388599296 class=chatlog__message-container data-message-id=1325912133388599296><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/276457929694117888/a4050ecaab48da12fae10d8f15fa8bd6.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=bullchicken360 data-user-id=276457929694117888>͘               .</span> <span class=chatlog__timestamp title="Monday, January 6, 2025 8:41 PM"><a href=#chatlog__message-container-1325912133388599296>1/6/2025 8:41 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>denton&#39;s is the cheapest i know</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1325914144351715410 class=chatlog__message-container data-message-id=1325914144351715410><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=https://cdn.discordapp.com/embed/avatars/2.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=filthy__ data-user-id=758208708957569044>Koszos</span> <span class=chatlog__timestamp title="Monday, January 6, 2025 8:49 PM"><a href=#chatlog__message-container-1325914144351715410>1/6/2025 8:49 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>das crazy</span></div></div></div></div><div id=chatlog__message-container-1325914179814555659 class=chatlog__message-container data-message-id=1325914179814555659><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, January 6, 2025 8:49 PM">8:49 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>nobody in china</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1327825486164000860 class=chatlog__message-container data-message-id=1327825486164000860><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dandelionxd data-user-id=290274768765190144>Dandelion</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:24 AM"><a href=#chatlog__message-container-1327825486164000860>1/12/2025 3:24 AM</a></span></div></div></div></div><div id=chatlog__message-container-1327825578102886482 class=chatlog__message-container data-message-id=1327825578102886482><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 12, 2025 3:24 AM">3:24 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>felt sedating and odd ^</span></div></div></div></div><div id=chatlog__message-container-1327825643207004160 class=chatlog__message-container data-message-id=1327825643207004160><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 12, 2025 3:25 AM">3:25 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>wont take that much again but dont regret it either.</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=sunglasses><img class="chatlog__emoji chatlog__emoji--small" alt=😎 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f60e.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1327840047600500828 class=chatlog__message-container data-message-id=1327840047600500828><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=https://cdn.discordapp.com/embed/avatars/2.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=filthy__ data-user-id=758208708957569044>Koszos</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 4:22 AM"><a href=#chatlog__message-container-1327840047600500828>1/12/2025 4:22 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>500mg</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1328010626207059989 class=chatlog__message-container data-message-id=1328010626207059989><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/860205246625742936/b8f1a064f5d3812e47651083538e7b13.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(52,152,219) title=dandelionxd>Dandelion</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1327825486164000860')"> <em>Click to see original message</em> </span></div></div><div class=chatlog__header><span class=chatlog__author title=dinoarchive data-user-id=860205246625742936>dinoarchive</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:40 PM"><a href=#chatlog__message-container-1328010626207059989>1/12/2025 3:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I thought I read the suggested dose was like 5-10mg?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1328010738756882442 class=chatlog__message-container data-message-id=1328010738756882442><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/860205246625742936/b8f1a064f5d3812e47651083538e7b13.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=secretweapon>secretweapon 🌀⚡</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324536142795640843')"> <h1>Ergothioneine (ERG)</h1>Ergothioneine (ERG) is a unique amino acid with powerful antioxidant properties, discovered in 1909. It&#39;s naturally produced by fungi and some bacteria but must be obtained through diet in humans, as we possess a specialized transporter (SLC22A4/OCTN1) dedicated to its uptake and distribution[9]. 
+<h2>Brain Health</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Protects against cognitive decline and memory problems associated with aging[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Shields brain cells from cortisol&#39;s harmful effects and inflammation[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Supports mitochondrial energy production in neural cells[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Prevents neuronal cell death caused by oxidative stress[6]
+<h2>Skin Health</h2>✨ Reduces UV-induced skin damage and photoaging[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Protects DNA integrity in skin cells exposed to UV radiation[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💪"
+    title="muscle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"> Suppresses collagen-degrading enzymes activated by UV exposure[2]
+<h2>Cardiovascular Health</h2>❤️ Best metabolic marker for reduced cardiovascular risk out of 112 markers studied[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f31f.svg"> Associated with lower mortality risk in a 20-year follow-up study[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔋"
+    title="battery"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50b.svg"> Protects heart cells from oxidative stress damage[3]
+<h2>Cellular Protection</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Accumulates in tissues with high oxidative stress levels[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Protects mitochondrial DNA from damage[4]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Regenerates through interaction with glutathione[12]
+<h2>Mechanism of Action</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Transported via specialized SLC22A4/OCTN1 transporter throughout body[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Acts as direct antioxidant against reactive oxygen species[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Activates KEAP1-NRF2 pathway to upregulate antioxidant genes[4]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Modulates TNF-alpha activity to reduce inflammation[3]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Protects mitochondrial function and reduces ROS production[4]
+<h2>Quantitative Outcomes</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📊"
+    title="bar_chart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ca.svg"> 3-30x higher antioxidant capacity than glutathione[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Maintains ~2mM concentration in cells for oxidative stress protection[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Levels decrease significantly with age[2]
+<h2>Caveats</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ Limited human clinical trials available[2]
+❗ Optimal dosage not fully established[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Effects may vary based on individual oxidative stress levels[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Most research is preliminary or in vitro[11]
+<h2>Dosage</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Recommended daily dose: 5-10mg[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚖"
+    title="⚖"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2696.svg">️ Safety and efficacy not fully established for different populations[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Natural dietary sources include mushrooms and fermented foods[10] </span> <span class=chatlog__reply-edited-timestamp title="Friday, January 3, 2025 1:33 AM">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author title=dinoarchive data-user-id=860205246625742936>dinoarchive</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:40 PM"><a href=#chatlog__message-container-1328010738756882442>1/12/2025 3:40 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>.</span></div></div></div></div><div id=chatlog__message-container-1328010793148743781 class=chatlog__message-container data-message-id=1328010793148743781><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 12, 2025 3:40 PM">3:40 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Why are you taking 100 fold that</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1328012822021668865 class=chatlog__message-container data-message-id=1328012822021668865><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/860205246625742936/b8f1a064f5d3812e47651083538e7b13.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=dinoarchive>dinoarchive</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1328010626207059989')"> I thought I read the suggested dose was like 5-10mg? </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dandelionxd data-user-id=290274768765190144>Dandelion</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:48 PM"><a href=#chatlog__message-container-1328012822021668865>1/12/2025 3:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>thats because theyre underestimating its potential and its understudied</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1328013078679257158 class=chatlog__message-container data-message-id=1328013078679257158><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/860205246625742936/b8f1a064f5d3812e47651083538e7b13.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=dinoarchive data-user-id=860205246625742936>dinoarchive</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:49 PM"><a href=#chatlog__message-container-1328013078679257158>1/12/2025 3:49 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Someone also mentioned too little or too much can have paradoxical effects, which isn&#39;t ideal</span></div></div></div></div><div id=chatlog__message-container-1328013144156799016 class=chatlog__message-container data-message-id=1328013144156799016><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 12, 2025 3:50 PM">3:50 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>What dose to people around here usually take</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1328013589784821843 class=chatlog__message-container data-message-id=1328013589784821843><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/290274768765190144/2a1dc76ed8e54290a783bc02330fdd92.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(52,152,219) title=dandelionxd data-user-id=290274768765190144>Dandelion</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:51 PM"><a href=#chatlog__message-container-1328013589784821843>1/12/2025 3:51 PM</a></span></div></div></div></div><div id=chatlog__message-container-1328013592003481734 class=chatlog__message-container data-message-id=1328013592003481734><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 12, 2025 3:51 PM">3:51 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Its understudied. ricky takes 20mg Intranasal</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1328014174013493269 class=chatlog__message-container data-message-id=1328014174013493269><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/860205246625742936/b8f1a064f5d3812e47651083538e7b13.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=dinoarchive data-user-id=860205246625742936>dinoarchive</span> <span class=chatlog__timestamp title="Sunday, January 12, 2025 3:54 PM"><a href=#chatlog__message-container-1328014174013493269>1/12/2025 3:54 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Word</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330467615100899349 class=chatlog__message-container data-message-id=1330467615100899349><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/502959687797440513/6e3261c8a303a0872f111b2cd5277075.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sonnyshut data-user-id=502959687797440513>Sonnyshut</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 10:23 AM"><a href=#chatlog__message-container-1330467615100899349>1/19/2025 10:23 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>So are we positive that taking massive amounts of L reuteri doesn’t raise ergothioneine levels</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330467970698317874 class=chatlog__message-container data-message-id=1330467970698317874><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/502959687797440513/6e3261c8a303a0872f111b2cd5277075.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=sonnyshut>Sonnyshut</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1330467615100899349')"> So are we positive that taking massive amounts of L reuteri doesn’t raise ergothioneine levels </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 10:24 AM"><a href=#chatlog__message-container-1330467970698317874>1/19/2025 10:24 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Yes</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330467989908361247 class=chatlog__message-container data-message-id=1330467989908361247><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/502959687797440513/6e3261c8a303a0872f111b2cd5277075.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sonnyshut data-user-id=502959687797440513>Sonnyshut</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 10:24 AM"><a href=#chatlog__message-container-1330467989908361247>1/19/2025 10:24 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://pubmed.ncbi.nlm.nih.gov/35486429/">https://pubmed.ncbi.nlm.nih.gov/35486429/</a></span></div><div class=chatlog__embed><div class=chatlog__embed-color-pill style=background-color:rgba(32,85,138,255)></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://pubmed.ncbi.nlm.nih.gov/35486429/"><div class="chatlog__markdown chatlog__markdown-preserve">Does Lactobacillus reuteri influence ergothioneine levels in the hu...</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">The dietary thione-thiol, ergothioneine (ET), accumulates in human and animal tissues and may play important roles in disease prevention. ET biosynthesis has only been described in fungi and certain bacteria, and humans and animals are widely assumed to accumulate ET solely from diet. However, a rec …</div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-1.discordapp.net/external/6d6-18oJZvi5cGlXNNJCiHYAoIa3DszlUhQifF-iATk/https/cdn.ncbi.nlm.nih.gov/pubmed/persistent/pubmed-meta-image-v2.jpg> <img class=chatlog__embed-thumbnail src=https://images-ext-1.discordapp.net/external/6d6-18oJZvi5cGlXNNJCiHYAoIa3DszlUhQifF-iATk/https/cdn.ncbi.nlm.nih.gov/pubmed/persistent/pubmed-meta-image-v2.jpg alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div><div id=chatlog__message-container-1330468089443389484 class=chatlog__message-container data-message-id=1330468089443389484><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 19, 2025 10:25 AM">10:25 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Is that paper just incorrect or what</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330468189452242966 class=chatlog__message-container data-message-id=1330468189452242966><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 10:25 AM"><a href=#chatlog__message-container-1330468189452242966>1/19/2025 10:25 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>It accumulates ergo, but doesn&#39;t produce it or anything</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330468792098099231 class=chatlog__message-container data-message-id=1330468792098099231><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/502959687797440513/6e3261c8a303a0872f111b2cd5277075.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=sonnyshut data-user-id=502959687797440513>Sonnyshut</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 10:27 AM"><a href=#chatlog__message-container-1330468792098099231>1/19/2025 10:27 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Damn</span></div></div></div></div><div id=chatlog__message-container-1330469600546000927 class=chatlog__message-container data-message-id=1330469600546000927><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 19, 2025 10:31 AM">10:31 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I just started taking it</span></div></div></div></div><div id=chatlog__message-container-1330470371417264138 class=chatlog__message-container data-message-id=1330470371417264138><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 19, 2025 10:34 AM">10:34 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Guess I gotta start eating more mushrooms</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1330470569765896253 class=chatlog__message-container data-message-id=1330470569765896253><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/502959687797440513/6e3261c8a303a0872f111b2cd5277075.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=sonnyshut>Sonnyshut</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1330470371417264138')"> Guess I gotta start eating more mushrooms </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Sunday, January 19, 2025 10:35 AM"><a href=#chatlog__message-container-1330470569765896253>1/19/2025 10:35 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Marinated porcini</span></div></div></div></div><div id=chatlog__message-container-1330470689786040401 class=chatlog__message-container data-message-id=1330470689786040401><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, January 19, 2025 10:35 AM">10:35 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Or this <a href="https://discord.com/channels/1022359715818242068/1241638145481510933/1317291975342428262" onclick="scrollToMessage(event, '1317291975342428262')">https://discord.com/channels/1022359715818242068/1241638145481510933/1317291975342428262</a></span></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg loading=lazy> <span class=chatlog__reaction-count>1</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1332350467216511048 class=chatlog__message-container data-message-id=1332350467216511048><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1020672763788271686/7974957427be201ea707b74213bb43a7.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(46,204,113) title=moriorinvictus753bc data-user-id=1020672763788271686>Swiss🇨🇭</span> <span class=chatlog__timestamp title="Friday, January 24, 2025 3:05 PM"><a href=#chatlog__message-container-1332350467216511048>1/24/2025 3:05 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://www.cell.com/cell-metabolism/fulltext/S1550-4131(24)00490-X">https://www.cell.com/cell-metabolism/fulltext/S1550-4131(24)00490-X</a></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1332416527349055524 class=chatlog__message-container data-message-id=1332416527349055524><div class=chatlog__message><div class=chatlog__message-aside><svg class=chatlog__system-notification-icon><use href=#thread-icon></use></svg></div><div class=chatlog__message-primary><span class=chatlog__system-notification-author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span> </span> <span class=chatlog__system-notification-content> <span>started a thread.</span> </span> <span class=chatlog__system-notification-timestamp title="Friday, January 24, 2025 7:27 PM"> <a href=#chatlog__message-container-1332416527349055524>1/24/2025 7:27 PM</a> </span></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1344497408020709461 class=chatlog__message-container data-message-id=1344497408020709461><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=fawker data-user-id=395427535586066432>Fawker</span> <span class=chatlog__timestamp title="Thursday, February 27, 2025 3:32 AM"><a href=#chatlog__message-container-1344497408020709461>2/27/2025 3:32 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>When will ergo be restocked on helios?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1344498447226765433 class=chatlog__message-container data-message-id=1344498447226765433><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=fawker>Fawker</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1344497408020709461')"> When will ergo be restocked on helios? </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Thursday, February 27, 2025 3:36 AM"><a href=#chatlog__message-container-1344498447226765433>2/27/2025 3:36 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Friday</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1352412933778313316 class=chatlog__message-container data-message-id=1352412933778313316><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Thursday, March 20, 2025 11:46 PM"><a href=#chatlog__message-container-1352412933778313316>3/20/2025 11:46 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://www.sciencedirect.com/science/article/abs/pii/S1550413125000245?dgcid=coauthor">https://www.sciencedirect.com/science/article/abs/pii/S1550413125000245?dgcid=coauthor</a></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1353312696606654535 class=chatlog__message-container data-message-id=1353312696606654535><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1262526687569121380/339e6fc4c7d9009e3c98396077719885.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=whatisthatisnt_ data-user-id=1262526687569121380>NX10</span> <span class=chatlog__timestamp title="Sunday, March 23, 2025 11:21 AM"><a href=#chatlog__message-container-1353312696606654535>3/23/2025 11:21 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://vitamondo.net/premium-l-ergothioneine-supplement-antioxidant-brain/?tm=tt&amp;ap=gads&amp;aaid=adaBkZdjosxwC&amp;gad_source=1&amp;gbraid=0AAAAACtJDQhP-cV0XhNVqZYR1ma8U9jUj&amp;gclid=EAIaIQobChMI2ui0jf2fjAMVU2SRBR2rhh2tEAQYASABEgJMgfD_BwE">https://vitamondo.net/premium-l-ergothioneine-supplement-antioxidant-brain/?tm=tt&amp;ap=gads&amp;aaid=adaBkZdjosxwC&amp;gad_source=1&amp;gbraid=0AAAAACtJDQhP-cV0XhNVqZYR1ma8U9jUj&amp;gclid=EAIaIQobChMI2ui0jf2fjAMVU2SRBR2rhh2tEAQYASABEgJMgfD_BwE</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://vitamondo.net/premium-l-ergothioneine-supplement-antioxidant-brain/?tm=tt&amp;ap=gads&amp;aaid=adaBkZdjosxwC&amp;gad_source=1&amp;gbraid=0AAAAACtJDQhP-cV0XhNVqZYR1ma8U9jUj&amp;gclid=EAIaIQobChMI2ui0jf2fjAMVU2SRBR2rhh2tEAQYASABEgJMgfD_BwE"><div class="chatlog__markdown chatlog__markdown-preserve">Premium L-Ergothioneine Supplement: 100g-1kg – Mushroom Extract</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">Premium L-Ergothioneine Supplement&#160;is natural, sulfur-containing amino acid that has garnered attention in recent years in the world of health and nutrition. Scientists are constantly exploring new</div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-1.discordapp.net/external/juUFEHN3kcU2LZCFZqhNjdA47clfh5BmPjIvRaRFcpo/https/vitamondo.net/wp-content/uploads/2025/02/Premium-L-Ergothioneine-1.webp> <img class=chatlog__embed-thumbnail src=https://images-ext-1.discordapp.net/external/juUFEHN3kcU2LZCFZqhNjdA47clfh5BmPjIvRaRFcpo/https/vitamondo.net/wp-content/uploads/2025/02/Premium-L-Ergothioneine-1.webp alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div><div id=chatlog__message-container-1353312744496955462 class=chatlog__message-container data-message-id=1353312744496955462><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, March 23, 2025 11:21 AM">11:21 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>This any good? (EU based)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354192582061719552 class=chatlog__message-container data-message-id=1354192582061719552><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=fawker data-user-id=395427535586066432>Fawker</span> <span class=chatlog__timestamp title="Tuesday, March 25, 2025 9:37 PM"><a href=#chatlog__message-container-1354192582061719552>3/25/2025 9:37 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>The ergo bottles are damn nice!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354192621743902780 class=chatlog__message-container data-message-id=1354192621743902780><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1318963715604877454/7c0007ffd758d039935322ac6599e978.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=fawker>Fawker</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354192582061719552')"> The ergo bottles are damn nice! </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(10,0,0) title=normanwasborn data-user-id=1318963715604877454>Norman</span> <span class=chatlog__timestamp title="Tuesday, March 25, 2025 9:38 PM"><a href=#chatlog__message-container-1354192621743902780>3/25/2025 9:38 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>send pics</span></div></div></div></div><div id=chatlog__message-container-1354192764887240806 class=chatlog__message-container data-message-id=1354192764887240806><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, March 25, 2025 9:38 PM">9:38 PM</div></div><div class=chatlog__message-primary><div class=chatlog__embed><video class=chatlog__embed-generic-gifv width=498 height=402 loop onmouseover=this.play() onmouseout=this.pause()><source src=https://images-ext-1.discordapp.net/external/iLCmPPh-IUVqKeBKzk7w25PsfhnTzAnFKShwxtY4v_c/https/media.tenor.com/bxTiQPeZW7AAAAPo/peach-cat-cute.mp4 alt="Embedded gifv"></video></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354201069965676544 class=chatlog__message-container data-message-id=1354201069965676544><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/934076637400690728/3958d8d4807c019d5d881bec5f26f1e7.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=fawker>Fawker</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354192582061719552')"> The ergo bottles are damn nice! </span></div></div><div class=chatlog__header><span class=chatlog__author title=cyclist5000 data-user-id=934076637400690728>cyclist5000</span> <span class=chatlog__timestamp title="Tuesday, March 25, 2025 10:11 PM"><a href=#chatlog__message-container-1354201069965676544>3/25/2025 10:11 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Pic</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354227927998398607 class=chatlog__message-container data-message-id=1354227927998398607><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/1318963715604877454/7c0007ffd758d039935322ac6599e978.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(10,0,0) title=normanwasborn>Norman</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354192621743902780')"> send pics </span></div></div><div class=chatlog__header><span class=chatlog__author title=fawker data-user-id=395427535586066432>Fawker</span> <span class=chatlog__timestamp title="Tuesday, March 25, 2025 11:58 PM"><a href=#chatlog__message-container-1354227927998398607>3/25/2025 11:58 PM</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1298844401337897010/1354227928019374151/IMG_2526.jpg?ex=687f6eca&amp;is=687e1d4a&amp;hm=14a62221d47030356f1245cd06b444e1de6ed8ab4d9c680e9e140a183ac6f3a1&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1298844401337897010/1354227928019374151/IMG_2526.jpg?ex=687f6eca&amp;is=687e1d4a&amp;hm=14a62221d47030356f1245cd06b444e1de6ed8ab4d9c680e9e140a183ac6f3a1&amp;" alt="Image attachment" title="Image: IMG_2526.jpg (894.91 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354276640234016768 class=chatlog__message-container data-message-id=1354276640234016768><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1318963715604877454/7c0007ffd758d039935322ac6599e978.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=fawker>Fawker</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354227927998398607')"> <em>Click to see attachment</em> <span>🖼️</span> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(10,0,0) title=normanwasborn data-user-id=1318963715604877454>Norman</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 3:11 AM"><a href=#chatlog__message-container-1354276640234016768>3/26/2025 3:11 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Hot</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354507871433265324 class=chatlog__message-container data-message-id=1354507871433265324><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/798131743113740308/cfafeaccb54c52b397a374eb1f1ba87c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=fawker>Fawker</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354227927998398607')"> <em>Click to see attachment</em> <span>🖼️</span> </span></div></div><div class=chatlog__header><span class=chatlog__author title=mallutki300mg data-user-id=798131743113740308>Mallutki</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 6:30 PM"><a href=#chatlog__message-container-1354507871433265324>3/26/2025 6:30 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Bro damn</span></div></div></div></div><div id=chatlog__message-container-1354507887782662256 class=chatlog__message-container data-message-id=1354507887782662256><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, March 26, 2025 6:30 PM">6:30 PM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Does it work?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354582032818376766 class=chatlog__message-container data-message-id=1354582032818376766><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/798131743113740308/cfafeaccb54c52b397a374eb1f1ba87c.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=mallutki300mg>Mallutki</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354507887782662256')"> Does it work? </span></div></div><div class=chatlog__header><span class=chatlog__author title=fawker data-user-id=395427535586066432>Fawker</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 11:25 PM"><a href=#chatlog__message-container-1354582032818376766>3/26/2025 11:25 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Definitely. Take it IN.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354583068161216512 class=chatlog__message-container data-message-id=1354583068161216512><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/798131743113740308/cfafeaccb54c52b397a374eb1f1ba87c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=mallutki300mg data-user-id=798131743113740308>Mallutki</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 11:29 PM"><a href=#chatlog__message-container-1354583068161216512>3/26/2025 11:29 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You made a spray solution or you snort it?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354583686300831784 class=chatlog__message-container data-message-id=1354583686300831784><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 11:31 PM"><a href=#chatlog__message-container-1354583686300831784>3/26/2025 11:31 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Is it soluble</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354587812510564472 class=chatlog__message-container data-message-id=1354587812510564472><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/395427535586066432/4dae7fe35005bd4d41c9bbb324e47789.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/798131743113740308/cfafeaccb54c52b397a374eb1f1ba87c.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=mallutki300mg>Mallutki</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354583068161216512')"> You made a spray solution or you snort it? </span></div></div><div class=chatlog__header><span class=chatlog__author title=fawker data-user-id=395427535586066432>Fawker</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 11:48 PM"><a href=#chatlog__message-container-1354587812510564472>3/26/2025 11:48 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Just the powder for now. Haven&#39;t got around to making a solution, but its water soluble so I don&#39;t see it being a problem.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354588727917285506 class=chatlog__message-container data-message-id=1354588727917285506><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span class=chatlog__timestamp title="Wednesday, March 26, 2025 11:51 PM"><a href=#chatlog__message-container-1354588727917285506>3/26/2025 11:51 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>What&#39;s your dose</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354625815295426631 class=chatlog__message-container data-message-id=1354625815295426631><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/959236295408894052/d134d01e6381176a39f51abdae5cb9c0.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=da_veed data-user-id=959236295408894052>BardleDoo</span> <span class=chatlog__timestamp title="Thursday, March 27, 2025 2:19 AM"><a href=#chatlog__message-container-1354625815295426631>3/27/2025 2:19 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Loved the idea of it, maybe needed to do more but I finished a jar at 10-20 IN and I did t notice anything.  But don’t let me muddy the waters I don’t ever notice shit from fuck</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354676228707193007 class=chatlog__message-container data-message-id=1354676228707193007><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=secretweapon>secretweapon 🌀⚡</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1324536142795640843')"> <h1>Ergothioneine (ERG)</h1>Ergothioneine (ERG) is a unique amino acid with powerful antioxidant properties, discovered in 1909. It&#39;s naturally produced by fungi and some bacteria but must be obtained through diet in humans, as we possess a specialized transporter (SLC22A4/OCTN1) dedicated to its uptake and distribution[9]. 
+<h2>Brain Health</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Protects against cognitive decline and memory problems associated with aging[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Shields brain cells from cortisol&#39;s harmful effects and inflammation[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Supports mitochondrial energy production in neural cells[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Prevents neuronal cell death caused by oxidative stress[6]
+<h2>Skin Health</h2>✨ Reduces UV-induced skin damage and photoaging[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Protects DNA integrity in skin cells exposed to UV radiation[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💪"
+    title="muscle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"> Suppresses collagen-degrading enzymes activated by UV exposure[2]
+<h2>Cardiovascular Health</h2>❤️ Best metabolic marker for reduced cardiovascular risk out of 112 markers studied[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f31f.svg"> Associated with lower mortality risk in a 20-year follow-up study[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔋"
+    title="battery"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50b.svg"> Protects heart cells from oxidative stress damage[3]
+<h2>Cellular Protection</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Accumulates in tissues with high oxidative stress levels[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Protects mitochondrial DNA from damage[4]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Regenerates through interaction with glutathione[12]
+<h2>Mechanism of Action</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Transported via specialized SLC22A4/OCTN1 transporter throughout body[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Acts as direct antioxidant against reactive oxygen species[2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Activates KEAP1-NRF2 pathway to upregulate antioxidant genes[4]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Modulates TNF-alpha activity to reduce inflammation[3]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Protects mitochondrial function and reduces ROS production[4]
+<h2>Quantitative Outcomes</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📊"
+    title="bar_chart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ca.svg"> 3-30x higher antioxidant capacity than glutathione[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Maintains ~2mM concentration in cells for oxidative stress protection[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Levels decrease significantly with age[2]
+<h2>Caveats</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ Limited human clinical trials available[2]
+❗ Optimal dosage not fully established[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Effects may vary based on individual oxidative stress levels[1]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Most research is preliminary or in vitro[11]
+<h2>Dosage</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Recommended daily dose: 5-10mg[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚖"
+    title="⚖"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2696.svg">️ Safety and efficacy not fully established for different populations[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Natural dietary sources include mushrooms and fermented foods[10] </span> <span class=chatlog__reply-edited-timestamp title="Friday, January 3, 2025 1:33 AM">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span class=chatlog__timestamp title="Thursday, March 27, 2025 5:39 AM"><a href=#chatlog__message-container-1354676228707193007>3/27/2025 5:39 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Regenerates through interaction with glutathione[12]</span></div></div></div></div><div id=chatlog__message-container-1354676399184674859 class=chatlog__message-container data-message-id=1354676399184674859><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, March 27, 2025 5:40 AM">5:40 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Good to shoot ergo with glu</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354680296460779560 class=chatlog__message-container data-message-id=1354680296460779560><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span class=chatlog__timestamp title="Thursday, March 27, 2025 5:55 AM"><a href=#chatlog__message-container-1354680296460779560>3/27/2025 5:55 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h1>Ergothioneine</h1><h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📚"
+    title="books"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4da.svg"> Introduction &amp; Background</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Ergothioneine (ET/EGT) is a naturally occurring amino acid and potent antioxidant discovered by Charles Tanret in 1909 from ergot fungus.[1,2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> It&#39;s a thiourea derivative of histidine with a sulfur atom on the imidazole ring, giving exceptional stability and antioxidant capacity.[1,2]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Primarily produced by fungi (mushrooms), actinomycetota, and cyanobacteria - not synthesized by animals or plants.[3]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Growing interest stems from: specific transporter in mammals (OCTN1/ETT), accumulation in high-oxidative stress tissues, and epidemiological links to reduced age-related conditions.[4,5]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧓"
+    title="older_adult"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9d3.svg"> Designated a &quot;longevity vitamin&quot; by biochemist Bruce Ames, suggesting importance for preventing premature aging and long-term health.[6]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚗"
+    title="⚗"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2697.svg">️ Chemical formula C₉H₁₅N₃O₂S with molecular weight of 229.30 g/mol.[7]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Features unique combination of thiol group (providing antioxidant properties) and betaine moiety (creating zwitterion at physiological pH).[7]
+<h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Biological Role &amp; Mechanism of Action</h2><h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Chemical Structure &amp; Properties</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Exceptional stability in physiological conditions with resistance to auto-oxidation in oxygen presence.[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="♻"
+    title="♻"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/267b.svg">️ Exists in tautomeric forms (thiol and thione).[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔗"
+    title="link"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f517.svg"> Strong metal-chelating properties.[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧹"
+    title="broom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9f9.svg"> Capacity to scavenge reactive oxygen and nitrogen species.[8]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💪"
+    title="muscle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"> Maintains antioxidant capability in both oxidizing and reducing environments, unlike glutathione and other sulfur antioxidants.[9]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🚗"
+    title="red_car"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f697.svg"> Absorption, Transport &amp; Tissue Distribution</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧩"
+    title="jigsaw"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e9.svg"> Absorbed via OCTN1 transporter (now designated ETT - ergothioneine transporter) encoded by SLC22A4 gene.[10]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Highly specific transporter with expression throughout body: small intestine, kidney proximal tubules, liver, bone marrow, erythrocytes, monocytes, and certain brain regions.[11]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🎯"
+    title="dart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3af.svg"> Highest concentrations found in: erythrocytes, bone marrow, liver, kidneys, ocular tissues, seminal fluid, and certain brain regions.[12,13]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🚫"
+    title="no_entry_sign"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6ab.svg"> Cells lacking OCTN1/ETT don&#39;t accumulate ergothioneine as plasma membrane is virtually impermeable without the transporter.[14]
+⏱️ Remarkable retention with whole-body half-life of approximately one month in humans (based on animal studies).[15]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Antioxidant Mechanisms</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💥"
+    title="boom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4a5.svg"> Direct scavenging of reactive oxygen species including hydroxyl radicals, hypochlorous acid, and peroxynitrite.[16]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔒"
+    title="lock"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f512.svg"> Metal chelation - binding copper and iron to prevent Fenton reactions that generate hydroxyl radicals.[17]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔋"
+    title="battery"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50b.svg"> Mitochondrial protection - concentrates in mitochondria to maintain DNA integrity by protecting against superoxide.[18]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🤝"
+    title="handshake"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f91d.svg"> Synergistic action with glutathione and other antioxidants, creating robust defense network.[19]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔼"
+    title="arrow_up_small"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f53c.svg"> Activates Nrf2 pathway (master regulator of antioxidant responses), upregulating enzymes like superoxide dismutase and catalase.[20]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔥"
+    title="fire"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"> Anti-inflammatory Effects</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🚫"
+    title="no_entry_sign"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6ab.svg"> Inhibits NF-κB activation, a key transcription factor regulating pro-inflammatory cytokine expression.[21]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📉"
+    title="chart_with_downwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c9.svg"> Decreases production of interleukin-8, tumor necrosis factor-alpha, and other inflammatory mediators.[22]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧱"
+    title="bricks"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9f1.svg"> Protects cellular membranes during oxidative stress, preventing inflammatory mediator release.[23]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Mitochondrial Function Enhancement</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔋"
+    title="battery"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50b.svg"> Improves mitochondrial respiration and oxygen utilization efficiency.[24]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Protects mitochondrial DNA, which is vulnerable to oxidative damage due to proximity to ROS production.[25]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚖"
+    title="⚖"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2696.svg">️ Maintains mitochondrial membrane potential, supporting efficient energy production.[26]</span></div></div></div></div><div id=chatlog__message-container-1354680403876642816 class=chatlog__message-container data-message-id=1354680403876642816><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, March 27, 2025 5:56 AM">5:56 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🥘"
+    title="shallow_pan_of_food"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f958.svg"> Dietary Sources &amp; Supplementation</h2><h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Natural Food Sources</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Richest sources are mushrooms, with varying concentrations (dry weight):[27,28]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌟"
+    title="star2"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f31f.svg"> Oyster mushrooms: 119.0 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👑"
+    title="crown"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f451.svg"> King oyster mushrooms: 74.0 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Shiitake mushrooms: 27.0 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧙"
+    title="mage"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9d9.svg"> Maitake mushrooms: 20.4 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔘"
+    title="radio_button"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f518.svg"> Button mushrooms: 7.3 mg/kg
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍲"
+    title="stew"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f372.svg"> Other sources in smaller amounts:[27,28]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🫘"
+    title="🫘"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fad8.svg"> Black turtle beans: 13.49 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🫘"
+    title="🫘"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fad8.svg"> Red kidney beans: 4.52 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🌾"
+    title="ear_of_rice"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f33e.svg"> Oat bran: 4.41 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍗"
+    title="poultry_leg"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f357.svg"> Liver (chicken): 10.78 mg/kg
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍥"
+    title="fish_cake"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f365.svg"> Fermented foods like tempeh and miso
+
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍽"
+    title="🍽"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f37d.svg">️ Daily intake estimates range from 0.1 to 7 mg, higher in populations regularly consuming mushrooms.[29]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔥"
+    title="fire"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"> Cooking doesn&#39;t significantly reduce ergothioneine content as it remains stable under most cooking conditions.[30]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Bioavailability</h3>⏱️ Readily absorbed from mushroom sources with plasma levels peaking within 1-2 hours of consumption.[31]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔑"
+    title="key"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f511.svg"> Efficiently taken up via specific OCTN1/ETT transporter from intestine to tissues expressing the transporter.[32]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Minimal metabolism with estimated one-month whole-body half-life.[33]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Tissue levels can be significantly increased through dietary supplementation.[34]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Supplementation Forms</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Synthetic ergothioneine - chemically identical to natural compound but historically expensive to produce.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Fungal extracts - standardized extracts from mushrooms rich in ergothioneine.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧫"
+    title="petri_dish"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9eb.svg"> Fermentation-derived ergothioneine - produced through precision fermentation, more economically viable.[35]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Commercially available in capsule or powder form, with dosages ranging from 5-30 mg per serving.
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💉"
+    title="syringe"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f489.svg"> Dosage Considerations</h3>✅ US FDA reviewed safety at doses up to 30 mg/day for supplements and 5 mg for addition to food products (GRAS Notice 734).[36]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Recent human trials investigated dosages of 5-30 mg daily with positive effects observed.[37,38]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Traditional mushroom-rich diets provide 7-10 mg daily, suggesting this as potentially beneficial target.[39]
+⏳ Long half-life suggests benefits may accumulate over time with consistent supplementation.
+<h2>❤️ Health Benefits</h2><h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🫀"
+    title="anatomical_heart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fac0.svg"> Cardiovascular Health</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📊"
+    title="bar_chart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ca.svg"> Large Swedish cohort study (21.4-year follow-up) found higher plasma ergothioneine associated with significantly lower risk of coronary disease (HR=0.85), cardiovascular mortality (HR=0.79), and overall mortality (HR=0.86).[40]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🩸"
+    title="drop_of_blood"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fa78.svg"> Protects vascular endothelial cells from oxidative damage, critical in atherosclerosis prevention.[41]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Inhibits LDL cholesterol oxidation, preventing key initiating event in atherosclerosis.[42]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Animal studies show protection against ischemia-reperfusion injury in heart and liver tissue.[43]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Cognitive Function &amp; Neurological Health</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📉"
+    title="chart_with_downwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c9.svg"> Lower plasma ergothioneine associated with cognitive decline in elderly; levels decrease with age and cognitive impairment.[44]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Research shows lower levels in patients with neurodegenerative diseases.[45]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Recent double-blind, placebo-controlled trial showed ergothioneine supplementation supported cognitive function, memory, and sleep in elderly with subjective memory complaints.[46]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Neuroprotective mechanisms include:[47]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Mitigating oxidative stress in neural tissues
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Protecting mitochondrial function in neurons
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📉"
+    title="chart_with_downwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c9.svg"> Reducing neuroinflammation
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Enhancing BDNF (brain-derived neurotrophic factor) levels
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔼"
+    title="arrow_up_small"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f53c.svg"> Increasing expression of PSD95 (protein crucial for synaptic plasticity)
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🚪"
+    title="door"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6aa.svg"> Can cross blood-brain barrier via OCTN1/ETT transporter expressed in cerebral vasculature.[48]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🏃"
+    title="person_running"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3c3.svg"> Exercise Performance &amp; Recovery</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💪"
+    title="muscle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4aa.svg"> Mouse study showed 41% increase in running time before exhaustion after one week of supplementation.[49]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Boosts mitochondrial respiration and improves oxygen utilization during exercise.[50]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📉"
+    title="chart_with_downwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c9.svg"> Decreases markers of oxidative damage following intense exercise.[51]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔥"
+    title="fire"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"> Lowers inflammatory biomarkers after strenuous activity.[52]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔄"
+    title="arrows_counterclockwise"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f504.svg"> Improves performance without interfering with early muscle recovery signaling pathways essential for training adaptations.[53]</span></div></div></div></div><div id=chatlog__message-container-1354680481509019670 class=chatlog__message-container data-message-id=1354680481509019670><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, March 27, 2025 5:56 AM">5:56 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🩸"
+    title="drop_of_blood"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fa78.svg"> Metabolic Health</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📊"
+    title="bar_chart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ca.svg"> Higher plasma levels associated with lower risk of metabolic syndrome components.[54]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Preliminary research indicates potential improvement in insulin sensitivity and glucose handling.[55]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ May mitigate tissue damage from hyperglycemia, potentially reducing diabetic complication risk.[56]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🫁"
+    title="lungs"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fac1.svg"> Studies suggest protection of liver cells from oxidative damage and inflammation, key in NAFLD prevention.[57]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧴"
+    title="squeeze_bottle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9f4.svg"> Skin Health &amp; Photoprotection</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="☀"
+    title="☀"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/2600.svg">️ Protects skin cells from UV-induced damage through antioxidant properties.[58]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> May help preserve collagen integrity and slow skin aging processes.[59]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📈"
+    title="chart_with_upwards_trend"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4c8.svg"> Open-label clinical study showed daily oral supplementation improved skin health parameters including moisture retention, elasticity, and texture.[60]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🏙"
+    title="🏙"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f3d9.svg">️ May protect skin from environmental pollutants and external stressors accelerating skin aging.[61]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👁"
+    title="👁"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f441.svg">️ Other Potential Benefits</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="👁"
+    title="👁"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f441.svg">️ Accumulates in ocular tissues, potentially protecting against conditions like cataracts and age-related macular degeneration.[62]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🫘"
+    title="🫘"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fad8.svg"> May help preserve kidney function through antioxidant and anti-inflammatory properties.[63]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🫁"
+    title="lungs"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fac1.svg"> Potential benefits for respiratory health by inhibiting NF-κB activation and reducing inflammatory cytokines in alveolar epithelial cells.[64]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> High concentration in seminal fluid suggests role in protecting sperm from oxidative damage.[65]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🤰"
+    title="pregnant_woman"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f930.svg"> Research indicates potential for reducing oxidative stress in placenta, supporting healthy pregnancy outcomes.[66]
+<h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Dosage, Safety &amp; Side Effects</h2><h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🛡"
+    title="🛡"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f6e1.svg">️ Safety Profile</h3>✅ FDA GRAS status for adults at doses up to 30 mg/day for supplements and 5 mg for food products (GRN #734).[67]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Toxicological evaluations found no evidence of genotoxicity, mutagenicity, or reproductive toxicity at therapeutic doses.[68]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍄"
+    title="mushroom"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f344.svg"> Long history of consumption in mushrooms with no identified adverse effects.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔍"
+    title="mag"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50d.svg"> Human clinical trials report no significant adverse events related to supplementation.[69,70]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💉"
+    title="syringe"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f489.svg"> Recommended Dosages</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🥗"
+    title="salad"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f957.svg"> General health maintenance: 5-10 mg daily (similar to mushroom-rich diets).
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Specific health goals: 10-30 mg daily (consistent with clinical trial dosages).
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔝"
+    title="top"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f51d.svg"> Upper limit: 30 mg daily (highest dose reviewed for safety by regulators).
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ Optimal dosages for specific conditions not yet firmly established; individual needs may vary.
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚠"
+    title="⚠"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a0.svg">️ Potential Interactions and Contraindications</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Limited evidence suggests potential interactions with gabapentin, though clinical significance unclear.[71]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Theoretical caution warranted in autoimmune disorders until more research available.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🤰"
+    title="pregnant_woman"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f930.svg"> Limited safety data in pregnancy and lactation suggests cautious approach.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Individuals with SLC22A4 gene variants may have altered ergothioneine transport and potentially different supplementation responses.[72]</span></div></div></div></div><div id=chatlog__message-container-1354680554485846047 class=chatlog__message-container data-message-id=1354680554485846047><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, March 27, 2025 5:56 AM">5:56 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Clinical Evidence &amp; Case Studies</h2><h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Clinical Trials</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Cognitive function trial (Blue California, 2024): Double-blinded, placebo-controlled trial showed ErgoActive&#174; ergothioneine supported cognitive function, memory, and sleep in elderly with subjective memory complaints over four months.[73]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🩸"
+    title="drop_of_blood"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1fa78.svg"> ErgMS pilot study: Randomized controlled trial examining effects in people with metabolic syndrome.[74]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧴"
+    title="squeeze_bottle"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9f4.svg"> Skin health study: Open-label clinical study found daily oral supplementation improved skin health parameters (moisture retention, elasticity, texture).[75]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="💊"
+    title="pill"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f48a.svg"> Pharmacokinetics studies confirmed ready absorption from dietary sources with significant tissue retention.[76]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📊"
+    title="bar_chart"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4ca.svg"> Epidemiological Evidence</h3>❤️ Swedish cohort study (Smith et al., 2020): Large prospective study with 21.4-year follow-up linked higher plasma ergothioneine with reduced risk of coronary disease, cardiovascular mortality, and overall mortality.[77]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Research by Cheah et al. showed ergothioneine levels decrease with age and are lower in those experiencing cognitive decline.[78]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Studies found lower ergothioneine levels in patients with neurodegenerative diseases versus healthy controls.[79]
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔬"
+    title="microscope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52c.svg"> Mechanistic Studies</h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧪"
+    title="test_tube"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ea.svg"> Laboratory studies confirmed ability to neutralize various reactive oxygen/nitrogen species while preserving cellular redox balance.[80]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔥"
+    title="fire"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg"> Research showed inhibition of NF-κB activation and reduced pro-inflammatory cytokine production in various cell types.[81]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="⚡"
+    title="zap"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/26a1.svg"> Studies documented improved mitochondrial respiration and protection of mitochondrial DNA from oxidative damage.[82]
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧠"
+    title="brain"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e0.svg"> Neuronal cell model research demonstrated protection against neurotoxic insults and promotion of neural health/plasticity factors.[83]
+<h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="📝"
+    title="pencil"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f4dd.svg"> Conclusion</h2><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔎"
+    title="mag_right"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f50e.svg"> Ergothioneine represents a promising compound at the intersection of nutrition, aging, and disease prevention.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> Its unique antioxidant properties appear important for protecting tissues from oxidative stress, supporting mitochondrial function, and reducing inflammation—key factors in aging and age-related diseases.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧓"
+    title="older_adult"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9d3.svg"> Designation as &quot;longevity vitamin&quot; by Bruce Ames aligns with evidence suggesting importance for long-term health.
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧩"
+    title="jigsaw"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9e9.svg"> Specific OCTN1/ETT transporter facilitating absorption/retention in high-oxidative stress tissues supports biological significance.
+❤️ Current evidence suggests benefits for cardiovascular health, cognitive function, exercise performance, metabolic health, and skin health.
+✅ Excellent safety profile makes ergothioneine intriguing for supplementation, especially as modern diets may provide suboptimal amounts.
+<h3><img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🔭"
+    title="telescope"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f52d.svg"> Future Research Questions</h3>❓ What are optimal dosages for specific health outcomes?
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🧬"
+    title="dna"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f9ec.svg"> How do SLC22A4 gene variations affect individual responses?
+⏱️ Can long-term supplementation effectively slow biological aging aspects?
+<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🥗"
+    title="salad"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f957.svg"> How does ergothioneine interact with other dietary components and lifestyle factors?</span></div></div></div></div><div id=chatlog__message-container-1354680601176838194 class=chatlog__message-container data-message-id=1354680601176838194><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, March 27, 2025 5:57 AM">5:57 AM</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>## Citations</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354719964442918933 class=chatlog__message-container data-message-id=1354719964442918933><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1020672763788271686/7974957427be201ea707b74213bb43a7.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(46,204,113) title=moriorinvictus753bc data-user-id=1020672763788271686>Swiss🇨🇭</span> <span class=chatlog__timestamp title="Thursday, March 27, 2025 8:33 AM"><a href=#chatlog__message-container-1354719964442918933>3/27/2025 8:33 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="jcd3nt">@JC Denton</span> did you get your ergothioneine third party tested by now?
+
+<a href="https://biomedgrid.com/fulltext/volume20/efficacy-of-oral-administration-of-ergothioneine-dr-ergo-%E2%84%A2-on-skin-health-improvement-a-single-center-open-label-clinical-study.002779.php">https://biomedgrid.com/fulltext/volume20/efficacy-of-oral-administration-of-ergothioneine-dr-ergo-%E2%84%A2-on-skin-health-improvement-a-single-center-open-label-clinical-study.002779.php</a>
+(no placebo control though)</span> <span class=chatlog__edited-timestamp title="Thursday, March 27, 2025 8:33 AM">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href=https://biomedgrid.com/fulltext/volume20/efficacy-of-oral-administration-of-ergothioneine-dr-ergo-%E2%84%A2-on-skin-health-improvement-a-single-center-open-label-clinical-study.002779.php><div class="chatlog__markdown chatlog__markdown-preserve">Efficacy of Oral Administration of Ergothioneine (DR.
+ERGO&lt;sup&gt;™&lt;...</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">According to projections by the World Health Organization, the
+proportion of the global population aged 60 and above is anticipated
+to nearly double, increasing from 12% to 22% by the year 2050.</div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-1.discordapp.net/external/OvlHIt7eXFU8fPXEBaRiyXhJf6I5tNenpCZX1lcT57w/https/biomedgrid.com/img/logo.png> <img class=chatlog__embed-thumbnail src=https://images-ext-1.discordapp.net/external/OvlHIt7eXFU8fPXEBaRiyXhJf6I5tNenpCZX1lcT57w/https/biomedgrid.com/img/logo.png alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1354815594750410944 class=chatlog__message-container data-message-id=1354815594750410944><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1019677469072179230/5f5998e4c3997b1770bf2fbed0d7e1a2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/1020672763788271686/7974957427be201ea707b74213bb43a7.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(46,204,113) title=moriorinvictus753bc>Swiss🇨🇭</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1354719964442918933')"> <span class="chatlog__markdown-mention" title="jcd3nt">@JC Denton</span> did you get your ergothioneine third party tested by now?
+
+<a href="https://biomedgrid.com/fulltext/volume20/efficacy-of-oral-administration-of-ergothioneine-dr-ergo-%E2%84%A2-on-skin-health-improvement-a-single-center-open-label-clinical-study.002779.php">https://biomedgrid.com/fulltext/volume20/efficacy-of-oral-administration-of-ergothioneine-dr-ergo-%E2%84%A2-on-skin-health-improvement-a-single-center-open-label-clinical-study.002779.php</a>
+(no placebo control though) </span> <span class=chatlog__reply-edited-timestamp title="Thursday, March 27, 2025 8:33 AM">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(113,54,138) title=jcd3nt data-user-id=1019677469072179230>JC Denton</span> <span class=chatlog__timestamp title="Thursday, March 27, 2025 2:53 PM"><a href=#chatlog__message-container-1354815594750410944>3/27/2025 2:53 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Of course, but just switched suppliers so gonna need to do it again before I restock</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1394864477073178726 class=chatlog__message-container data-message-id=1394864477073178726><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/889739330711588954/77e380d8a6fb4b759ffb56d82ce08d79.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=myestus data-user-id=889739330711588954>Maestus</span> <span class=chatlog__timestamp title="Wednesday, July 16, 2025 3:13 AM"><a href=#chatlog__message-container-1394864477073178726>7/16/2025 3:13 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Made a robust Alcar/Ergothionene nasal spray at 100mg/50mg per ml. 
+
+Acetylcholine increase, network coherence and flow is tangible, once adjusted.
+
+Freebase Ergothionene didn&#39;t crash after 72hrs. Happy with that. 
+Gentle vibe, definitely more noticeable than reg freebase IN. 
+
+Does it&#39;s job. 
+Next rendition will feature citicoline and aloe vera.</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=thumbsup><img class="chatlog__emoji chatlog__emoji--small" alt=👍 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f44d.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1395040849653534832 class=chatlog__message-container data-message-id=1395040849653534832><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/1020672763788271686/7974957427be201ea707b74213bb43a7.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/889739330711588954/77e380d8a6fb4b759ffb56d82ce08d79.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(244,127,255) title=myestus>Maestus</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1394864477073178726')"> Made a robust Alcar/Ergothionene nasal spray at 100mg/50mg per ml. 
+
+Acetylcholine increase, network coherence and flow is tangible, once adjusted.
+
+Freebase Ergothionene didn&#39;t crash after 72hrs. Happy with that. 
+Gentle vibe, definitely more noticeable than reg freebase IN. 
+
+Does it&#39;s job. 
+Next rendition will feature citicoline and aloe vera. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(46,204,113) title=moriorinvictus753bc data-user-id=1020672763788271686>Swiss🇨🇭</span> <span class=chatlog__timestamp title="Wednesday, July 16, 2025 2:54 PM"><a href=#chatlog__message-container-1395040849653534832>7/16/2025 2:54 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>What are some of the effects you noticed</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1395046233256624129 class=chatlog__message-container data-message-id=1395046233256624129><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/889739330711588954/77e380d8a6fb4b759ffb56d82ce08d79.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(244,127,255) title=myestus>Maestus</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1394864477073178726')"> Made a robust Alcar/Ergothionene nasal spray at 100mg/50mg per ml. 
+
+Acetylcholine increase, network coherence and flow is tangible, once adjusted.
+
+Freebase Ergothionene didn&#39;t crash after 72hrs. Happy with that. 
+Gentle vibe, definitely more noticeable than reg freebase IN. 
+
+Does it&#39;s job. 
+Next rendition will feature citicoline and aloe vera. </span></div></div><div class=chatlog__header><span class=chatlog__author title=secretweapon data-user-id=368954209569079297>secretweapon 🌀⚡</span> <span class=chatlog__timestamp title="Wednesday, July 16, 2025 3:15 PM"><a href=#chatlog__message-container-1395046233256624129>7/16/2025 3:15 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Buffered?</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1395184130202931231 class=chatlog__message-container data-message-id=1395184130202931231><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/889739330711588954/77e380d8a6fb4b759ffb56d82ce08d79.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/368954209569079297/10445b602ba0a423ec696177c20ca6dd.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author title=secretweapon>secretweapon 🌀⚡</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1395046233256624129')"> Buffered? </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=myestus data-user-id=889739330711588954>Maestus</span> <span class=chatlog__timestamp title="Thursday, July 17, 2025 12:23 AM"><a href=#chatlog__message-container-1395184130202931231>7/17/2025 12:23 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>20ml saline
+2g ALCAR
+1g Ergothionene
+0.2 benzyl alc
+0.2 glycerol 
+500mg HPbCD 
+NAOH adjusted dropwise to 6.25 PH 
+
+Be mindful
+Raising ph of ALCAR is nonlinear;
+As you&#39;d know, amino acids are zwitterionic and thus have two pKas, thus making normal titration calculations impossible
+
+Recommend dissolving L-ergo with HPbCD at more stable ph than immediately in ALCAR.</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=fire><img class="chatlog__emoji chatlog__emoji--small" alt=🔥 src=https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f525.svg loading=lazy> <span class=chatlog__reaction-count>2</span></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1395185283791585300 class=chatlog__message-container data-message-id=1395185283791585300><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/889739330711588954/77e380d8a6fb4b759ffb56d82ce08d79.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/1020672763788271686/7974957427be201ea707b74213bb43a7.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(46,204,113) title=moriorinvictus753bc>Swiss🇨🇭</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1395040849653534832')"> What are some of the effects you noticed </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=myestus data-user-id=889739330711588954>Maestus</span> <span class=chatlog__timestamp title="Thursday, July 17, 2025 12:28 AM"><a href=#chatlog__message-container-1395185283791585300>7/17/2025 12:28 AM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Ergothionene has a gentle hum, very subtle.
+ALCAR is crisp mentally, slightly sharper in tone. 
+Decent synergy</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 80 message(s)</div><div class=postamble__entry>Timezone: UTC+1</div></div>
